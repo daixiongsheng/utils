@@ -8,4 +8,3 @@
  * @return {*}  {string}
  */
 export declare function dayOfTheWeek(day: number | Date, month?: number, year?: number): [string, number];
-//# sourceMappingURL=date.d.ts.map

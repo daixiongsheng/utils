@@ -3,7 +3,7 @@ const path = require('path')
 const execa = require('execa')
 
 const args = require('minimist')(process.argv.slice(2))
-const resolve = p => path.resolve(__dirname, '..', p)
+const resolve = (...p) => path.resolve(__dirname, '..', ...p)
 
 const formats = args.formats || args.f
 const devOnly = args.devOnly || args.d
@@ -17,7 +17,7 @@ async function run() {
     // remove build cache for release builds to avoid outdated enum values
     // await fs.remove(path.resolve(__dirname, '../node_modules/.rts2_cache'));
   }
-  await execa('rm', ['-rf', 'dist'])
+  await execa('rm', ['-rf', 'dist', 'types'])
   await execa('mkdir', ['dist'])
 
   await buildAll()

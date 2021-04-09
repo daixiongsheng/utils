@@ -74,10 +74,13 @@ function createConfig(format, output, plugins = []) {
       compilerOptions: {
         sourceMap: output.sourcemap,
         declaration: true,
-        declarationMap: true
+        declarationMap: false
       },
       exclude: ['**/__tests__', 'test-dts']
-    }
+    },
+    clean: true,
+    rollupCommonJSResolveHack: true,
+    useTsconfigDeclarationDir: true
   })
   if (isGlobalBuild) {
     output.name = 'DxsUtil'

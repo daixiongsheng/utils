@@ -39,4 +39,3 @@ export declare function typeOf<T = any>(value: T): string;
  * @return {*}  {boolean}
  */
 export declare function strictEqual<T = any>(value: T, other: T, ma?: Map<any, any>): boolean;
-//# sourceMappingURL=base.d.ts.map

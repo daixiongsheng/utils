@@ -72,4 +72,3 @@ export declare function bytes2simple(bytes: number): string;
  * @return {*}  {(number | string)}
  */
 export declare function simple2bytes(size: string): number;
-//# sourceMappingURL=number.d.ts.map

@@ -18,4 +18,3 @@ export declare function dealPath(path: string, pramsObject?: Record<string, any>
  * @return {Object}
  */
 export declare function query2Object(queryString: string): Record<string, string>;
-//# sourceMappingURL=url.d.ts.map

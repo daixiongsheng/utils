@@ -6,6 +6,15 @@
   "author": "daixiongsheng",
   "license": "MIT",
   "main": "index.js",
+  "files": [
+    "src",
+    "index.js",
+    "dist/*.js",
+    "types/*.d.ts"
+  ],
+  "keywords": [
+    "utils"
+  ],
   "scripts": {
     "dev": "rollup -c --watch",
     "build": "node scripts/build.js",
