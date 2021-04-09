@@ -1,6 +1,6 @@
 const { resolve } = require('path')
 
-const sidebar = ['/', '/guide/']
+const sidebar = ['/', '/guide/', '/url/']
 
 module.exports = {
   base: '/utils/',
