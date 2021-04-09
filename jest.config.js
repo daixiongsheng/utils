@@ -11,5 +11,5 @@ module.exports = {
   moduleFileExtensions: ['ts', 'js'],
   testEnvironment: 'node',
   reporters: ['default'],
-  coverageReporters: ['text', 'cobertura']
+  coverageReporters: ['json', 'clover', 'lcov', 'text', 'html', 'cobertura']
 }
