@@ -2,14 +2,13 @@
   "compilerOptions": {
     // 目标代码的模块结构版本
     "target": "esnext",
-    "module": "es6",
+    "module": "esnext",
     "removeComments": false,
     // 允许未执行的代码不报错
     "allowUnreachableCode": true,
     // 严格模式, 强烈建议开启
     "strict": true,
-    // 支持别名导入:
-    // import * as React from "react"
+    "importHelpers": true,
     "esModuleInterop": true,
     // 保留 const和 enum声明
     "preserveConstEnums": true,
@@ -34,6 +33,9 @@
     "allowJs": true,
     "typeRoots": [
       "node_modules/@types",
+    ],
+    "lib": [
+      "esnext"
     ],
     "paths": {
       "@/*": [
