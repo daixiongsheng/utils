@@ -2,8 +2,8 @@
  * 空函数
  *
  * @export
-* @return {*}  {void}
-*/
+ * @return {*}  {void}
+ */
 export declare function noop(): void;
 /**
  * Object.prototype.toString
@@ -38,5 +38,5 @@ export declare function typeOf<T = any>(value: T): string;
  * @param {*} other
  * @return {*}  {boolean}
  */
-export declare function strictEqual<T = any>(value: T, other: T, ma?: Map<any, any>, mb?: Map<any, any>): boolean;
+export declare function strictEqual<T = any>(value: T, other: T, ma?: Map<any, any>): boolean;
 //# sourceMappingURL=base.d.ts.map

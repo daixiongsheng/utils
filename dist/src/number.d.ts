@@ -65,11 +65,11 @@ export declare function dec2hex(s: string | number): string;
  */
 export declare function bytes2simple(bytes: number): string;
 /**
-* 1KB -> 1024
-* 字节单位换算
-* @export
-* @param {string} size
-* @return {*}  {(number | string)}
-*/
+ * 1KB -> 1024
+ * 字节单位换算
+ * @export
+ * @param {string} size
+ * @return {*}  {(number | string)}
+ */
 export declare function simple2bytes(size: string): number;
 //# sourceMappingURL=number.d.ts.map

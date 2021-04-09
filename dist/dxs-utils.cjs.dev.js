@@ -89,7 +89,7 @@ function dec2hex(s) {
 function bytes2simple(bytes) {
     let ret = '';
     const symbols = ['B', 'KB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB'];
-    let exp = Math.floor(Math.log(bytes) / Math.log(2));
+    let exp = (Math.log(bytes) / Math.log(2)) | 0;
     if (exp < 1) {
         exp = 0;
     }
@@ -101,12 +101,12 @@ function bytes2simple(bytes) {
     return ret + symbols[i];
 }
 /**
-* 1KB -> 1024
-* 字节单位换算
-* @export
-* @param {string} size
-* @return {*}  {(number | string)}
-*/
+ * 1KB -> 1024
+ * 字节单位换算
+ * @export
+ * @param {string} size
+ * @return {*}  {(number | string)}
+ */
 function simple2bytes(size) {
     const symbols = ['B', 'KB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB'];
     const length = parseInt(size, 10);
@@ -122,7 +122,11 @@ function simple2bytes(size) {
  */
 function object2QueryString(o) {
     let s = '';
-    Object.keys(o).forEach(key => {
+    const keys = Object.keys(o);
+    if (!keys.length) {
+        return s;
+    }
+    keys.forEach(key => {
         const value = o[key];
         const type = typeof value;
         switch (type) {
@@ -175,7 +179,7 @@ function dealPath(path, pramsObject = {}) {
         path = `${path}/`;
     }
     const queryString = object2QueryString(pramsObject);
-    path += '?' + (queryString ? queryString + '&' : '');
+    path += `?${queryString}&`;
     return path.substr(0, path.length - 1);
 }
 /**
@@ -209,9 +213,6 @@ function query2Object(queryString) {
             case 'true':
                 o[key] = true;
                 return;
-            case 'undefined':
-                o[key] = void 0;
-                return;
         }
         // value是number
         if (parseInt(value, 10).toString() === value) {
@@ -220,7 +221,7 @@ function query2Object(queryString) {
         }
         try {
             const result = JSON.parse(decodeURIComponent(value));
-            o[key] = query2Object(result);
+            o[key] = result;
         }
         catch (e) {
             o[key] = value;
@@ -255,7 +256,7 @@ function dayOfTheWeek(day, month, year) {
         'Thursday',
         'Friday',
         'Saturday',
-        'Sunday',
+        'Sunday'
     ];
     if (month < 3) {
         month += 12;
@@ -264,7 +265,7 @@ function dayOfTheWeek(day, month, year) {
     // w 为 0-6
     const w = ((day +
         2 * month +
-        (3 * (month)) / 5 +
+        (3 * month) / 5 +
         year +
         ((year / 4) >>> 0) -
         ((year / 100) >>> 0) +
@@ -279,8 +280,8 @@ function dayOfTheWeek(day, month, year) {
  * 空函数
  *
  * @export
-* @return {*}  {void}
-*/
+ * @return {*}  {void}
+ */
 function noop() {
     return void 0;
 }
@@ -402,7 +403,7 @@ function typeOf(value) {
  * @param {*} other
  * @return {*}  {boolean}
  */
-function strictEqual(value, other, ma = new Map(), mb = new Map()) {
+function strictEqual(value, other, ma = new Map()) {
     if (value === other) {
         return true;
     }
@@ -412,31 +413,35 @@ function strictEqual(value, other, ma = new Map(), mb = new Map()) {
         return false;
     }
     switch (typeA) {
+        case 'symbol':
+            return (value.description ===
+                other.description);
         case 'NaN':
             return true;
         case 'array':
-            if (ma.has(value)) {
-                return ma.get(value) === mb.get(other);
-            }
-            ma.set(value, other);
-            mb.set(other, value);
             if (value.length !== other.length) {
                 return false;
             }
+            if (ma.has(value)) {
+                return ma.get(value) === other;
+            }
+            else if (ma.has(other)) {
+                return false;
+            }
+            ma.set(value, other);
             for (let i = 0, len = value.length; i < len; i++) {
-                if (!strictEqual(value[i], other[i], ma, mb)) {
+                if (!strictEqual(value[i], other[i], ma)) {
                     return false;
                 }
             }
             return true;
         case 'object':
             if (ma.has(value)) {
-                return ma.get(value) === mb.get(other);
+                return ma.get(value) === other;
             }
             ma.set(value, other);
-            mb.set(other, value);
             for (const key of Reflect.ownKeys(value)) {
-                if (!strictEqual(value[key], other[key], ma, mb)) {
+                if (!strictEqual(value[key], other[key], ma)) {
                     return false;
                 }
             }
