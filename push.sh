@@ -1,4 +1,5 @@
 #! /bin/zsh
+npm run guide
 npm run prettier
 git add .
 date=$(date "+%Y-%m-%d-%H:%M:%S")

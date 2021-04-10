@@ -1,5 +1,5 @@
 /*!
- * dxs-utils v0.0.2
+ * dxs-utils v0.0.4
  * (c) 2020-2021 Xiongsheng Dai
  * Released under the MIT License.
  */
