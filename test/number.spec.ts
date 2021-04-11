@@ -7,10 +7,20 @@ import {
   dec2bin,
   bin2hex,
   bytes2simple,
-  simple2bytes
+  simple2bytes,
+  toNumber
 } from '../src'
 
 describe('进制转换', () => {
+  it('toNumber', () => {
+    expect(toNumber(1)).toBe(1)
+    expect(toNumber('100')).toBe(100)
+    expect(toNumber('189xxx')).toBe(189)
+    expect(toNumber('0x11')).toBe(0)
+    expect(toNumber('011')).toBe(11)
+    expect(toNumber('af11')).toBe('af11')
+  })
+
   it('任意进制转任意进制', () => {
     expect(numberConvert(10, 10, 10)).toBe('10')
     expect(numberConvert(10, 10, 16)).toBe('a')

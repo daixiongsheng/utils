@@ -1,4 +1,16 @@
 /**
+ * 讲字符串转成数字,转换失败会返回原来的值
+ *
+ * @export
+ * @param {string} val
+ * @return {*}  {(number | string)}
+ */
+export function toNumber(val: string | number): number | string {
+  const n = parseFloat(val + '')
+  return isNaN(n) ? val : n
+}
+
+/**
  * 进制转换
  *
  * @export

@@ -10,6 +10,43 @@ export function toString<T = any>(o: T): string {
 }
 
 /**
+ * 判断是不是对象，typeof
+ *
+ * @export
+ * @template T
+ * @param {T} o
+ * @return {*}  {boolean}
+ */
+export function isObject<T = any>(o: T): boolean {
+  return typeof o === 'object' && o !== null
+}
+
+/**
+ * 判断有没有定义，不是null和undefined
+ *
+ * @export
+ * @template T
+ * @param {T} o
+ * @return {*}  {boolean}
+ */
+export function isDef(v: any): boolean {
+  return v !== undefined && v !== null
+}
+
+/**
+ * 判断是不是一个promise
+ *
+ * @export
+ * @param {*} v
+ * @return {*}  {boolean}
+ */
+export function isPromise(v: any): boolean {
+  return (
+    isDef(v) && typeof v.then === 'function' && typeof v.catch === 'function'
+  )
+}
+
+/**
  * 深拷贝对象
  *
  * @export

@@ -1,4 +1,41 @@
-import { clone, strictEqual, typeOf } from '../src'
+import { clone, strictEqual, typeOf, isObject, isDef, isPromise } from '../src'
+
+describe('类型', () => {
+  it('isPromise', () => {
+    expect(isPromise({})).toBe(false)
+    expect(isPromise(new Promise(_ => _))).toBe(true)
+    expect(isPromise(Promise.resolve())).toBe(true)
+    expect(isPromise({ then() {}, catch() {} })).toBe(true)
+  })
+
+  it('isObject', () => {
+    expect(isObject({})).toBe(true)
+    expect(isObject([])).toBe(true)
+    expect(isObject(null)).toBe(false)
+    expect(isObject(1)).toBe(false)
+  })
+
+  it('isDef', () => {
+    expect(isDef({})).toBe(true)
+    expect(isDef([])).toBe(true)
+    expect(isDef(null)).toBe(false)
+    expect(isDef(void 0)).toBe(false)
+  })
+
+  it('类型', () => {
+    expect(typeOf([])).toBe('array')
+    expect(typeOf(1)).toBe('number')
+    expect(typeOf(NaN)).toBe('NaN')
+    expect(typeOf(null)).toBe('null')
+    expect(typeOf({})).toBe('object')
+    expect(typeOf(/r/)).toBe('object')
+    expect(typeOf(true)).toBe('boolean')
+    expect(typeOf(void 0)).toBe('undefined')
+    expect(typeOf(1n)).toBe('bigint')
+    expect(typeOf(Symbol())).toBe('symbol')
+    expect(typeOf(Symbol())).not.toBe('number')
+  })
+})
 
 describe('base', () => {
   it('克隆对象', () => {
@@ -43,20 +80,6 @@ describe('base', () => {
     const cloneA = clone(a)
     expect(Reflect.ownKeys(cloneA)).toStrictEqual(['b'])
     expect(Reflect.ownKeys(cloneA.b)).toStrictEqual(['a'])
-  })
-
-  it('类型', () => {
-    expect(typeOf([])).toBe('array')
-    expect(typeOf(1)).toBe('number')
-    expect(typeOf(NaN)).toBe('NaN')
-    expect(typeOf(null)).toBe('null')
-    expect(typeOf({})).toBe('object')
-    expect(typeOf(/r/)).toBe('object')
-    expect(typeOf(true)).toBe('boolean')
-    expect(typeOf(void 0)).toBe('undefined')
-    expect(typeOf(1n)).toBe('bigint')
-    expect(typeOf(Symbol())).toBe('symbol')
-    expect(typeOf(Symbol())).not.toBe('number')
   })
 
   it('深比较', () => {
