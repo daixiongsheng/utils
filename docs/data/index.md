@@ -5,6 +5,8 @@ search: true
 
 ## 判断数据类型
 
+### 对象
+
 ```JS
 typeOf({age:123}) // object
 ```

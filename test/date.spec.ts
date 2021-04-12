@@ -9,7 +9,7 @@ describe('日期', () => {
     expect(dayOfTheWeek(28, 4, 2021)[1]).toBe(3)
     const toDay = new Date()
 
-    expect(dayOfTheWeek(toDay)[1]).toBeGreaterThan(1)
+    expect(dayOfTheWeek(toDay)[1]).toBeGreaterThanOrEqual(1)
     expect(dayOfTheWeek(toDay)[1]).toBeLessThanOrEqual(7)
   })
 })

@@ -35,7 +35,9 @@
       "node_modules/@types",
     ],
     "lib": [
-      "esnext"
+      "esnext",
+      "DOM",
+      "DOM.Iterable"
     ],
     "paths": {
       "@/*": [
