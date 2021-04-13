@@ -1,3 +1,5 @@
+import { clone } from './data'
+
 /**
  * 空函数
  *
@@ -8,7 +10,7 @@ export function noop(): void {
   return void 0
 }
 
-interface DebouncedFunction<T extends (...args: any) => any> {
+export interface DebouncedFunction<T extends (...args: any) => any> {
   (...args: Parameters<T>): void
   cancel: () => void
 }
@@ -26,7 +28,7 @@ interface DebouncedFunction<T extends (...args: any) => any> {
 export function debounce<T extends (...args: any) => any>(
   func: T,
   delay: number,
-  immediate: boolean = true
+  immediate: boolean = false
 ): DebouncedFunction<T> {
   let timer: number | null = null
   function f(...args: Parameters<T>): void {
@@ -55,7 +57,7 @@ export function debounce<T extends (...args: any) => any>(
   return f
 }
 
-interface ThrottledFunction<T extends (...args: any) => any> {
+export interface ThrottledFunction<T extends (...args: any) => any> {
   (...args: Parameters<T>): void
 }
 
@@ -81,4 +83,62 @@ export function throttle<T extends (...args: any) => any>(
       prev = Date.now()
     }
   }
+}
+
+// 锁
+export const Lock = {
+  /**
+   *
+   * 加锁
+   * @param {string} key 加锁的内容
+   * @return {*}  {boolean}
+   */
+  isLocked(key: string): boolean {
+    return Boolean(this[`$$${key}`])
+  },
+
+  /**
+   *
+   * 解锁
+   * @param {string} key 解锁的内容
+   */
+  unlock(key: string): void {
+    if (`$$${key}` in this) {
+      delete this[`$$${key}`]
+    }
+  },
+
+  /**
+   *
+   * 判断某有没有加锁
+   * @param {string} key
+   */
+  lock(key: string): void {
+    this[`$$${key}`] = true
+  }
+}
+
+/**
+ * 获取指定范围的随机整数
+ * @param min 最小值
+ * @param max 最大值
+ */
+export function random(min: number = 0, max: number = 100) {
+  return (Math.random() * (+max - +min) + +min) | 0
+}
+
+/**
+ * 洗牌算法（数组乱序算法）
+ * @param {Array} array
+ * @return {Array} 返回乱序后的数组
+ */
+export function shuffle<T = any>(array: T[]): T[] {
+  const result: T[] = clone(array)
+  let m = result.length,
+    i
+  while (m) {
+    i = (Math.random() * m--) | 0
+    ;[result[m], result[i]] = [result[i], result[m]]
+  }
+  return result
 }

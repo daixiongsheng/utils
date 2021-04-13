@@ -1,4 +1,12 @@
-import { clone, strictEqual, typeOf, isObject, isDef, isPromise } from '../src'
+import {
+  clone,
+  strictEqual,
+  typeOf,
+  isObject,
+  isDef,
+  isPromise,
+  isEmptyObject
+} from '../src'
 
 describe('类型', () => {
   it('isPromise', () => {
@@ -116,5 +124,21 @@ describe('base', () => {
     expect(strictEqual(c, d)).toBe(false)
     expect(strictEqual(a, clone(a))).toBe(true)
     expect(strictEqual(c, clone(c))).toBe(true)
+  })
+})
+
+describe('判断是不是空对象', () => {
+  it('空对象', () => {
+    expect(isEmptyObject({})).toBe(true)
+    expect(isEmptyObject([])).toBe(true)
+    expect(isEmptyObject(Object.create(null))).toBe(true)
+  })
+
+  it('不是空对象', () => {
+    expect(isEmptyObject(1)).toBe(false)
+    expect(isEmptyObject(null)).toBe(false)
+    expect(isEmptyObject(void 0)).toBe(false)
+    expect(isEmptyObject([1])).toBe(false)
+    expect(isEmptyObject({ foo: 'bar' })).toBe(false)
   })
 })

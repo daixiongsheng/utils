@@ -8,6 +8,17 @@
 Object.defineProperty(exports, '__esModule', { value: true });
 
 /**
+ * 讲字符串转成数字,转换失败会返回原来的值
+ *
+ * @export
+ * @param {string} val
+ * @return {*}  {(number | string)}
+ */
+function toNumber(val) {
+    const n = parseFloat(val + '');
+    return isNaN(n) ? val : n;
+}
+/**
  * 进制转换
  *
  * @export
@@ -237,7 +248,7 @@ function query2Object(queryString) {
  * @param {(number | Date)} day
  * @param {number} [month]
  * @param {number} [year]
- * @return {*}  {string}
+ * @return {array: [string, number]}  返回一个数组，第一个值为对应的英语名称，第二个为1-7表示周一到周日
  */
 function dayOfTheWeek(day, month, year) {
     // 基姆拉尔森计算公式
@@ -286,6 +297,65 @@ function noop() {
     return void 0;
 }
 /**
+ * 防抖函数
+ *
+ * @export
+ * @template T
+ * @param {T} func
+ * @param {number} delay
+ * @param {boolean} [immediate=true]
+ * @return {*}  {DebouncedFunction<T>}
+ */
+function debounce(func, delay, immediate = true) {
+    let timer = null;
+    function f(...args) {
+        const that = this;
+        if (timer) {
+            clearTimeout(timer);
+        }
+        if (immediate) {
+            const callNow = !timer;
+            timer = setTimeout(() => {
+                timer = null;
+            }, delay);
+            if (callNow) {
+                return func.apply(that, args);
+            }
+        }
+        else {
+            timer = setTimeout(() => {
+                timer = null;
+                func.apply(that, args);
+            }, delay);
+        }
+    }
+    f.cancel = () => {
+        clearTimeout(timer);
+    };
+    return f;
+}
+/**
+ *节流函数
+ *
+ * @export
+ * @template T
+ * @param {T} func
+ * @param {number} delay
+ * @return {*}  {ThrottledFunction<T>}
+ */
+function throttle(func, delay) {
+    let prev = Date.now();
+    return function (...args) {
+        const that = this;
+        const now = Date.now();
+        if (now - prev >= delay) {
+            func.apply(that, args);
+            prev = Date.now();
+        }
+    };
+}
+
+/**
  * Object.prototype.toString
  *
  * @export
@@ -294,6 +364,38 @@ function noop() {
  */
 function toString(o) {
     return Object.prototype.toString.call(o);
+}
+/**
+ * 判断是不是对象，typeof
+ *
+ * @export
+ * @template T
+ * @param {T} o
+ * @return {*}  {boolean}
+ */
+function isObject(o) {
+    return typeof o === 'object' && o !== null;
+}
+/**
+ * 判断有没有定义，不是null和undefined
+ *
+ * @export
+ * @template T
+ * @param {T} o
+ * @return {*}  {boolean}
+ */
+function isDef(v) {
+    return v !== undefined && v !== null;
+}
+/**
+ * 判断是不是一个promise
+ *
+ * @export
+ * @param {*} v
+ * @return {*}  {boolean}
+ */
+function isPromise(v) {
+    return (isDef(v) && typeof v.then === 'function' && typeof v.catch === 'function');
 }
 /**
  * 深拷贝对象
@@ -456,15 +558,21 @@ exports.bytes2simple = bytes2simple;
 exports.clone = clone;
 exports.dayOfTheWeek = dayOfTheWeek;
 exports.dealPath = dealPath;
+exports.debounce = debounce;
 exports.dec2bin = dec2bin;
 exports.dec2hex = dec2hex;
 exports.hex2bin = hex2bin;
 exports.hex2dec = hex2dec;
+exports.isDef = isDef;
+exports.isObject = isObject;
+exports.isPromise = isPromise;
 exports.noop = noop;
 exports.numberConvert = numberConvert;
 exports.object2QueryString = object2QueryString;
 exports.query2Object = query2Object;
 exports.simple2bytes = simple2bytes;
 exports.strictEqual = strictEqual;
+exports.throttle = throttle;
+exports.toNumber = toNumber;
 exports.toString = toString;
 exports.typeOf = typeOf;

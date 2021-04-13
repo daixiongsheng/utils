@@ -205,3 +205,17 @@ export function strictEqual<T = any>(
   }
   return value === other
 }
+
+/**
+ * 判断是不是一个空对象
+ *
+ * @export
+ * @param {object} value
+ * @return {*}  {boolean}
+ */
+export function isEmptyObject(v: any): boolean {
+  if (!isObject(v)) {
+    return false
+  }
+  return !Object.keys(v).length
+}

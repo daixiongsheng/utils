@@ -1,11 +1,4 @@
 /**
- * 空函数
- *
- * @export
- * @return {*}  {void}
- */
-export declare function noop(): void;
-/**
  * Object.prototype.toString
  *
  * @export
@@ -13,6 +6,32 @@ export declare function noop(): void;
  * @return {*}  {string}
  */
 export declare function toString<T = any>(o: T): string;
+/**
+ * 判断是不是对象，typeof
+ *
+ * @export
+ * @template T
+ * @param {T} o
+ * @return {*}  {boolean}
+ */
+export declare function isObject<T = any>(o: T): boolean;
+/**
+ * 判断有没有定义，不是null和undefined
+ *
+ * @export
+ * @template T
+ * @param {T} o
+ * @return {*}  {boolean}
+ */
+export declare function isDef(v: any): boolean;
+/**
+ * 判断是不是一个promise
+ *
+ * @export
+ * @param {*} v
+ * @return {*}  {boolean}
+ */
+export declare function isPromise(v: any): boolean;
 /**
  * 深拷贝对象
  *

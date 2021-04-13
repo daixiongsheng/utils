@@ -1,4 +1,12 @@
 /**
+ * 讲字符串转成数字,转换失败会返回原来的值
+ *
+ * @export
+ * @param {string} val
+ * @return {*}  {(number | string)}
+ */
+export declare function toNumber(val: string | number): number | string;
+/**
  * 进制转换
  *
  * @export
