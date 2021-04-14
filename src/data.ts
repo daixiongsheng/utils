@@ -219,3 +219,28 @@ export function isEmptyObject(v: any): boolean {
   }
   return !Object.keys(v).length
 }
+
+/**
+ * 获取指定范围的随机整数
+ * @param min 最小值
+ * @param max 最大值
+ */
+export function random(min: number = 0, max: number = 100) {
+  return (Math.random() * (+max - +min) + +min) | 0
+}
+
+/**
+ * 洗牌算法（数组乱序算法）
+ * @param {Array} array
+ * @return {Array} 返回乱序后的数组
+ */
+export function shuffle<T = any>(array: T[]): T[] {
+  const result: T[] = clone(array)
+  let m = result.length,
+    i
+  while (m) {
+    i = (Math.random() * m--) | 0
+    ;[result[m], result[i]] = [result[i], result[m]]
+  }
+  return result
+}

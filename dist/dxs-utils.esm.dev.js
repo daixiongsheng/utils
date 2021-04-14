@@ -302,7 +302,7 @@ function noop() {
  * @param {boolean} [immediate=true]
  * @return {*}  {DebouncedFunction<T>}
  */
-function debounce(func, delay, immediate = true) {
+function debounce(func, delay, immediate = false) {
     let timer = null;
     function f(...args) {
         const that = this;
@@ -350,6 +350,36 @@ function throttle(func, delay) {
         }
     };
 }
+// 锁
+const Lock = {
+    /**
+     *
+     * 加锁
+     * @param {string} key 加锁的内容
+     * @return {*}  {boolean}
+     */
+    isLocked(key) {
+        return Boolean(this[`$$${key}`]);
+    },
+    /**
+     *
+     * 解锁
+     * @param {string} key 解锁的内容
+     */
+    unlock(key) {
+        if (`$$${key}` in this) {
+            delete this[`$$${key}`];
+        }
+    },
+    /**
+     *
+     * 判断某有没有加锁
+     * @param {string} key
+     */
+    lock(key) {
+        this[`$$${key}`] = true;
+    }
+};
 
 /**
  * Object.prototype.toString
@@ -547,5 +577,40 @@ function strictEqual(value, other, ma = new Map()) {
     }
     return value === other;
 }
+/**
+ * 判断是不是一个空对象
+ *
+ * @export
+ * @param {object} value
+ * @return {*}  {boolean}
+ */
+function isEmptyObject(v) {
+    if (!isObject(v)) {
+        return false;
+    }
+    return !Object.keys(v).length;
+}
+/**
+ * 获取指定范围的随机整数
+ * @param min 最小值
+ * @param max 最大值
+ */
+function random(min = 0, max = 100) {
+    return (Math.random() * (+max - +min) + +min) | 0;
+}
+/**
+ * 洗牌算法（数组乱序算法）
+ * @param {Array} array
+ * @return {Array} 返回乱序后的数组
+ */
+function shuffle(array) {
+    const result = clone(array);
+    let m = result.length, i;
+    while (m) {
+        i = (Math.random() * m--) | 0;
+        [result[m], result[i]] = [result[i], result[m]];
+    }
+    return result;
+}
 
-export { bin2dec, bin2hex, bytes2simple, clone, dayOfTheWeek, dealPath, debounce, dec2bin, dec2hex, hex2bin, hex2dec, isDef, isObject, isPromise, noop, numberConvert, object2QueryString, query2Object, simple2bytes, strictEqual, throttle, toNumber, toString, typeOf };
+export { Lock, bin2dec, bin2hex, bytes2simple, clone, dayOfTheWeek, dealPath, debounce, dec2bin, dec2hex, hex2bin, hex2dec, isDef, isEmptyObject, isObject, isPromise, noop, numberConvert, object2QueryString, query2Object, random, shuffle, simple2bytes, strictEqual, throttle, toNumber, toString, typeOf };

@@ -33,3 +33,24 @@ export interface ThrottledFunction<T extends (...args: any) => any> {
  * @return {*}  {ThrottledFunction<T>}
  */
 export declare function throttle<T extends (...args: any) => any>(func: T, delay: number): ThrottledFunction<T>;
+export declare const Lock: {
+    /**
+     *
+     * 加锁
+     * @param {string} key 加锁的内容
+     * @return {*}  {boolean}
+     */
+    isLocked(key: string): boolean;
+    /**
+     *
+     * 解锁
+     * @param {string} key 解锁的内容
+     */
+    unlock(key: string): void;
+    /**
+     *
+     * 判断某有没有加锁
+     * @param {string} key
+     */
+    lock(key: string): void;
+};

@@ -58,3 +58,23 @@ export declare function typeOf<T = any>(value: T): string;
  * @return {*}  {boolean}
  */
 export declare function strictEqual<T = any>(value: T, other: T, ma?: Map<any, any>): boolean;
+/**
+ * 判断是不是一个空对象
+ *
+ * @export
+ * @param {object} value
+ * @return {*}  {boolean}
+ */
+export declare function isEmptyObject(v: any): boolean;
+/**
+ * 获取指定范围的随机整数
+ * @param min 最小值
+ * @param max 最大值
+ */
+export declare function random(min?: number, max?: number): number;
+/**
+ * 洗牌算法（数组乱序算法）
+ * @param {Array} array
+ * @return {Array} 返回乱序后的数组
+ */
+export declare function shuffle<T = any>(array: T[]): T[];

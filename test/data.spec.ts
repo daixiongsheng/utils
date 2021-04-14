@@ -5,7 +5,9 @@ import {
   isObject,
   isDef,
   isPromise,
-  isEmptyObject
+  isEmptyObject,
+  random,
+  shuffle
 } from '../src'
 
 describe('类型', () => {
@@ -140,5 +142,34 @@ describe('判断是不是空对象', () => {
     expect(isEmptyObject(void 0)).toBe(false)
     expect(isEmptyObject([1])).toBe(false)
     expect(isEmptyObject({ foo: 'bar' })).toBe(false)
+  })
+})
+
+describe('随机娄', () => {
+  it('随机数', () => {
+    const result: number[] = []
+    for (let i = 0; i < 100; i++) {
+      const a = random(0, i)
+      const b = random(300, i)
+      expect(a).toBeGreaterThanOrEqual(0)
+      expect(random()).toBeGreaterThanOrEqual(0)
+      expect(random()).toBeLessThanOrEqual(100)
+      expect(a).toBeLessThanOrEqual(i)
+      expect(b).toBeLessThanOrEqual(300)
+      expect(b).toBeGreaterThanOrEqual(i)
+      result.push(a, b)
+    }
+    expect(new Set(result).size).toBeGreaterThanOrEqual(10)
+    expect(random(0, 0)).toBe(0)
+    expect(random(100, 100)).toBe(100)
+  })
+})
+
+describe('乱序数组', () => {
+  it('乱序', () => {
+    for (let i = 0; i < 300; i++) {
+      const arr = new Array(10).map(() => random())
+      expect(shuffle(arr)).not.toStrictEqual(arr)
+    }
   })
 })
