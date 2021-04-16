@@ -11,7 +11,7 @@ outStream.on('open', () => {
     }
   }
   console.log(
-    '---\n' + 'title: 开始\n' + 'search: true\n' + '---\n' + '\n' + '# 开始\n'
+    '---\n' + 'title: 目录\n' + 'search: true\n' + '---\n' + '\n' + '# 开始\n'
   )
   const title = []
   const re = /title:\s*(.+)\n(.|\n)*/
