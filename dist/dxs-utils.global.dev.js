@@ -14,7 +14,7 @@ var DxsUtil = (function (exports) {
    * @return {*}  {(number | string)}
    */
   function toNumber(val) {
-      const n = parseFloat(val + '');
+      var n = parseFloat(val + '');
       return isNaN(n) ? val : n;
   }
   /**
@@ -97,14 +97,14 @@ var DxsUtil = (function (exports) {
    * @return {*}  {string}
    */
   function bytes2simple(bytes) {
-      let ret = '';
-      const symbols = ['B', 'KB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB'];
-      let exp = (Math.log(bytes) / Math.log(2)) | 0;
+      var ret = '';
+      var symbols = ['B', 'KB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB'];
+      var exp = (Math.log(bytes) / Math.log(2)) | 0;
       if (exp < 1) {
           exp = 0;
       }
-      const i = Math.floor(exp / 10);
-      ret = `${bytes / Math.pow(2, 10 * i)}`;
+      var i = Math.floor(exp / 10);
+      ret = "" + bytes / Math.pow(2, 10 * i);
       if (bytes.toString().length > bytes.toFixed(2).toString().length) {
           ret = bytes.toFixed(2);
       }
@@ -118,11 +118,66 @@ var DxsUtil = (function (exports) {
    * @return {*}  {(number | string)}
    */
   function simple2bytes(size) {
-      const symbols = ['B', 'KB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB'];
-      const length = parseInt(size, 10);
-      const unit = size.substring(length.toString().length).toUpperCase();
-      const index = symbols.findIndex(i => i === unit);
+      var symbols = ['B', 'KB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB'];
+      var length = parseInt(size, 10);
+      var unit = size.substring(length.toString().length).toUpperCase();
+      var index = symbols.findIndex(function (i) { return i === unit; });
       return length * Math.pow(2, 10 * index);
+  }
+
+  /*! *****************************************************************************
+  Copyright (c) Microsoft Corporation.
+
+  Permission to use, copy, modify, and/or distribute this software for any
+  purpose with or without fee is hereby granted.
+
+  THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH
+  REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY
+  AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT,
+  INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM
+  LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR
+  OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
+  PERFORMANCE OF THIS SOFTWARE.
+  ***************************************************************************** */
+
+  var __assign = function() {
+      __assign = Object.assign || function __assign(t) {
+          for (var s, i = 1, n = arguments.length; i < n; i++) {
+              s = arguments[i];
+              for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p)) t[p] = s[p];
+          }
+          return t;
+      };
+      return __assign.apply(this, arguments);
+  };
+
+  function __values(o) {
+      var s = typeof Symbol === "function" && Symbol.iterator, m = s && o[s], i = 0;
+      if (m) return m.call(o);
+      if (o && typeof o.length === "number") return {
+          next: function () {
+              if (o && i >= o.length) o = void 0;
+              return { value: o && o[i++], done: !o };
+          }
+      };
+      throw new TypeError(s ? "Object is not iterable." : "Symbol.iterator is not defined.");
+  }
+
+  function __read(o, n) {
+      var m = typeof Symbol === "function" && o[Symbol.iterator];
+      if (!m) return o;
+      var i = m.call(o), r, ar = [], e;
+      try {
+          while ((n === void 0 || n-- > 0) && !(r = i.next()).done) ar.push(r.value);
+      }
+      catch (error) { e = { error: error }; }
+      finally {
+          try {
+              if (r && !r.done && (m = i["return"])) m.call(i);
+          }
+          finally { if (e) throw e.error; }
+      }
+      return ar;
   }
 
   /**
@@ -131,34 +186,34 @@ var DxsUtil = (function (exports) {
    * @param o
    */
   function object2QueryString(o) {
-      let s = '';
-      const keys = Object.keys(o);
+      var s = '';
+      var keys = Object.keys(o);
       if (!keys.length) {
           return s;
       }
-      keys.forEach(key => {
-          const value = o[key];
-          const type = typeof value;
+      keys.forEach(function (key) {
+          var value = o[key];
+          var type = typeof value;
           switch (type) {
               case 'number':
                   // no NaN
                   if (value === value) {
-                      s += `${key}=${value}&`;
+                      s += key + "=" + value + "&";
                   }
                   break;
               case 'object':
                   if (value !== null) {
-                      s += `${key}=${encodeURIComponent(object2QueryString(value))}&`;
+                      s += key + "=" + encodeURIComponent(object2QueryString(value)) + "&";
                   }
                   else {
-                      s += `${key}=null&`;
+                      s += key + "=null&";
                   }
                   break;
               case 'boolean':
-                  s += `${key}=${value}&`;
+                  s += key + "=" + value + "&";
                   break;
               case 'string':
-                  s += `${key}=${encodeURIComponent(value)}&`;
+                  s += key + "=" + encodeURIComponent(value) + "&";
                   break;
           }
       });
@@ -171,25 +226,23 @@ var DxsUtil = (function (exports) {
    * @param {object} pramsObj 传给url的参数对象
    * @return {string} 返回拼接后的url串
    */
-  function dealPath(path, pramsObject = {}) {
+  function dealPath(path, pramsObject) {
+      if (pramsObject === void 0) { pramsObject = {}; }
       if (!path || path.length === 1 || Object.keys(pramsObject).length === 0) {
           return path;
       }
       // 是否已经经过处理
-      const isDealt = path.includes('?');
+      var isDealt = path.includes('?');
       if (isDealt) {
-          const [p, ...query] = path.split('?');
-          pramsObject = {
-              ...query2Object(query.join('')),
-              ...pramsObject
-          };
+          var _a = __read(path.split('?')), p = _a[0], query = _a.slice(1);
+          pramsObject = __assign(__assign({}, query2Object(query.join(''))), pramsObject);
           path = p;
       }
       else if (path[path.length - 1] !== '/') {
-          path = `${path}/`;
+          path = path + "/";
       }
-      const queryString = object2QueryString(pramsObject);
-      path += `?${queryString}&`;
+      var queryString = object2QueryString(pramsObject);
+      path += "?" + queryString + "&";
       return path.substr(0, path.length - 1);
   }
   /**
@@ -198,21 +251,21 @@ var DxsUtil = (function (exports) {
    * @return {Object}
    */
   function query2Object(queryString) {
-      const o = {};
+      var o = {};
       if (!queryString) {
           return o;
       }
       if (queryString.includes('?')) {
-          const splitArray = queryString.split('?');
+          var splitArray = queryString.split('?');
           queryString = splitArray[splitArray.length - 1];
       }
-      const qArr = queryString.split('&');
-      qArr.forEach(item => {
-          const [k, v] = item.split('=');
+      var qArr = queryString.split('&');
+      qArr.forEach(function (item) {
+          var _a = __read(item.split('='), 2), k = _a[0], v = _a[1];
           o[k] = v === void 0 ? '' : decodeURIComponent(v);
       });
-      Object.keys(o).forEach(key => {
-          const value = o[key];
+      Object.keys(o).forEach(function (key) {
+          var value = o[key];
           switch (value) {
               case 'null':
                   o[key] = null;
@@ -230,7 +283,7 @@ var DxsUtil = (function (exports) {
               return;
           }
           try {
-              const result = JSON.parse(decodeURIComponent(value));
+              var result = JSON.parse(decodeURIComponent(value));
               o[key] = result;
           }
           catch (e) {
@@ -244,22 +297,23 @@ var DxsUtil = (function (exports) {
    * 返回这一天是周几
    *
    * @export
-   * @param {(number | Date)} day
+   * @param {(number | Date)} [day=new Date()]
    * @param {number} [month]
    * @param {number} [year]
    * @return {array: [string, number]}  返回一个数组，第一个值为对应的英语名称，第二个为1-7表示周一到周日
    */
   function dayOfTheWeek(day, month, year) {
+      if (day === void 0) { day = new Date(); }
       // 基姆拉尔森计算公式
       if (day instanceof Date) {
           month = day.getMonth() + 1;
           year = day.getFullYear();
           day = day.getDate();
       }
-      const now = new Date();
+      var now = new Date();
       month = typeof month === 'undefined' ? now.getMonth() + 1 : month;
       year = typeof year === 'undefined' ? now.getFullYear() : year;
-      const arr = [
+      var arr = [
           'Monday',
           'Tuesday',
           'Wednesday',
@@ -273,7 +327,7 @@ var DxsUtil = (function (exports) {
           --year;
       }
       // w 为 0-6
-      const w = ((day +
+      var w = ((day +
           2 * month +
           (3 * month) / 5 +
           year +
@@ -305,16 +359,21 @@ var DxsUtil = (function (exports) {
    * @param {boolean} [immediate=true]
    * @return {*}  {DebouncedFunction<T>}
    */
-  function debounce(func, delay, immediate = false) {
-      let timer = null;
-      function f(...args) {
-          const that = this;
+  function debounce(func, delay, immediate) {
+      if (immediate === void 0) { immediate = false; }
+      var timer = null;
+      function f() {
+          var args = [];
+          for (var _i = 0; _i < arguments.length; _i++) {
+              args[_i] = arguments[_i];
+          }
+          var that = this;
           if (timer) {
               clearTimeout(timer);
           }
           if (immediate) {
-              const callNow = !timer;
-              timer = setTimeout(() => {
+              var callNow = !timer;
+              timer = setTimeout(function () {
                   timer = null;
               }, delay);
               if (callNow) {
@@ -322,13 +381,13 @@ var DxsUtil = (function (exports) {
               }
           }
           else {
-              timer = setTimeout(() => {
+              timer = setTimeout(function () {
                   timer = null;
                   func.apply(that, args);
               }, delay);
           }
       }
-      f.cancel = () => {
+      f.cancel = function () {
           clearTimeout(timer);
       };
       return f;
@@ -343,10 +402,14 @@ var DxsUtil = (function (exports) {
    * @return {*}  {ThrottledFunction<T>}
    */
   function throttle(func, delay) {
-      let prev = Date.now();
-      return function (...args) {
-          const that = this;
-          const now = Date.now();
+      var prev = Date.now();
+      return function () {
+          var args = [];
+          for (var _i = 0; _i < arguments.length; _i++) {
+              args[_i] = arguments[_i];
+          }
+          var that = this;
+          var now = Date.now();
           if (now - prev >= delay) {
               func.apply(that, args);
               prev = Date.now();
@@ -354,24 +417,24 @@ var DxsUtil = (function (exports) {
       };
   }
   // 锁
-  const Lock = {
+  var Lock = {
       /**
        *
        * 加锁
        * @param {string} key 加锁的内容
        * @return {*}  {boolean}
        */
-      isLocked(key) {
-          return Boolean(this[`$$${key}`]);
+      isLocked: function (key) {
+          return Boolean(this["$$" + key]);
       },
       /**
        *
        * 解锁
        * @param {string} key 解锁的内容
        */
-      unlock(key) {
-          if (`$$${key}` in this) {
-              delete this[`$$${key}`];
+      unlock: function (key) {
+          if ("$$" + key in this) {
+              delete this["$$" + key];
           }
       },
       /**
@@ -379,8 +442,8 @@ var DxsUtil = (function (exports) {
        * 判断某有没有加锁
        * @param {string} key
        */
-      lock(key) {
-          this[`$$${key}`] = true;
+      lock: function (key) {
+          this["$$" + key] = true;
       }
   };
 
@@ -434,8 +497,9 @@ var DxsUtil = (function (exports) {
    * @param {*} [map=new Map()]
    * @return {*}
    */
-  function clone(obj, map = new Map()) {
-      let copy;
+  function clone(obj, map) {
+      if (map === void 0) { map = new Map(); }
+      var copy;
       switch (typeof obj) {
           case 'undefined':
               break;
@@ -460,22 +524,22 @@ var DxsUtil = (function (exports) {
                   copy = new Date(obj);
               }
               else {
-                  const has = map.get(obj);
+                  var has = map.get(obj);
                   if (has) {
                       return has;
                   }
                   if (Array.isArray(obj)) {
-                      const len = obj.length;
+                      var len = obj.length;
                       copy = new Array(len);
                       map.set(obj, copy);
-                      for (let i = 0; i < len; i++) {
+                      for (var i = 0; i < len; i++) {
                           copy[i] = clone(obj[i], map);
                       }
                   }
                   else {
                       copy = {};
                       map.set(obj, copy);
-                      Reflect.ownKeys(obj).forEach(key => {
+                      Reflect.ownKeys(obj).forEach(function (key) {
                           copy[key] = clone(obj[key], map);
                       });
                   }
@@ -498,7 +562,7 @@ var DxsUtil = (function (exports) {
    * @return {*}  {string}
    */
   function typeOf(value) {
-      const type = typeof value;
+      var type = typeof value;
       switch (type) {
           case 'string':
           case 'boolean':
@@ -516,7 +580,7 @@ var DxsUtil = (function (exports) {
               if (value === null) {
                   return 'null';
               }
-              const typeString = toString(value).slice(8);
+              var typeString = toString(value).slice(8);
               if (typeString.includes('Object')) {
                   return 'object';
               }
@@ -534,12 +598,14 @@ var DxsUtil = (function (exports) {
    * @param {*} other
    * @return {*}  {boolean}
    */
-  function strictEqual(value, other, ma = new Map()) {
+  function strictEqual(value, other, ma) {
+      var e_1, _a;
+      if (ma === void 0) { ma = new Map(); }
       if (value === other) {
           return true;
       }
-      const typeA = typeOf(value);
-      const typeB = typeOf(other);
+      var typeA = typeOf(value);
+      var typeB = typeOf(other);
       if (typeA !== typeB) {
           return false;
       }
@@ -560,7 +626,7 @@ var DxsUtil = (function (exports) {
                   return false;
               }
               ma.set(value, other);
-              for (let i = 0, len = value.length; i < len; i++) {
+              for (var i = 0, len = value.length; i < len; i++) {
                   if (!strictEqual(value[i], other[i], ma)) {
                       return false;
                   }
@@ -571,10 +637,20 @@ var DxsUtil = (function (exports) {
                   return ma.get(value) === other;
               }
               ma.set(value, other);
-              for (const key of Reflect.ownKeys(value)) {
-                  if (!strictEqual(value[key], other[key], ma)) {
-                      return false;
+              try {
+                  for (var _b = __values(Reflect.ownKeys(value)), _c = _b.next(); !_c.done; _c = _b.next()) {
+                      var key = _c.value;
+                      if (!strictEqual(value[key], other[key], ma)) {
+                          return false;
+                      }
                   }
+              }
+              catch (e_1_1) { e_1 = { error: e_1_1 }; }
+              finally {
+                  try {
+                      if (_c && !_c.done && (_a = _b.return)) _a.call(_b);
+                  }
+                  finally { if (e_1) throw e_1.error; }
               }
               return true;
       }
@@ -598,7 +674,9 @@ var DxsUtil = (function (exports) {
    * @param min 最小值
    * @param max 最大值
    */
-  function random(min = 0, max = 100) {
+  function random(min, max) {
+      if (min === void 0) { min = 0; }
+      if (max === void 0) { max = 100; }
       return (Math.random() * (+max - +min) + +min) | 0;
   }
   /**
@@ -607,11 +685,12 @@ var DxsUtil = (function (exports) {
    * @return {Array} 返回乱序后的数组
    */
   function shuffle(array) {
-      const result = clone(array);
-      let m = result.length, i;
+      var _a;
+      var result = clone(array);
+      var m = result.length, i;
       while (m) {
           i = (Math.random() * m--) | 0;
-          [result[m], result[i]] = [result[i], result[m]];
+          _a = __read([result[i], result[m]], 2), result[m] = _a[0], result[i] = _a[1];
       }
       return result;
   }

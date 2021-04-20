@@ -2,22 +2,33 @@ const { resolve } = require('path')
 const { name, version, repository } = require('../../package.json')
 const sidebar = [
   '/',
-  '/guide/',
-  '/function/',
+  // '/guide/',
+  {
+    title: '函数',
+    children: [
+      '/function/noop',
+      '/function/debounce',
+      '/function/throttle',
+      '/function/lock'
+    ]
+  },
   '/url/',
   '/data/',
   '/number/',
-  '/date/'
+  {
+    title: '日期',
+    children: ['/date/dayOfTheWeek']
+  }
 ]
 function CustomPlugin() {}
 CustomPlugin.prototype.apply = function(compiler) {
   compiler.hooks.emit.tapAsync('CustomPlugin', (compilation, callback) => {
-    const changedFiles = compilation.compiler.watchFileSystem.watcher.mtimes
-    if (
-      !Object.keys(changedFiles).filter(key => key.includes('guide')).length
-    ) {
-      require('child_process').exec('npm run guide')
-    }
+    // const changedFiles = compilation.compiler.watchFileSystem.watcher.mtimes
+    // if (
+    //   !Object.keys(changedFiles).filter(key => key.includes('guide')).length
+    // ) {
+    //   require('child_process').exec('npm run guide')
+    // }
     callback()
   })
 }

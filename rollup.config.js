@@ -8,7 +8,7 @@ const resolve = p => path.resolve(__dirname, p)
 
 const banner =
   '/*!\n' +
-  ` * dxs-utils v${version}\n` +
+  ` * ${name} v${version}\n` +
   ` * (c) 2020-${new Date().getFullYear()} Xiongsheng Dai\n` +
   ' * Released under the MIT License.\n' +
   ' */'
@@ -21,7 +21,7 @@ const outputConfigs = {
   },
   esm: {
     file: resolve(`dist/${name}.esm.js`),
-    format: 'es',
+    format: 'esm',
     banner
   },
   global: {
@@ -88,20 +88,6 @@ function createConfig(format, output, plugins = []) {
 
   const entryFile = `src/index.ts`
 
-  const external = isGlobalBuild
-    ? // externalize postcss for @vue/compiler-sfc
-      // because @rollup/plugin-commonjs cannot bundle it properly
-      ['postcss']
-    : // normal browser builds - non-browser only imports are tree-shaken,
-      // they are only listed here to suppress warnings.
-      ['source-map', '@babel/parser', 'estree-walker']
-
-  // the browser builds of @vue/compiler-sfc requires postcss to be available
-  // as a global (e.g. http://wzrd.in/standalone/postcss)
-  output.globals = {
-    postcss: 'postcss'
-  }
-
   const nodePlugins =
     format !== 'cjs'
       ? [
@@ -118,18 +104,12 @@ function createConfig(format, output, plugins = []) {
 
   return {
     input: resolve(entryFile),
-    external,
     plugins: [
       json({
         namedExports: false
       }),
       tsPlugin,
-      createReplacePlugin(
-        isProductionBuild,
-        isGlobalBuild,
-        isGlobalBuild,
-        isNodeBuild
-      ),
+      createReplacePlugin(isProductionBuild, isNodeBuild),
       ...nodePlugins,
       ...plugins
     ],
@@ -145,19 +125,12 @@ function createConfig(format, output, plugins = []) {
   }
 }
 
-function createReplacePlugin(
-  isProduction,
-  isBrowserBuild,
-  isGlobalBuild,
-  isNodeBuild
-) {
+function createReplacePlugin(isProduction, isNodeBuild) {
   const replacements = {
     __COMMIT__: `"${process.env.COMMIT}"`,
     __VERSION__: `"${version}"`,
     __DEV__: !isProduction,
     __TEST__: false,
-    __BROWSER__: isBrowserBuild,
-    __GLOBAL__: isGlobalBuild,
     __NODE_JS__: isNodeBuild
   }
   Object.keys(replacements).forEach(key => {

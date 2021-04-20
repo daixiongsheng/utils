@@ -1,4 +1,5 @@
 const path = require('path')
+process.exit(0)
 const resolve = (...p) => path.resolve(__dirname, '..', ...p)
 const config = require(resolve('docs', '.vuepress', 'config.js'))
 const { sidebar } = config.themeConfig
@@ -17,6 +18,7 @@ outStream.on('open', () => {
   const re = /title:\s*(.+)\n(.|\n)*/
   const rshape = /^#\B[^#]\s*(.+)\n?(.|\n)*/
   sidebar.forEach(key => {
+    key = typeof key === 'object' ? key.children[0] : key
     key = key.replace(/\//g, '')
     if (key && !key.includes('guide')) {
       const data = fs.readFileSync(resolve('docs', key, 'index.md')).toString()

@@ -1,6 +1,9 @@
 const fs = require('fs')
 const path = require('path')
 const execa = require('execa')
+const chalk = require('chalk')
+const { gzipSync } = require('zlib')
+const { compress } = require('brotli')
 
 const args = require('minimist')(process.argv.slice(2))
 const resolve = (...p) => path.resolve(__dirname, '..', ...p)
@@ -13,10 +16,6 @@ const isRelease = args.release
 const buildTypes = args.t || args.types || isRelease
 run()
 async function run() {
-  if (isRelease) {
-    // remove build cache for release builds to avoid outdated enum values
-    // await fs.remove(path.resolve(__dirname, '../node_modules/.rts2_cache'));
-  }
   await execa('rm', ['-rf', 'dist', 'types'])
   await execa('mkdir', ['dist'])
 
@@ -25,7 +24,8 @@ async function run() {
 }
 
 async function buildAll() {
-  const env = 0 ? 'development' : 'production'
+  const env =
+    process.env.NODE_ENV !== 'development' ? 'production' : 'development'
   await execa(
     'rollup',
     [
@@ -53,6 +53,7 @@ function checkAllSizes() {
 }
 
 function checkFileSize(filePath) {
+  filePath = resolve('dist', filePath)
   if (!fs.existsSync(filePath)) {
     return
   }
