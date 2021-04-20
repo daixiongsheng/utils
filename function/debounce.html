@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>debounce | 工具集</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    <link rel="icon" href="/utils/favicon.ico">
+    <meta name="description" content="工具集">
+    
+    <link rel="preload" href="/utils/assets/css/0.styles.fb94dbf7.css" as="style"><link rel="preload" href="/utils/assets/js/app.4c8a7ac9.js" as="script"><link rel="preload" href="/utils/assets/js/2.d58be569.js" as="script"><link rel="preload" href="/utils/assets/js/12.cd79d1e3.js" as="script"><link rel="prefetch" href="/utils/assets/js/10.3b578c29.js"><link rel="prefetch" href="/utils/assets/js/11.de3182c6.js"><link rel="prefetch" href="/utils/assets/js/13.ee43418d.js"><link rel="prefetch" href="/utils/assets/js/14.37d3600d.js"><link rel="prefetch" href="/utils/assets/js/15.9f3c6bb0.js"><link rel="prefetch" href="/utils/assets/js/16.3ba68d40.js"><link rel="prefetch" href="/utils/assets/js/17.fdcb22fa.js"><link rel="prefetch" href="/utils/assets/js/18.0b1166e5.js"><link rel="prefetch" href="/utils/assets/js/3.4c11b233.js"><link rel="prefetch" href="/utils/assets/js/4.a89313ec.js"><link rel="prefetch" href="/utils/assets/js/5.cf9b7af4.js"><link rel="prefetch" href="/utils/assets/js/6.f8605c8d.js"><link rel="prefetch" href="/utils/assets/js/7.1432ff79.js"><link rel="prefetch" href="/utils/assets/js/8.0a6ffe09.js"><link rel="prefetch" href="/utils/assets/js/9.6ca074b6.js">
+    <link rel="stylesheet" href="/utils/assets/css/0.styles.fb94dbf7.css">
+</head>
+
+<body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/utils/" class="home-link router-link-active"><img src="/utils/img/logo.png" alt="工具集" class="logo"> <span class="site-name can-hide">工具集</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"> <a href="https://github.com/daixiongsheng/utils.git" target="_blank" rel="noopener noreferrer" class="repo-link">
+    查看源码
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"> <a href="https://github.com/daixiongsheng/utils.git" target="_blank" rel="noopener noreferrer" class="repo-link">
+    查看源码
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav>  <ul class="sidebar-links"><li><a href="/utils/" aria-current="page" class="sidebar-link">介绍</a></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>函数</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/utils/function/noop.html" class="sidebar-link">noop</a></li><li><a href="/utils/function/debounce.html" aria-current="page" class="active sidebar-link">debounce</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/utils/function/throttle.html" class="sidebar-link">throttle</a></li><li><a href="/utils/function/lock.html" class="sidebar-link">Lock</a></li></ul></section></li><li><a href="/utils/url/" class="sidebar-link">url处理</a></li><li><a href="/utils/data/" class="sidebar-link">数据处理</a></li><li><a href="/utils/number/" class="sidebar-link">数字/单位处理</a></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>日期</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h3 id="防抖函数"><a href="#防抖函数" class="header-anchor">#</a> 防抖函数</h3> <p><code>debounce(func, delay, [immediate=false])</code></p> <h4 id="说明"><a href="#说明" class="header-anchor">#</a> 说明</h4> <p>创建一个 <code>debounced</code> 防抖函数，该函数会从上一次被调用后，延迟 <code>delay</code> 毫秒后调用 <code>func</code> 方法。
+返回的 <code>debounced</code> 防抖函数提供一个 <code>cancel</code> 方法取消延迟的函数调用
+<code>immediate</code> 表示先调用后等待 还是 先等待后调用</p> <h4 id="params"><a href="#params" class="header-anchor">#</a> params</h4> <ol><li><code>{Function}</code>: 需要防抖的函数</li> <li><code>{number}</code>: 防抖时间</li> <li><code>{boolean} [immediate=false]</code>: 是否立即执行</li></ol> <h4 id="return"><a href="#return" class="header-anchor">#</a> return</h4> <p><code>{Function}</code>: 返回新的 <code>debounced</code> 防抖函数。</p> <h4 id="eg"><a href="#eg" class="header-anchor">#</a> eg</h4> <div class="language-JS line-numbers-mode"><pre class="language-js"><code><span class="token comment">// 这个函数会在滚动停止后的200ms后执行</span>
+window<span class="token punctuation">.</span>onscroll <span class="token operator">=</span> <span class="token function">debounce</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'这个函数会在滚动停止后的200ms后执行'</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token number">200</span><span class="token punctuation">)</span>
+
+<span class="token comment">// 这个函数会立即执行一次，并且在停止滚动后的200ms再次滚动不会执行</span>
+window<span class="token punctuation">.</span>onscroll <span class="token operator">=</span> <span class="token function">debounce</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'这个函数会立即执行一次，并且在停止滚动后的200ms再次滚动不会执行'</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token number">200</span><span class="token punctuation">,</span> <span class="token boolean">true</span><span class="token punctuation">)</span>
+
+
+<span class="token comment">// cancel后，这个函数不会在滚动停止后的200ms后执行</span>
+<span class="token keyword">const</span> f <span class="token operator">=</span> <span class="token function">debounce</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'这个函数不会在滚动停止后的200ms后执行'</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token number">200</span><span class="token punctuation">)</span>
+window<span class="token punctuation">.</span><span class="token function-variable function">onscroll</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token function">f</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  f<span class="token punctuation">.</span><span class="token function">cancel</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br></div></div></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated:</span> <span class="time">4/20/2021, 5:03:22 PM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/utils/function/noop.html" class="prev">
+        noop
+      </a></span> <span class="next"><a href="/utils/function/throttle.html">
+        throttle
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/utils/assets/js/app.4c8a7ac9.js" defer></script><script src="/utils/assets/js/2.d58be569.js" defer></script><script src="/utils/assets/js/12.cd79d1e3.js" defer></script>
+</body>
+
+</html>
