@@ -10,7 +10,7 @@ export declare function toNumber(val: string | number): number | string;
  * 进制转换
  *
  * @export
- * @param {number} number 需要转换的数
+ * @param {number | string} number 需要转换的数
  * @param {number} base 原进制
  * @param {number} radix 转换后的进制
  * @return {*}  {string}

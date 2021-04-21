@@ -1,5 +1,5 @@
 /*!
- * dxs-utils v0.0.4
+ * dxs-utils v0.0.5
  * (c) 2020-2021 Xiongsheng Dai
  * Released under the MIT License.
  */
@@ -16,13 +16,13 @@ Object.defineProperty(exports, '__esModule', { value: true });
  */
 function toNumber(val) {
     var n = parseFloat(val + '');
-    return isNaN(n) ? val : n;
+    return n !== n ? val : n;
 }
 /**
  * 进制转换
  *
  * @export
- * @param {number} number 需要转换的数
+ * @param {number | string} number 需要转换的数
  * @param {number} base 原进制
  * @param {number} radix 转换后的进制
  * @return {*}  {string}
@@ -459,7 +459,7 @@ function toString(o) {
     return Object.prototype.toString.call(o);
 }
 /**
- * 判断是不是对象，typeof
+ * 判断是不是对象
  *
  * @export
  * @template T

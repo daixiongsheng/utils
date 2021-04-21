@@ -2,7 +2,6 @@ const { resolve } = require('path')
 const { name, version, repository } = require('../../package.json')
 const sidebar = [
   '/',
-  // '/guide/',
   {
     title: '函数',
     children: [
@@ -12,9 +11,39 @@ const sidebar = [
       '/function/lock'
     ]
   },
-  '/url/',
-  '/data/',
-  '/number/',
+  {
+    title: '数据处理',
+    children: [
+      '/data/isPromise',
+      '/data/isObject',
+      '/data/isDef',
+      '/data/typeOf',
+      '/data/clone',
+      '/data/strictEqual',
+      '/data/isEmptyObject',
+      '/data/random',
+      '/data/shuffle'
+    ]
+  },
+  {
+    title: 'URL处理',
+    children: ['/url/object2QueryString', '/url/dealPath', '/url/query2Object']
+  },
+  {
+    title: '数字/单位处理',
+    children: [
+      '/number/toNumber',
+      '/number/numberConvert',
+      '/number/dec2bin',
+      '/number/dec2hex',
+      '/number/bin2dec',
+      '/number/bin2hex',
+      '/number/hex2bin',
+      '/number/hex2dec',
+      '/number/bytes2simple',
+      '/number/simple2bytes'
+    ]
+  },
   {
     title: '日期',
     children: ['/date/dayOfTheWeek']

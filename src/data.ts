@@ -10,7 +10,7 @@ export function toString<T = any>(o: T): string {
 }
 
 /**
- * 判断是不是对象，typeof
+ * 判断是不是对象
  *
  * @export
  * @template T

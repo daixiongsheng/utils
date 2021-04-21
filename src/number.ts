@@ -7,14 +7,14 @@
  */
 export function toNumber(val: string | number): number | string {
   const n = parseFloat(val + '')
-  return isNaN(n) ? val : n
+  return n !== n ? val : n
 }
 
 /**
  * 进制转换
  *
  * @export
- * @param {number} number 需要转换的数
+ * @param {number | string} number 需要转换的数
  * @param {number} base 原进制
  * @param {number} radix 转换后的进制
  * @return {*}  {string}

@@ -49,6 +49,7 @@ describe('进制转换', () => {
     expect(bin2hex(10)).toBe('2')
     expect(bin2hex('10')).toBe('2')
     expect(bin2hex('10')).toBe('2')
+    expect(bin2hex(10000)).toBe('10')
   })
 
   it('16进制转2进制', () => {

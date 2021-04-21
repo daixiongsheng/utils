@@ -41,6 +41,9 @@ describe('类型', () => {
     expect(typeOf(/r/)).toBe('object')
     expect(typeOf(true)).toBe('boolean')
     expect(typeOf(void 0)).toBe('undefined')
+    // @ts-ignore
+    expect(typeOf()).toBe('undefined')
+    // @ts-ignore
     expect(typeOf(1n)).toBe('bigint')
     expect(typeOf(Symbol())).toBe('symbol')
     expect(typeOf(Symbol())).not.toBe('number')
@@ -72,6 +75,7 @@ describe('base', () => {
         r: /r/,
         date: new Date(),
         g: [{ foo: 'bar' }, 1, null],
+        // @ts-ignore
         h: 1n
       }
     ].forEach(input => {
@@ -133,6 +137,9 @@ describe('判断是不是空对象', () => {
   it('空对象', () => {
     expect(isEmptyObject({})).toBe(true)
     expect(isEmptyObject([])).toBe(true)
+    expect(isEmptyObject(null)).toBe(false)
+    expect(isEmptyObject(void 0)).toBe(false)
+    expect(isEmptyObject(1)).toBe(false)
     expect(isEmptyObject(Object.create(null))).toBe(true)
   })
 

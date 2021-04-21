@@ -6,6 +6,7 @@
   "author": "daixiongsheng",
   "license": "MIT",
   "main": "index.js",
+  "homepage": "https://daixiongsheng.github.io/utils",
   "files": [
     "src",
     "index.js",
@@ -49,6 +50,7 @@
     "rollup-plugin-terser": "^7.0.2",
     "rollup-plugin-typescript2": "^0.30.0",
     "ts-jest": "^26.5.4",
+    "ts-node": "^9.1.1",
     "typescript": "^4.2.4",
     "vuepress": "^1.8.2"
   },

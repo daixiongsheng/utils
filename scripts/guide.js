@@ -1,5 +1,4 @@
 const path = require('path')
-process.exit(0)
 const resolve = (...p) => path.resolve(__dirname, '..', ...p)
 const config = require(resolve('docs', '.vuepress', 'config.js'))
 const { sidebar } = config.themeConfig
