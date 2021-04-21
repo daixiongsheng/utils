@@ -11,6 +11,6 @@ describe('日期', () => {
 
     expect(dayOfTheWeek(toDay)[1]).toBeGreaterThanOrEqual(1)
     expect(dayOfTheWeek(toDay)[1]).toBeLessThanOrEqual(7)
-    expect(dayOfTheWeek()[1]).toEqual(dayOfTheWeek(toDay)[1]);
+    expect(dayOfTheWeek()[1]).toEqual(dayOfTheWeek(toDay)[1])
   })
 })
