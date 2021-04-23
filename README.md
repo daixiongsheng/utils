@@ -4,6 +4,8 @@ title: 介绍
 
 # 前端常用工具类方法
 
+[文档链接](https://daixiongsheng.github.io/utils/)
+
 > 本文档的持续更新中...
 
 ---
