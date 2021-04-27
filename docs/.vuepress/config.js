@@ -47,7 +47,8 @@ const sidebar = [
   {
     title: '日期',
     children: ['/date/dayOfTheWeek']
-  }
+  },
+  require('./logs.json')
 ]
 function CustomPlugin() {}
 CustomPlugin.prototype.apply = function(compiler) {

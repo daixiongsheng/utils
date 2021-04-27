@@ -115,3 +115,34 @@ export const Lock = {
     this[`$$${key}`] = true
   }
 }
+
+/**
+ *
+ * 从右到左
+ *
+ * @param  {Array[Function]} funcs
+ */
+
+export function compose(
+  ...funcs: ((value: any) => any)[]
+): (value: any) => any {
+  return function(x) {
+    return funcs.reduceRight(function(res, cb) {
+      return cb(res)
+    }, x)
+  }
+}
+
+/**
+ *
+ * 从左到右
+ *
+ * @param  {Array[Function]} funcs
+ */
+export function pipe(...funcs: ((value: any) => any)[]): (value: any) => any {
+  return function(x) {
+    return funcs.reduce(function(res, cb) {
+      return cb(res)
+    }, x)
+  }
+}

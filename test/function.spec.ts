@@ -1,4 +1,4 @@
-import { noop, debounce, throttle, Lock } from '../src'
+import { noop, debounce, throttle, Lock, compose, pipe } from '../src'
 
 describe('base', () => {
   it('noop', () => {
@@ -89,4 +89,50 @@ describe('锁', () => {
     Lock.unlock('getUserInfo')
     expect(Lock.isLocked('getUserInfo')).toBe(false)
   })
+})
+
+it('compose', () => {
+  function addFive(number) {
+    return number + 5
+  }
+  function multiplyTen(number) {
+    return number * 10
+  }
+
+  function subSix(number) {
+    return number - 6
+  }
+
+  expect(compose(addFive, multiplyTen)(10)).toBe(10 * 10 + 5)
+
+  expect(compose(addFive)(10)).toBe(10 + 5)
+
+  expect(compose(multiplyTen, addFive)(10)).toBe((10 + 5) * 10)
+
+  expect(compose(multiplyTen, addFive, subSix)(10)).toBe((10 - 6 + 5) * 10)
+
+  expect(compose(addFive, multiplyTen)(10)).toBe(10 * 10 + 5)
+
+  expect(compose()(10)).toBe(10)
+})
+
+it('pipe', () => {
+  function addFive(number) {
+    return number + 5
+  }
+  function multiplyTen(number) {
+    return number * 10
+  }
+
+  function subSix(number) {
+    return number - 6
+  }
+
+  expect(pipe(addFive, multiplyTen)(10)).toBe((10 + 5) * 10)
+
+  expect(pipe(addFive)(10)).toBe(10 + 5)
+
+  expect(pipe(multiplyTen, addFive)(10)).toBe(10 * 10 + 5)
+
+  expect(pipe(multiplyTen, addFive, subSix)(10)).toBe(10 * 10 + 5 - 6)
 })
