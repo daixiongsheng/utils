@@ -1,5 +1,5 @@
 /*!
- * dxs-utils v0.0.5
+ * dxs-utils v0.0.7
  * (c) 2020-2021 Xiongsheng Dai
  * Released under the MIT License.
  */
@@ -447,6 +447,40 @@ var Lock = {
         this["$$" + key] = true;
     }
 };
+/**
+ *
+ * 从右到左
+ *
+ * @param  {Array[Function]} funcs
+ */
+function compose() {
+    var funcs = [];
+    for (var _i = 0; _i < arguments.length; _i++) {
+        funcs[_i] = arguments[_i];
+    }
+    return function (x) {
+        return funcs.reduceRight(function (res, cb) {
+            return cb(res);
+        }, x);
+    };
+}
+/**
+ *
+ * 从左到右
+ *
+ * @param  {Array[Function]} funcs
+ */
+function pipe() {
+    var funcs = [];
+    for (var _i = 0; _i < arguments.length; _i++) {
+        funcs[_i] = arguments[_i];
+    }
+    return function (x) {
+        return funcs.reduce(function (res, cb) {
+            return cb(res);
+        }, x);
+    };
+}
 
 /**
  * Object.prototype.toString
@@ -701,6 +735,7 @@ exports.bin2dec = bin2dec;
 exports.bin2hex = bin2hex;
 exports.bytes2simple = bytes2simple;
 exports.clone = clone;
+exports.compose = compose;
 exports.dayOfTheWeek = dayOfTheWeek;
 exports.dealPath = dealPath;
 exports.debounce = debounce;
@@ -715,6 +750,7 @@ exports.isPromise = isPromise;
 exports.noop = noop;
 exports.numberConvert = numberConvert;
 exports.object2QueryString = object2QueryString;
+exports.pipe = pipe;
 exports.query2Object = query2Object;
 exports.random = random;
 exports.shuffle = shuffle;

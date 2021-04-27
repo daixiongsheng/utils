@@ -54,3 +54,17 @@ export declare const Lock: {
      */
     lock(key: string): void;
 };
+/**
+ *
+ * 从右到左
+ *
+ * @param  {Array[Function]} funcs
+ */
+export declare function compose(...funcs: ((value: any) => any)[]): (value: any) => any;
+/**
+ *
+ * 从左到右
+ *
+ * @param  {Array[Function]} funcs
+ */
+export declare function pipe(...funcs: ((value: any) => any)[]): (value: any) => any;

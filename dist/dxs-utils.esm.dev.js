@@ -1,5 +1,5 @@
 /*!
- * dxs-utils v0.0.5
+ * dxs-utils v0.0.7
  * (c) 2020-2021 Xiongsheng Dai
  * Released under the MIT License.
  */
@@ -443,6 +443,40 @@ var Lock = {
         this["$$" + key] = true;
     }
 };
+/**
+ *
+ * 从右到左
+ *
+ * @param  {Array[Function]} funcs
+ */
+function compose() {
+    var funcs = [];
+    for (var _i = 0; _i < arguments.length; _i++) {
+        funcs[_i] = arguments[_i];
+    }
+    return function (x) {
+        return funcs.reduceRight(function (res, cb) {
+            return cb(res);
+        }, x);
+    };
+}
+/**
+ *
+ * 从左到右
+ *
+ * @param  {Array[Function]} funcs
+ */
+function pipe() {
+    var funcs = [];
+    for (var _i = 0; _i < arguments.length; _i++) {
+        funcs[_i] = arguments[_i];
+    }
+    return function (x) {
+        return funcs.reduce(function (res, cb) {
+            return cb(res);
+        }, x);
+    };
+}
 
 /**
  * Object.prototype.toString
@@ -692,4 +726,4 @@ function shuffle(array) {
     return result;
 }
 
-export { Lock, bin2dec, bin2hex, bytes2simple, clone, dayOfTheWeek, dealPath, debounce, dec2bin, dec2hex, hex2bin, hex2dec, isDef, isEmptyObject, isObject, isPromise, noop, numberConvert, object2QueryString, query2Object, random, shuffle, simple2bytes, strictEqual, throttle, toNumber, toString, typeOf };
+export { Lock, bin2dec, bin2hex, bytes2simple, clone, compose, dayOfTheWeek, dealPath, debounce, dec2bin, dec2hex, hex2bin, hex2dec, isDef, isEmptyObject, isObject, isPromise, noop, numberConvert, object2QueryString, pipe, query2Object, random, shuffle, simple2bytes, strictEqual, throttle, toNumber, toString, typeOf };
