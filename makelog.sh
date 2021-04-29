@@ -36,11 +36,11 @@ for file in $files;do
   if [[ ! $file =~ "index.md" ]];then
     file=${file/.md/}
     out+="### [$file](/logs/$file/)"$'\n'$'\n'
-    file="    "\"\/logs\/$file\/\"
+    file="    "\"\/logs\/$file\"
     content+=$file$',\n'
   fi;
 done
-content+="    "\"\/logs\/$now\/\"
+content+="    "\"\/logs\/$now\"
 # IFS=$''
 cat >$path/index.md<<EOF
 ---
