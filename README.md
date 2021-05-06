@@ -29,5 +29,5 @@ import { bytes2simple } from 'dxs-utils'
 // or
 // const { bytes2simple } = require('dxs-utils');
 
-console.assert(bytes2simple(1024) === '1KB')
+console.assert(bytes2simple(1024 * 1024) === '1MB')
 ```
