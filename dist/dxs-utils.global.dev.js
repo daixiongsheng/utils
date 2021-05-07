@@ -1,9 +1,9 @@
 /*!
- * dxs-utils v0.0.8
+ * dxs-utils v0.0.9
  * (c) 2020-2021 Xiongsheng Dai
  * Released under the MIT License.
  */
-var DxsUtil = (function (exports) {
+var DxsUtils = (function (exports) {
   'use strict';
 
   /**

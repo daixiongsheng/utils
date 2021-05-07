@@ -225,7 +225,7 @@ export function isEmptyObject(v: any): boolean {
  * @param min 最小值
  * @param max 最大值
  */
-export function random(min: number = 0, max: number = 100) {
+export function random(min = 0, max = 100) {
   return (Math.random() * (+max - +min) + +min) | 0
 }
 

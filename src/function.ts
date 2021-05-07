@@ -26,7 +26,7 @@ export interface DebouncedFunction<T extends (...args: any) => any> {
 export function debounce<T extends (...args: any) => any>(
   func: T,
   delay: number,
-  immediate: boolean = false
+  immediate = false
 ): DebouncedFunction<T> {
   let timer: number | null = null
   function f(...args: Parameters<T>): void {

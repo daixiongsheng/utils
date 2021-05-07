@@ -3,7 +3,7 @@
   "version": "0.0.9",
   "description": "常用工具方法集",
   "repository": "https://github.com/daixiongsheng/utils.git",
-  "author": "daixiongsheng",
+  "author": "Xiongsheng Dai",
   "license": "MIT",
   "main": "index.js",
   "homepage": "https://daixiongsheng.github.io/utils",
@@ -33,6 +33,7 @@
     "@babel/core": "^7.13.10",
     "@babel/preset-env": "^7.13.12",
     "@rollup/plugin-commonjs": "^18.0.0",
+    "@rollup/plugin-eslint": "^8.0.1",
     "@rollup/plugin-json": "^4.1.0",
     "@rollup/plugin-node-resolve": "^11.2.1",
     "@rollup/plugin-replace": "^2.4.2",
@@ -53,6 +54,5 @@
     "ts-node": "^9.1.1",
     "typescript": "^4.2.4",
     "vuepress": "^1.8.2"
-  },
-  "dependencies": {}
+  }
 }
