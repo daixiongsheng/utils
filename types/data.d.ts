@@ -15,6 +15,7 @@ export declare function toString<T = any>(o: T): string;
  * @return {*}  {boolean}
  */
 export declare function isObject<T = any>(o: T): boolean;
+export declare type BaseType = boolean | number | string | symbol | bigint | any;
 /**
  * 判断有没有定义，不是null和undefined
  *
@@ -23,7 +24,7 @@ export declare function isObject<T = any>(o: T): boolean;
  * @param {T} o
  * @return {*}  {boolean}
  */
-export declare function isDef(v: any): boolean;
+export declare function isDef(v: BaseType): boolean;
 /**
  * 判断是不是一个promise
  *
@@ -31,7 +32,7 @@ export declare function isDef(v: any): boolean;
  * @param {*} v
  * @return {*}  {boolean}
  */
-export declare function isPromise(v: any): boolean;
+export declare function isPromise(v: BaseType): boolean;
 /**
  * 深拷贝对象
  *
@@ -65,7 +66,7 @@ export declare function strictEqual<T = any>(value: T, other: T, ma?: Map<any, a
  * @param {object} value
  * @return {*}  {boolean}
  */
-export declare function isEmptyObject(v: any): boolean;
+export declare function isEmptyObject(v: BaseType): boolean;
 /**
  * 获取指定范围的随机整数
  * @param min 最小值

@@ -21,6 +21,7 @@ export function isObject<T = any>(o: T): boolean {
   return typeof o === 'object' && o !== null
 }
 
+export type BaseType = boolean | number | string | symbol | bigint | any;
 /**
  * 判断有没有定义，不是null和undefined
  *
@@ -29,7 +30,7 @@ export function isObject<T = any>(o: T): boolean {
  * @param {T} o
  * @return {*}  {boolean}
  */
-export function isDef(v: any): boolean {
+export function isDef(v: BaseType): boolean {
   return v !== undefined && v !== null
 }
 
@@ -40,7 +41,7 @@ export function isDef(v: any): boolean {
  * @param {*} v
  * @return {*}  {boolean}
  */
-export function isPromise(v: any): boolean {
+export function isPromise(v: BaseType): boolean {
   return (
     isDef(v) && typeof v.then === 'function' && typeof v.catch === 'function'
   )
@@ -213,7 +214,7 @@ export function strictEqual<T = any>(
  * @param {object} value
  * @return {*}  {boolean}
  */
-export function isEmptyObject(v: any): boolean {
+export function isEmptyObject(v: BaseType): boolean {
   if (!isObject(v)) {
     return false
   }
@@ -225,7 +226,7 @@ export function isEmptyObject(v: any): boolean {
  * @param min 最小值
  * @param max 最大值
  */
-export function random(min = 0, max = 100) {
+export function random(min = 0, max = 100): number {
   return (Math.random() * (+max - +min) + +min) | 0
 }
 
