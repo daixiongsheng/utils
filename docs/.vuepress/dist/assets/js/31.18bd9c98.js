@@ -1,13 +1,13 @@
 ;(window.webpackJsonp = window.webpackJsonp || []).push([
   [31],
   {
-    379: function(t, s, a) {
+    379: function (t, s, a) {
       'use strict'
       a.r(s)
       var n = a(41),
         r = Object(n.a)(
           {},
-          function() {
+          function () {
             var t = this,
               s = t.$createElement,
               a = t._self._c || s
@@ -20,11 +20,11 @@
                     'a',
                     {
                       staticClass: 'header-anchor',
-                      attrs: { href: '#十进制转二进制' }
+                      attrs: { href: '#十进制转二进制' },
                     },
                     [t._v('#')]
                   ),
-                  t._v(' 十进制转二进制')
+                  t._v(' 十进制转二进制'),
                 ]),
                 t._v(' '),
                 a('p', [a('code', [t._v('dec2bin(number)')])]),
@@ -35,7 +35,7 @@
                     { staticClass: 'header-anchor', attrs: { href: '#说明' } },
                     [t._v('#')]
                   ),
-                  t._v(' 说明')
+                  t._v(' 说明'),
                 ]),
                 t._v(' '),
                 a('p', [t._v('进制转换')]),
@@ -45,18 +45,18 @@
                     'a',
                     {
                       staticClass: 'header-anchor',
-                      attrs: { href: '#params' }
+                      attrs: { href: '#params' },
                     },
                     [t._v('#')]
                   ),
-                  t._v(' params')
+                  t._v(' params'),
                 ]),
                 t._v(' '),
                 a('ol', [
                   a('li', [
                     a('code', [t._v('{number}')]),
-                    t._v(': 需要转换的数')
-                  ])
+                    t._v(': 需要转换的数'),
+                  ]),
                 ]),
                 t._v(' '),
                 a('h4', { attrs: { id: 'return' } }, [
@@ -64,16 +64,16 @@
                     'a',
                     {
                       staticClass: 'header-anchor',
-                      attrs: { href: '#return' }
+                      attrs: { href: '#return' },
                     },
                     [t._v('#')]
                   ),
-                  t._v(' return')
+                  t._v(' return'),
                 ]),
                 t._v(' '),
                 a('p', [
                   a('code', [t._v('{string}')]),
-                  t._v(': 返回转换后二进制的字串形式')
+                  t._v(': 返回转换后二进制的字串形式'),
                 ]),
                 t._v(' '),
                 a('h4', { attrs: { id: 'eg' } }, [
@@ -82,7 +82,7 @@
                     { staticClass: 'header-anchor', attrs: { href: '#eg' } },
                     [t._v('#')]
                   ),
-                  t._v(' eg')
+                  t._v(' eg'),
                 ]),
                 t._v(' '),
                 a('div', { staticClass: 'language-JS line-numbers-mode' }, [
@@ -115,7 +115,7 @@
                         [t._v('(')]
                       ),
                       a('span', { pre: !0, attrs: { class: 'token number' } }, [
-                        t._v('2')
+                        t._v('2'),
                       ]),
                       a(
                         'span',
@@ -130,7 +130,7 @@
                       ),
                       t._v(' '),
                       a('span', { pre: !0, attrs: { class: 'token string' } }, [
-                        t._v("'10'")
+                        t._v("'10'"),
                       ]),
                       a(
                         'span',
@@ -169,7 +169,7 @@
                         [t._v('-')]
                       ),
                       a('span', { pre: !0, attrs: { class: 'token number' } }, [
-                        t._v('10')
+                        t._v('10'),
                       ]),
                       a(
                         'span',
@@ -184,24 +184,24 @@
                       ),
                       t._v(' '),
                       a('span', { pre: !0, attrs: { class: 'token string' } }, [
-                        t._v("'-1010'")
+                        t._v("'-1010'"),
                       ]),
                       a(
                         'span',
                         { pre: !0, attrs: { class: 'token punctuation' } },
                         [t._v(')')]
                       ),
-                      t._v('\n')
-                    ])
+                      t._v('\n'),
+                    ]),
                   ]),
                   t._v(' '),
                   a('div', { staticClass: 'line-numbers-wrapper' }, [
                     a('span', { staticClass: 'line-number' }, [t._v('1')]),
                     a('br'),
                     a('span', { staticClass: 'line-number' }, [t._v('2')]),
-                    a('br')
-                  ])
-                ])
+                    a('br'),
+                  ]),
+                ]),
               ]
             )
           },
@@ -212,6 +212,6 @@
           null
         )
       s.default = r.exports
-    }
-  }
+    },
+  },
 ])

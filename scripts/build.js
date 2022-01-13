@@ -36,10 +36,10 @@ async function buildAll() {
         formats ? `FORMATS:${formats}` : ``,
         buildTypes ? `TYPES:true` : ``,
         prodOnly ? `PROD_ONLY:true` : ``,
-        sourceMap ? `SOURCE_MAP:true` : ``
+        sourceMap ? `SOURCE_MAP:true` : ``,
       ]
         .filter(Boolean)
-        .join(',')
+        .join(','),
     ],
     { stdio: 'inherit' }
   )
@@ -48,7 +48,7 @@ async function buildAll() {
 function checkAllSizes() {
   const targets = fs
     .readdirSync(resolve('dist'))
-    .filter(f => !fs.statSync(resolve('dist', f)).isDirectory())
+    .filter((f) => !fs.statSync(resolve('dist', f)).isDirectory())
   targets.forEach(checkFileSize)
 }
 

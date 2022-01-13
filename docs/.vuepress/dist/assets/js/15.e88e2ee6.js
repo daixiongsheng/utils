@@ -1,13 +1,13 @@
 ;(window.webpackJsonp = window.webpackJsonp || []).push([
   [15],
   {
-    362: function(t, a, s) {
+    362: function (t, a, s) {
       'use strict'
       s.r(a)
       var r = s(41),
         e = Object(r.a)(
           {},
-          function() {
+          function () {
             var t = this,
               a = t.$createElement,
               s = t._self._c || a
@@ -20,11 +20,11 @@
                     'a',
                     {
                       staticClass: 'header-anchor',
-                      attrs: { href: '#乱序数组' }
+                      attrs: { href: '#乱序数组' },
                     },
                     [t._v('#')]
                   ),
-                  t._v(' 乱序数组')
+                  t._v(' 乱序数组'),
                 ]),
                 t._v(' '),
                 s('p', [s('code', [t._v('shuffle(array)')])]),
@@ -34,18 +34,18 @@
                     'a',
                     {
                       staticClass: 'header-anchor',
-                      attrs: { href: '#params' }
+                      attrs: { href: '#params' },
                     },
                     [t._v('#')]
                   ),
-                  t._v(' params')
+                  t._v(' params'),
                 ]),
                 t._v(' '),
                 s('ol', [
                   s('li', [
                     s('code', [t._v('{array}')]),
-                    t._v(': 数据乱序的数组')
-                  ])
+                    t._v(': 数据乱序的数组'),
+                  ]),
                 ]),
                 t._v(' '),
                 s('h4', { attrs: { id: 'return' } }, [
@@ -53,16 +53,16 @@
                     'a',
                     {
                       staticClass: 'header-anchor',
-                      attrs: { href: '#return' }
+                      attrs: { href: '#return' },
                     },
                     [t._v('#')]
                   ),
-                  t._v(' return')
+                  t._v(' return'),
                 ]),
                 t._v(' '),
                 s('p', [
                   s('code', [t._v('{string}')]),
-                  t._v(': 返回乱序后的数组，原数组不变')
+                  t._v(': 返回乱序后的数组，原数组不变'),
                 ]),
                 t._v(' '),
                 s('h4', { attrs: { id: 'eg' } }, [
@@ -71,7 +71,7 @@
                     { staticClass: 'header-anchor', attrs: { href: '#eg' } },
                     [t._v('#')]
                   ),
-                  t._v(' eg')
+                  t._v(' eg'),
                 ]),
                 t._v(' '),
                 s('div', { staticClass: 'language-JS line-numbers-mode' }, [
@@ -95,7 +95,7 @@
                         [t._v('[')]
                       ),
                       s('span', { pre: !0, attrs: { class: 'token number' } }, [
-                        t._v('1')
+                        t._v('1'),
                       ]),
                       s(
                         'span',
@@ -104,7 +104,7 @@
                       ),
                       t._v(' '),
                       s('span', { pre: !0, attrs: { class: 'token number' } }, [
-                        t._v('2')
+                        t._v('2'),
                       ]),
                       s(
                         'span',
@@ -113,7 +113,7 @@
                       ),
                       t._v(' '),
                       s('span', { pre: !0, attrs: { class: 'token number' } }, [
-                        t._v('3')
+                        t._v('3'),
                       ]),
                       s(
                         'span',
@@ -122,7 +122,7 @@
                       ),
                       t._v(' '),
                       s('span', { pre: !0, attrs: { class: 'token number' } }, [
-                        t._v('4')
+                        t._v('4'),
                       ]),
                       s(
                         'span',
@@ -152,17 +152,17 @@
                         { pre: !0, attrs: { class: 'token punctuation' } },
                         [t._v(')')]
                       ),
-                      t._v('\n')
-                    ])
+                      t._v('\n'),
+                    ]),
                   ]),
                   t._v(' '),
                   s('div', { staticClass: 'line-numbers-wrapper' }, [
                     s('span', { staticClass: 'line-number' }, [t._v('1')]),
                     s('br'),
                     s('span', { staticClass: 'line-number' }, [t._v('2')]),
-                    s('br')
-                  ])
-                ])
+                    s('br'),
+                  ]),
+                ]),
               ]
             )
           },
@@ -173,6 +173,6 @@
           null
         )
       a.default = e.exports
-    }
-  }
+    },
+  },
 ])

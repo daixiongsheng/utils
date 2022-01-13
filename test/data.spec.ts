@@ -7,13 +7,13 @@ import {
   isPromise,
   isEmptyObject,
   random,
-  shuffle
+  shuffle,
 } from '../src'
 
 describe('类型', () => {
   it('isPromise', () => {
     expect(isPromise({})).toBe(false)
-    expect(isPromise(new Promise(_ => _))).toBe(true)
+    expect(isPromise(new Promise((_) => _))).toBe(true)
     expect(isPromise(Promise.resolve())).toBe(true)
     expect(isPromise({ then() {}, catch() {} })).toBe(true)
   })
@@ -70,15 +70,15 @@ describe('base', () => {
           return void 0
         },
         f: {
-          for: 'bar'
+          for: 'bar',
         },
         r: /r/,
         date: new Date(),
         g: [{ foo: 'bar' }, 1, null],
         // @ts-ignore
-        h: 1n
-      }
-    ].forEach(input => {
+        h: 1n,
+      },
+    ].forEach((input) => {
       // Symbol 不能StrictEqual
       expect(clone(input)).toStrictEqual(input)
       if (typeof input === 'object' && input !== null) {
@@ -111,12 +111,12 @@ describe('base', () => {
     const a: any = {
       n: NaN,
       c: [],
-      a: 1
+      a: 1,
     }
     const b = {
       foo: 'bar',
       a,
-      s: Symbol()
+      s: Symbol(),
     }
     a.b = b
     a.a = a

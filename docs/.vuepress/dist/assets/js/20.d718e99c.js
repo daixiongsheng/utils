@@ -1,13 +1,13 @@
 ;(window.webpackJsonp = window.webpackJsonp || []).push([
   [20],
   {
-    367: function(s, t, a) {
+    367: function (s, t, a) {
       'use strict'
       a.r(t)
       var n = a(41),
         e = Object(n.a)(
           {},
-          function() {
+          function () {
             var s = this,
               t = s.$createElement,
               a = s._self._c || t
@@ -20,15 +20,15 @@
                     'a',
                     {
                       staticClass: 'header-anchor',
-                      attrs: { href: '#防抖函数' }
+                      attrs: { href: '#防抖函数' },
                     },
                     [s._v('#')]
                   ),
-                  s._v(' 防抖函数')
+                  s._v(' 防抖函数'),
                 ]),
                 s._v(' '),
                 a('p', [
-                  a('code', [s._v('debounce(func, delay, [immediate=false])')])
+                  a('code', [s._v('debounce(func, delay, [immediate=false])')]),
                 ]),
                 s._v(' '),
                 a('h4', { attrs: { id: '说明' } }, [
@@ -37,7 +37,7 @@
                     { staticClass: 'header-anchor', attrs: { href: '#说明' } },
                     [s._v('#')]
                   ),
-                  s._v(' 说明')
+                  s._v(' 说明'),
                 ]),
                 s._v(' '),
                 a('p', [
@@ -53,7 +53,7 @@
                   a('code', [s._v('cancel')]),
                   s._v(' 方法取消延迟的函数调用\n'),
                   a('code', [s._v('immediate')]),
-                  s._v(' 表示先调用后等待 还是 先等待后调用')
+                  s._v(' 表示先调用后等待 还是 先等待后调用'),
                 ]),
                 s._v(' '),
                 a('h4', { attrs: { id: 'params' } }, [
@@ -61,25 +61,25 @@
                     'a',
                     {
                       staticClass: 'header-anchor',
-                      attrs: { href: '#params' }
+                      attrs: { href: '#params' },
                     },
                     [s._v('#')]
                   ),
-                  s._v(' params')
+                  s._v(' params'),
                 ]),
                 s._v(' '),
                 a('ol', [
                   a('li', [
                     a('code', [s._v('{Function}')]),
-                    s._v(': 需要防抖的函数')
+                    s._v(': 需要防抖的函数'),
                   ]),
                   s._v(' '),
                   a('li', [a('code', [s._v('{number}')]), s._v(': 防抖时间')]),
                   s._v(' '),
                   a('li', [
                     a('code', [s._v('{boolean} [immediate=false]')]),
-                    s._v(': 是否立即执行')
-                  ])
+                    s._v(': 是否立即执行'),
+                  ]),
                 ]),
                 s._v(' '),
                 a('h4', { attrs: { id: 'return' } }, [
@@ -87,18 +87,18 @@
                     'a',
                     {
                       staticClass: 'header-anchor',
-                      attrs: { href: '#return' }
+                      attrs: { href: '#return' },
                     },
                     [s._v('#')]
                   ),
-                  s._v(' return')
+                  s._v(' return'),
                 ]),
                 s._v(' '),
                 a('p', [
                   a('code', [s._v('{Function}')]),
                   s._v(': 返回新的 '),
                   a('code', [s._v('debounced')]),
-                  s._v(' 防抖函数。')
+                  s._v(' 防抖函数。'),
                 ]),
                 s._v(' '),
                 a('h4', { attrs: { id: 'eg' } }, [
@@ -107,7 +107,7 @@
                     { staticClass: 'header-anchor', attrs: { href: '#eg' } },
                     [s._v('#')]
                   ),
-                  s._v(' eg')
+                  s._v(' eg'),
                 ]),
                 s._v(' '),
                 a('div', { staticClass: 'language-JS line-numbers-mode' }, [
@@ -180,7 +180,7 @@
                         [s._v('(')]
                       ),
                       a('span', { pre: !0, attrs: { class: 'token string' } }, [
-                        s._v("'这个函数会在滚动停止后的200ms后执行'")
+                        s._v("'这个函数会在滚动停止后的200ms后执行'"),
                       ]),
                       a(
                         'span',
@@ -200,7 +200,7 @@
                       ),
                       s._v(' '),
                       a('span', { pre: !0, attrs: { class: 'token number' } }, [
-                        s._v('200')
+                        s._v('200'),
                       ]),
                       a(
                         'span',
@@ -214,7 +214,7 @@
                         [
                           s._v(
                             '// 这个函数会立即执行一次，并且在停止滚动后的200ms再次滚动不会执行'
-                          )
+                          ),
                         ]
                       ),
                       s._v('\nwindow'),
@@ -281,7 +281,7 @@
                       a('span', { pre: !0, attrs: { class: 'token string' } }, [
                         s._v(
                           "'这个函数会立即执行一次，并且在停止滚动后的200ms再次滚动不会执行'"
-                        )
+                        ),
                       ]),
                       a(
                         'span',
@@ -301,7 +301,7 @@
                       ),
                       s._v(' '),
                       a('span', { pre: !0, attrs: { class: 'token number' } }, [
-                        s._v('200')
+                        s._v('200'),
                       ]),
                       a(
                         'span',
@@ -326,7 +326,7 @@
                         [
                           s._v(
                             '// cancel后，这个函数不会在滚动停止后的200ms后执行'
-                          )
+                          ),
                         ]
                       ),
                       s._v('\n'),
@@ -391,7 +391,7 @@
                         [s._v('(')]
                       ),
                       a('span', { pre: !0, attrs: { class: 'token string' } }, [
-                        s._v("'这个函数不会在滚动停止后的200ms后执行'")
+                        s._v("'这个函数不会在滚动停止后的200ms后执行'"),
                       ]),
                       a(
                         'span',
@@ -411,7 +411,7 @@
                       ),
                       s._v(' '),
                       a('span', { pre: !0, attrs: { class: 'token number' } }, [
-                        s._v('200')
+                        s._v('200'),
                       ]),
                       a(
                         'span',
@@ -428,7 +428,7 @@
                         'span',
                         {
                           pre: !0,
-                          attrs: { class: 'token function-variable function' }
+                          attrs: { class: 'token function-variable function' },
                         },
                         [s._v('onscroll')]
                       ),
@@ -509,8 +509,8 @@
                         { pre: !0, attrs: { class: 'token punctuation' } },
                         [s._v('}')]
                       ),
-                      s._v('\n')
-                    ])
+                      s._v('\n'),
+                    ]),
                   ]),
                   s._v(' '),
                   a('div', { staticClass: 'line-numbers-wrapper' }, [
@@ -551,9 +551,9 @@
                     a('span', { staticClass: 'line-number' }, [s._v('18')]),
                     a('br'),
                     a('span', { staticClass: 'line-number' }, [s._v('19')]),
-                    a('br')
-                  ])
-                ])
+                    a('br'),
+                  ]),
+                ]),
               ]
             )
           },
@@ -564,6 +564,6 @@
           null
         )
       t.default = e.exports
-    }
-  }
+    },
+  },
 ])

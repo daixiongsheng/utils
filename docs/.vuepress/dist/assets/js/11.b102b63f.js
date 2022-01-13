@@ -1,13 +1,13 @@
 ;(window.webpackJsonp = window.webpackJsonp || []).push([
   [11],
   {
-    384: function(t, s, a) {
+    384: function (t, s, a) {
       'use strict'
       a.r(s)
       var n = a(41),
         e = Object(n.a)(
           {},
-          function() {
+          function () {
             var t = this,
               s = t.$createElement,
               a = t._self._c || s
@@ -20,11 +20,11 @@
                     'a',
                     {
                       staticClass: 'header-anchor',
-                      attrs: { href: '#判断是不是没有数据的对象' }
+                      attrs: { href: '#判断是不是没有数据的对象' },
                     },
                     [t._v('#')]
                   ),
-                  t._v(' 判断是不是没有数据的对象')
+                  t._v(' 判断是不是没有数据的对象'),
                 ]),
                 t._v(' '),
                 a('p', [a('code', [t._v('isEmptyObject(any)')])]),
@@ -34,18 +34,18 @@
                     'a',
                     {
                       staticClass: 'header-anchor',
-                      attrs: { href: '#params' }
+                      attrs: { href: '#params' },
                     },
                     [t._v('#')]
                   ),
-                  t._v(' params')
+                  t._v(' params'),
                 ]),
                 t._v(' '),
                 a('ol', [
                   a('li', [
                     a('code', [t._v('{object|array}')]),
-                    t._v(': 需要判断的值')
-                  ])
+                    t._v(': 需要判断的值'),
+                  ]),
                 ]),
                 t._v(' '),
                 a('h4', { attrs: { id: 'return' } }, [
@@ -53,16 +53,16 @@
                     'a',
                     {
                       staticClass: 'header-anchor',
-                      attrs: { href: '#return' }
+                      attrs: { href: '#return' },
                     },
                     [t._v('#')]
                   ),
-                  t._v(' return')
+                  t._v(' return'),
                 ]),
                 t._v(' '),
                 a('p', [
                   a('code', [t._v('{boolean}}')]),
-                  t._v(': 返回是不是没有数据')
+                  t._v(': 返回是不是没有数据'),
                 ]),
                 t._v(' '),
                 a('h4', { attrs: { id: 'eg' } }, [
@@ -71,7 +71,7 @@
                     { staticClass: 'header-anchor', attrs: { href: '#eg' } },
                     [t._v('#')]
                   ),
-                  t._v(' eg')
+                  t._v(' eg'),
                 ]),
                 t._v(' '),
                 a('div', { staticClass: 'language-JS line-numbers-mode' }, [
@@ -215,7 +215,7 @@
                         [t._v('(')]
                       ),
                       a('span', { pre: !0, attrs: { class: 'token number' } }, [
-                        t._v('1')
+                        t._v('1'),
                       ]),
                       a(
                         'span',
@@ -297,8 +297,8 @@
                         { pre: !0, attrs: { class: 'token punctuation' } },
                         [t._v(')')]
                       ),
-                      t._v('\n')
-                    ])
+                      t._v('\n'),
+                    ]),
                   ]),
                   t._v(' '),
                   a('div', { staticClass: 'line-numbers-wrapper' }, [
@@ -309,9 +309,9 @@
                     a('span', { staticClass: 'line-number' }, [t._v('3')]),
                     a('br'),
                     a('span', { staticClass: 'line-number' }, [t._v('4')]),
-                    a('br')
-                  ])
-                ])
+                    a('br'),
+                  ]),
+                ]),
               ]
             )
           },
@@ -322,6 +322,6 @@
           null
         )
       s.default = e.exports
-    }
-  }
+    },
+  },
 ])

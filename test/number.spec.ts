@@ -8,7 +8,7 @@ import {
   bin2hex,
   bytes2simple,
   simple2bytes,
-  toNumber
+  toNumber,
 } from '../src'
 
 describe('进制转换', () => {

@@ -1,13 +1,13 @@
 ;(window.webpackJsonp = window.webpackJsonp || []).push([
   [37],
   {
-    383: function(t, a, s) {
+    383: function (t, a, s) {
       'use strict'
       s.r(a)
       var r = s(41),
         e = Object(r.a)(
           {},
-          function() {
+          function () {
             var t = this,
               a = t.$createElement,
               s = t._self._c || a
@@ -20,11 +20,11 @@
                     'a',
                     {
                       staticClass: 'header-anchor',
-                      attrs: { href: '#转成数字' }
+                      attrs: { href: '#转成数字' },
                     },
                     [t._v('#')]
                   ),
-                  t._v(' 转成数字')
+                  t._v(' 转成数字'),
                 ]),
                 t._v(' '),
                 s('p', [s('code', [t._v('toNumber(value)')])]),
@@ -35,7 +35,7 @@
                     { staticClass: 'header-anchor', attrs: { href: '#说明' } },
                     [t._v('#')]
                   ),
-                  t._v(' 说明')
+                  t._v(' 说明'),
                 ]),
                 t._v(' '),
                 s('p', [t._v('将一个字符串转成 10 进制的数字')]),
@@ -45,18 +45,18 @@
                     'a',
                     {
                       staticClass: 'header-anchor',
-                      attrs: { href: '#params' }
+                      attrs: { href: '#params' },
                     },
                     [t._v('#')]
                   ),
-                  t._v(' params')
+                  t._v(' params'),
                 ]),
                 t._v(' '),
                 s('ol', [
                   s('li', [
                     s('code', [t._v('{string|number}')]),
-                    t._v(': 需要转的字符串')
-                  ])
+                    t._v(': 需要转的字符串'),
+                  ]),
                 ]),
                 t._v(' '),
                 s('h4', { attrs: { id: 'return' } }, [
@@ -64,16 +64,16 @@
                     'a',
                     {
                       staticClass: 'header-anchor',
-                      attrs: { href: '#return' }
+                      attrs: { href: '#return' },
                     },
                     [t._v('#')]
                   ),
-                  t._v(' return')
+                  t._v(' return'),
                 ]),
                 t._v(' '),
                 s('p', [
                   s('code', [t._v('{number}')]),
-                  t._v(': 返回转换后的数字')
+                  t._v(': 返回转换后的数字'),
                 ]),
                 t._v(' '),
                 s('h4', { attrs: { id: 'eg' } }, [
@@ -82,7 +82,7 @@
                     { staticClass: 'header-anchor', attrs: { href: '#eg' } },
                     [t._v('#')]
                   ),
-                  t._v(' eg')
+                  t._v(' eg'),
                 ]),
                 t._v(' '),
                 s('div', { staticClass: 'language-JS line-numbers-mode' }, [
@@ -115,7 +115,7 @@
                         [t._v('(')]
                       ),
                       s('span', { pre: !0, attrs: { class: 'token string' } }, [
-                        t._v("'100'")
+                        t._v("'100'"),
                       ]),
                       s(
                         'span',
@@ -130,22 +130,22 @@
                       ),
                       t._v(' '),
                       s('span', { pre: !0, attrs: { class: 'token number' } }, [
-                        t._v('100')
+                        t._v('100'),
                       ]),
                       s(
                         'span',
                         { pre: !0, attrs: { class: 'token punctuation' } },
                         [t._v(')')]
                       ),
-                      t._v('\n')
-                    ])
+                      t._v('\n'),
+                    ]),
                   ]),
                   t._v(' '),
                   s('div', { staticClass: 'line-numbers-wrapper' }, [
                     s('span', { staticClass: 'line-number' }, [t._v('1')]),
-                    s('br')
-                  ])
-                ])
+                    s('br'),
+                  ]),
+                ]),
               ]
             )
           },
@@ -156,6 +156,6 @@
           null
         )
       a.default = e.exports
-    }
-  }
+    },
+  },
 ])

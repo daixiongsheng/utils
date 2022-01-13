@@ -1,13 +1,13 @@
 ;(window.webpackJsonp = window.webpackJsonp || []).push([
   [21],
   {
-    365: function(t, s, a) {
+    365: function (t, s, a) {
       'use strict'
       a.r(s)
       var n = a(41),
         e = Object(n.a)(
           {},
-          function() {
+          function () {
             var t = this,
               s = t.$createElement,
               a = t._self._c || s
@@ -20,17 +20,19 @@
                     'a',
                     {
                       staticClass: 'header-anchor',
-                      attrs: { href: '#加解锁' }
+                      attrs: { href: '#加解锁' },
                     },
                     [t._v('#')]
                   ),
-                  t._v(' 加解锁')
+                  t._v(' 加解锁'),
                 ]),
                 t._v(' '),
                 a('p', [
                   a('code', [
-                    t._v('Lock.isLocked(key), Lock.lock(key), Lock.unlock(key)')
-                  ])
+                    t._v(
+                      'Lock.isLocked(key), Lock.lock(key), Lock.unlock(key)'
+                    ),
+                  ]),
                 ]),
                 t._v(' '),
                 a('h4', { attrs: { id: '说明' } }, [
@@ -39,14 +41,14 @@
                     { staticClass: 'header-anchor', attrs: { href: '#说明' } },
                     [t._v('#')]
                   ),
-                  t._v(' 说明')
+                  t._v(' 说明'),
                 ]),
                 t._v(' '),
                 a('p', [
                   t._v('加一个锁，只有在解锁后'),
                   a('code', [t._v('Lock.isLocked(key)')]),
                   t._v(' 才加返回'),
-                  a('code', [t._v('false')])
+                  a('code', [t._v('false')]),
                 ]),
                 t._v(' '),
                 a('h4', { attrs: { id: 'params' } }, [
@@ -54,15 +56,18 @@
                     'a',
                     {
                       staticClass: 'header-anchor',
-                      attrs: { href: '#params' }
+                      attrs: { href: '#params' },
                     },
                     [t._v('#')]
                   ),
-                  t._v(' params')
+                  t._v(' params'),
                 ]),
                 t._v(' '),
                 a('ol', [
-                  a('li', [a('code', [t._v('{string}')]), t._v(': 加锁的键名')])
+                  a('li', [
+                    a('code', [t._v('{string}')]),
+                    t._v(': 加锁的键名'),
+                  ]),
                 ]),
                 t._v(' '),
                 a('h4', { attrs: { id: 'return' } }, [
@@ -70,11 +75,11 @@
                     'a',
                     {
                       staticClass: 'header-anchor',
-                      attrs: { href: '#return' }
+                      attrs: { href: '#return' },
                     },
                     [t._v('#')]
                   ),
-                  t._v(' return')
+                  t._v(' return'),
                 ]),
                 t._v(' '),
                 a('ol', [
@@ -82,18 +87,18 @@
                     a('strong', [a('code', [t._v('Lock.isLocked(key)')])]),
                     t._v(' '),
                     a('code', [t._v('{boolean}')]),
-                    t._v(': 返回是否是锁定状态')
+                    t._v(': 返回是否是锁定状态'),
                   ]),
                   t._v(' '),
                   a('li', [
                     a('strong', [a('code', [t._v('Lock.lock(key)')])]),
-                    t._v(': 加锁')
+                    t._v(': 加锁'),
                   ]),
                   t._v(' '),
                   a('li', [
                     a('strong', [a('code', [t._v('Lock.unlock(key)')])]),
-                    t._v(': 解锁')
-                  ])
+                    t._v(': 解锁'),
+                  ]),
                 ]),
                 t._v(' '),
                 a('h4', { attrs: { id: 'eg' } }, [
@@ -102,7 +107,7 @@
                     { staticClass: 'header-anchor', attrs: { href: '#eg' } },
                     [t._v('#')]
                   ),
-                  t._v(' eg')
+                  t._v(' eg'),
                 ]),
                 t._v(' '),
                 a('div', { staticClass: 'language-JS line-numbers-mode' }, [
@@ -141,7 +146,7 @@
                         [t._v('(')]
                       ),
                       a('span', { pre: !0, attrs: { class: 'token string' } }, [
-                        t._v("'fetchUserInfo'")
+                        t._v("'fetchUserInfo'"),
                       ]),
                       a(
                         'span',
@@ -187,7 +192,7 @@
                         [t._v('(')]
                       ),
                       a('span', { pre: !0, attrs: { class: 'token string' } }, [
-                        t._v("'fetchUserInfo'")
+                        t._v("'fetchUserInfo'"),
                       ]),
                       a(
                         'span',
@@ -227,7 +232,7 @@
                         [t._v('(')]
                       ),
                       a('span', { pre: !0, attrs: { class: 'token string' } }, [
-                        t._v("'fetchUserInfo'")
+                        t._v("'fetchUserInfo'"),
                       ]),
                       a(
                         'span',
@@ -273,7 +278,7 @@
                         [t._v('(')]
                       ),
                       a('span', { pre: !0, attrs: { class: 'token string' } }, [
-                        t._v("'fetchUserInfo'")
+                        t._v("'fetchUserInfo'"),
                       ]),
                       a(
                         'span',
@@ -313,7 +318,7 @@
                         [t._v('(')]
                       ),
                       a('span', { pre: !0, attrs: { class: 'token string' } }, [
-                        t._v("'fetchUserInfo'")
+                        t._v("'fetchUserInfo'"),
                       ]),
                       a(
                         'span',
@@ -342,8 +347,8 @@
                         { pre: !0, attrs: { class: 'token punctuation' } },
                         [t._v(';')]
                       ),
-                      t._v('\n')
-                    ])
+                      t._v('\n'),
+                    ]),
                   ]),
                   t._v(' '),
                   a('div', { staticClass: 'line-numbers-wrapper' }, [
@@ -356,9 +361,9 @@
                     a('span', { staticClass: 'line-number' }, [t._v('4')]),
                     a('br'),
                     a('span', { staticClass: 'line-number' }, [t._v('5')]),
-                    a('br')
-                  ])
-                ])
+                    a('br'),
+                  ]),
+                ]),
               ]
             )
           },
@@ -369,6 +374,6 @@
           null
         )
       s.default = e.exports
-    }
-  }
+    },
+  },
 ])

@@ -1,13 +1,13 @@
 ;(window.webpackJsonp = window.webpackJsonp || []).push([
   [9],
   {
-    359: function(s, t, a) {
+    359: function (s, t, a) {
       'use strict'
       a.r(t)
       var n = a(41),
         r = Object(n.a)(
           {},
-          function() {
+          function () {
             var s = this,
               t = s.$createElement,
               a = s._self._c || t
@@ -20,11 +20,11 @@
                     'a',
                     {
                       staticClass: 'header-anchor',
-                      attrs: { href: '#深拷贝' }
+                      attrs: { href: '#深拷贝' },
                     },
                     [s._v('#')]
                   ),
-                  s._v(' 深拷贝')
+                  s._v(' 深拷贝'),
                 ]),
                 s._v(' '),
                 a('p', [a('code', [s._v('clone(any)')])]),
@@ -35,7 +35,7 @@
                     { staticClass: 'header-anchor', attrs: { href: '#说明' } },
                     [s._v('#')]
                   ),
-                  s._v(' 说明')
+                  s._v(' 说明'),
                 ]),
                 s._v(' '),
                 a('p', [s._v('进行深度拷贝，支持循环引用的拷贝')]),
@@ -45,18 +45,18 @@
                     'a',
                     {
                       staticClass: 'header-anchor',
-                      attrs: { href: '#params' }
+                      attrs: { href: '#params' },
                     },
                     [s._v('#')]
                   ),
-                  s._v(' params')
+                  s._v(' params'),
                 ]),
                 s._v(' '),
                 a('ol', [
                   a('li', [
                     a('code', [s._v('{any}')]),
-                    s._v(': 需要拷贝的内容')
-                  ])
+                    s._v(': 需要拷贝的内容'),
+                  ]),
                 ]),
                 s._v(' '),
                 a('h4', { attrs: { id: 'return' } }, [
@@ -64,16 +64,16 @@
                     'a',
                     {
                       staticClass: 'header-anchor',
-                      attrs: { href: '#return' }
+                      attrs: { href: '#return' },
                     },
                     [s._v('#')]
                   ),
-                  s._v(' return')
+                  s._v(' return'),
                 ]),
                 s._v(' '),
                 a('p', [
                   a('code', [s._v('{string}')]),
-                  s._v(': 返回深拷贝的数据')
+                  s._v(': 返回深拷贝的数据'),
                 ]),
                 s._v(' '),
                 a('h4', { attrs: { id: 'eg' } }, [
@@ -82,7 +82,7 @@
                     { staticClass: 'header-anchor', attrs: { href: '#eg' } },
                     [s._v('#')]
                   ),
-                  s._v(' eg')
+                  s._v(' eg'),
                 ]),
                 s._v(' '),
                 a('div', { staticClass: 'language-JS line-numbers-mode' }, [
@@ -113,7 +113,7 @@
                       ),
                       s._v(' '),
                       a('span', { pre: !0, attrs: { class: 'token string' } }, [
-                        s._v("'bar'")
+                        s._v("'bar'"),
                       ]),
                       s._v('\n'),
                       a(
@@ -218,8 +218,8 @@
                         { pre: !0, attrs: { class: 'token punctuation' } },
                         [s._v(')')]
                       ),
-                      s._v('\n')
-                    ])
+                      s._v('\n'),
+                    ]),
                   ]),
                   s._v(' '),
                   a('div', { staticClass: 'line-numbers-wrapper' }, [
@@ -234,9 +234,9 @@
                     a('span', { staticClass: 'line-number' }, [s._v('5')]),
                     a('br'),
                     a('span', { staticClass: 'line-number' }, [s._v('6')]),
-                    a('br')
-                  ])
-                ])
+                    a('br'),
+                  ]),
+                ]),
               ]
             )
           },
@@ -247,6 +247,6 @@
           null
         )
       t.default = r.exports
-    }
-  }
+    },
+  },
 ])

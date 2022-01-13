@@ -1,13 +1,13 @@
 ;(window.webpackJsonp = window.webpackJsonp || []).push([
   [40],
   {
-    386: function(s, t, a) {
+    386: function (s, t, a) {
       'use strict'
       a.r(t)
       var e = a(41),
         n = Object(e.a)(
           {},
-          function() {
+          function () {
             var s = this,
               t = s.$createElement,
               a = s._self._c || t
@@ -20,11 +20,11 @@
                     'a',
                     {
                       staticClass: 'header-anchor',
-                      attrs: { href: '#讲-url-查询串转成对象' }
+                      attrs: { href: '#讲-url-查询串转成对象' },
                     },
                     [s._v('#')]
                   ),
-                  s._v(' 讲 url 查询串转成对象')
+                  s._v(' 讲 url 查询串转成对象'),
                 ]),
                 s._v(' '),
                 a('p', [a('code', [s._v('query2Object(string)')])]),
@@ -34,18 +34,18 @@
                     'a',
                     {
                       staticClass: 'header-anchor',
-                      attrs: { href: '#params' }
+                      attrs: { href: '#params' },
                     },
                     [s._v('#')]
                   ),
-                  s._v(' params')
+                  s._v(' params'),
                 ]),
                 s._v(' '),
                 a('ol', [
                   a('li', [
                     a('code', [s._v('{string}')]),
-                    s._v(': 需要解析的串')
-                  ])
+                    s._v(': 需要解析的串'),
+                  ]),
                 ]),
                 s._v(' '),
                 a('h4', { attrs: { id: 'return' } }, [
@@ -53,16 +53,16 @@
                     'a',
                     {
                       staticClass: 'header-anchor',
-                      attrs: { href: '#return' }
+                      attrs: { href: '#return' },
                     },
                     [s._v('#')]
                   ),
-                  s._v(' return')
+                  s._v(' return'),
                 ]),
                 s._v(' '),
                 a('p', [
                   a('code', [s._v('{object}')]),
-                  s._v(': 返回转换解析后的对象')
+                  s._v(': 返回转换解析后的对象'),
                 ]),
                 s._v(' '),
                 a('h4', { attrs: { id: 'eg' } }, [
@@ -71,7 +71,7 @@
                     { staticClass: 'header-anchor', attrs: { href: '#eg' } },
                     [s._v('#')]
                   ),
-                  s._v(' eg')
+                  s._v(' eg'),
                 ]),
                 s._v(' '),
                 a('div', { staticClass: 'language-JS line-numbers-mode' }, [
@@ -100,7 +100,7 @@
                         [s._v('(')]
                       ),
                       a('span', { pre: !0, attrs: { class: 'token string' } }, [
-                        s._v("'a=1&b=b&c=true&d=false&e=null&f'")
+                        s._v("'a=1&b=b&c=true&d=false&e=null&f'"),
                       ]),
                       a(
                         'span',
@@ -155,8 +155,8 @@
                         { pre: !0, attrs: { class: 'token comment' } },
                         [s._v('// }')]
                       ),
-                      s._v('\n')
-                    ])
+                      s._v('\n'),
+                    ]),
                   ]),
                   s._v(' '),
                   a('div', { staticClass: 'line-numbers-wrapper' }, [
@@ -177,9 +177,9 @@
                     a('span', { staticClass: 'line-number' }, [s._v('8')]),
                     a('br'),
                     a('span', { staticClass: 'line-number' }, [s._v('9')]),
-                    a('br')
-                  ])
-                ])
+                    a('br'),
+                  ]),
+                ]),
               ]
             )
           },
@@ -190,6 +190,6 @@
           null
         )
       t.default = n.exports
-    }
-  }
+    },
+  },
 ])

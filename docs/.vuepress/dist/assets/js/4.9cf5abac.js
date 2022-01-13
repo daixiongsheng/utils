@@ -1,12 +1,12 @@
 ;(window.webpackJsonp = window.webpackJsonp || []).push([
   [4],
   {
-    320: function(t, e, n) {},
-    348: function(t, e, n) {
+    320: function (t, e, n) {},
+    348: function (t, e, n) {
       'use strict'
       n(320)
     },
-    389: function(t, e, n) {
+    389: function (t, e, n) {
       'use strict'
       n.r(e)
       var i = {
@@ -14,24 +14,24 @@
           props: {
             type: { type: String, default: 'tip' },
             text: String,
-            vertical: { type: String, default: 'top' }
+            vertical: { type: String, default: 'top' },
           },
-          render: function(t, e) {
+          render: function (t, e) {
             var n = e.props,
               i = e.slots
             return t(
               'span',
               {
                 class: ['badge', n.type],
-                style: { verticalAlign: n.vertical }
+                style: { verticalAlign: n.vertical },
               },
               n.text || i().default
             )
-          }
+          },
         },
         r = (n(348), n(41)),
         p = Object(r.a)(i, void 0, void 0, !1, null, '15b7b770', null)
       e.default = p.exports
-    }
-  }
+    },
+  },
 ])

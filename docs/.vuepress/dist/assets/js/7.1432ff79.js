@@ -1,26 +1,26 @@
 ;(window.webpackJsonp = window.webpackJsonp || []).push([
   [7],
   {
-    352: function(t, e, s) {
+    352: function (t, e, s) {
       'use strict'
       s.r(e)
       var n = [
           "There's nothing here.",
           'How did we get here?',
           "That's a Four-Oh-Four.",
-          "Looks like we've got some broken links."
+          "Looks like we've got some broken links.",
         ],
         o = {
           methods: {
-            getMsg: function() {
+            getMsg: function () {
               return n[Math.floor(Math.random() * n.length)]
-            }
-          }
+            },
+          },
         },
         i = s(41),
         h = Object(i.a)(
           o,
-          function() {
+          function () {
             var t = this.$createElement,
               e = this._self._c || t
             return e('div', { staticClass: 'theme-container' }, [
@@ -33,11 +33,11 @@
                   e('blockquote', [this._v(this._s(this.getMsg()))]),
                   this._v(' '),
                   e('RouterLink', { attrs: { to: '/' } }, [
-                    this._v('\n      Take me home.\n    ')
-                  ])
+                    this._v('\n      Take me home.\n    '),
+                  ]),
                 ],
                 1
-              )
+              ),
             ])
           },
           [],
@@ -47,6 +47,6 @@
           null
         )
       e.default = h.exports
-    }
-  }
+    },
+  },
 ])

@@ -8,8 +8,8 @@ const sidebar = [
       '/function/noop',
       '/function/debounce',
       '/function/throttle',
-      '/function/lock'
-    ]
+      '/function/lock',
+    ],
   },
   {
     title: '数据处理',
@@ -22,12 +22,12 @@ const sidebar = [
       '/data/strictEqual',
       '/data/isEmptyObject',
       '/data/random',
-      '/data/shuffle'
-    ]
+      '/data/shuffle',
+    ],
   },
   {
     title: 'URL处理',
-    children: ['/url/object2QueryString', '/url/dealPath', '/url/query2Object']
+    children: ['/url/object2QueryString', '/url/dealPath', '/url/query2Object'],
   },
   {
     title: '数字/单位处理',
@@ -41,17 +41,17 @@ const sidebar = [
       '/number/hex2bin',
       '/number/hex2dec',
       '/number/bytes2simple',
-      '/number/simple2bytes'
-    ]
+      '/number/simple2bytes',
+    ],
   },
   {
     title: '日期',
-    children: ['/date/dayOfTheWeek']
+    children: ['/date/dayOfTheWeek'],
   },
-  require('./logs.json')
+  require('./logs.json'),
 ]
 function CustomPlugin() {}
-CustomPlugin.prototype.apply = function(compiler) {
+CustomPlugin.prototype.apply = function (compiler) {
   compiler.hooks.emit.tapAsync('CustomPlugin', (compilation, callback) => {
     // const changedFiles = compilation.compiler.watchFileSystem.watcher.mtimes
     // if (
@@ -71,17 +71,17 @@ module.exports = {
     return {
       resolve: {
         alias: {
-          '@img': resolve(__dirname, 'public/img')
-        }
+          '@img': resolve(__dirname, 'public/img'),
+        },
       },
-      plugins: [new CustomPlugin()]
+      plugins: [new CustomPlugin()],
     }
   },
   chainWebpack: (config, isServer) => {
     // config 是 ChainableConfig 的一个实例
   },
   markdown: {
-    lineNumbers: true
+    lineNumbers: true,
   },
   themeConfig: {
     name,
@@ -90,6 +90,6 @@ module.exports = {
     sidebar,
     repo: repository,
     repoLabel: '查看源码',
-    lastUpdated: 'Last Updated'
-  }
+    lastUpdated: 'Last Updated',
+  },
 }

@@ -9,7 +9,7 @@ export function object2QueryString(o: Record<string, any>): string {
   if (!keys.length) {
     return s
   }
-  keys.forEach(key => {
+  keys.forEach((key) => {
     const value = o[key]
     const type = typeof value
     switch (type) {
@@ -59,11 +59,9 @@ export function dealPath(
     const [p, ...query] = path.split('?')
     pramsObject = {
       ...query2Object(query.join('')),
-      ...pramsObject
+      ...pramsObject,
     }
     path = p
-  } else if (path[path.length - 1] !== '/') {
-    path = `${path}/`
   }
   const queryString = object2QueryString(pramsObject)
   path += `?${queryString}&`
@@ -85,12 +83,12 @@ export function query2Object(queryString: string): Record<string, string> {
     queryString = splitArray[splitArray.length - 1]
   }
   const qArr = queryString.split('&')
-  qArr.forEach(item => {
+  qArr.forEach((item) => {
     const [k, v] = item.split('=')
     o[k] = v === void 0 ? '' : decodeURIComponent(v)
   })
 
-  Object.keys(o).forEach(key => {
+  Object.keys(o).forEach((key) => {
     const value = o[key]
     switch (value) {
       case 'null':

@@ -36,17 +36,17 @@ export function debounce<T extends (...args: any) => any>(
     }
     if (immediate) {
       const callNow = !timer
-      timer = (setTimeout(() => {
+      timer = setTimeout(() => {
         timer = null
-      }, delay) as unknown) as number
+      }, delay) as unknown as number
       if (callNow) {
         return func.apply(that, args)
       }
     } else {
-      timer = (setTimeout(() => {
+      timer = setTimeout(() => {
         timer = null
         func.apply(that, args)
-      }, delay) as unknown) as number
+      }, delay) as unknown as number
     }
   }
   f.cancel = () => {
@@ -73,7 +73,7 @@ export function throttle<T extends (...args: any) => any>(
   delay: number
 ): ThrottledFunction<T> {
   let prev = Date.now()
-  return function(...args: Parameters<T>): void {
+  return function (...args: Parameters<T>): void {
     const that = this
     const now = Date.now()
     if (now - prev >= delay) {
@@ -113,7 +113,7 @@ export const Lock = {
    */
   lock(key: string): void {
     this[`$$${key}`] = true
-  }
+  },
 }
 
 /**
@@ -126,8 +126,8 @@ export const Lock = {
 export function compose(
   ...funcs: ((value: any) => any)[]
 ): (value: any) => any {
-  return function(x) {
-    return funcs.reduceRight(function(res, cb) {
+  return function (x) {
+    return funcs.reduceRight(function (res, cb) {
       return cb(res)
     }, x)
   }
@@ -140,8 +140,8 @@ export function compose(
  * @param  {Array[Function]} funcs
  */
 export function pipe(...funcs: ((value: any) => any)[]): (value: any) => any {
-  return function(x) {
-    return funcs.reduce(function(res, cb) {
+  return function (x) {
+    return funcs.reduce(function (res, cb) {
       return cb(res)
     }, x)
   }

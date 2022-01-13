@@ -8,7 +8,7 @@ describe('base', () => {
 
 describe('防抖', () => {
   it('debounce 200ms', () => {
-    return new Promise(resolve => {
+    return new Promise((resolve) => {
       const callback = jest.fn()
       const fn = debounce(callback, 200)
       expect(fn).toBeDefined()
@@ -24,7 +24,7 @@ describe('防抖', () => {
   })
 
   it('debounce immediate', () => {
-    return new Promise(resolve => {
+    return new Promise((resolve) => {
       const callback = jest.fn()
       const fn = debounce(callback, 100, true)
       expect(fn).toBeDefined()
@@ -40,7 +40,7 @@ describe('防抖', () => {
   })
 
   it('debounce cancel', () => {
-    return new Promise(resolve => {
+    return new Promise((resolve) => {
       const callback = jest.fn()
       const fn = debounce(callback, 200)
       expect(fn).toBeDefined()
@@ -59,7 +59,7 @@ describe('防抖', () => {
 
 describe('节流', () => {
   it('throttle 200ms', () => {
-    return new Promise(resolve => {
+    return new Promise((resolve) => {
       const callback = jest.fn()
       const fn = throttle(callback, 200)
       expect(fn).toBeDefined()

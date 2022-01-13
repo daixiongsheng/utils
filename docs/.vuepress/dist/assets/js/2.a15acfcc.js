@@ -1,42 +1,42 @@
 ;(window.webpackJsonp = window.webpackJsonp || []).push([
   [2],
   {
-    298: function(t, e, n) {
+    298: function (t, e, n) {
       'use strict'
-      n.d(e, 'd', function() {
+      n.d(e, 'd', function () {
         return i
       }),
-        n.d(e, 'a', function() {
+        n.d(e, 'a', function () {
           return a
         }),
-        n.d(e, 'i', function() {
+        n.d(e, 'i', function () {
           return s
         }),
-        n.d(e, 'f', function() {
+        n.d(e, 'f', function () {
           return u
         }),
-        n.d(e, 'g', function() {
+        n.d(e, 'g', function () {
           return l
         }),
-        n.d(e, 'h', function() {
+        n.d(e, 'h', function () {
           return c
         }),
-        n.d(e, 'b', function() {
+        n.d(e, 'b', function () {
           return h
         }),
-        n.d(e, 'e', function() {
+        n.d(e, 'e', function () {
           return p
         }),
-        n.d(e, 'k', function() {
+        n.d(e, 'k', function () {
           return f
         }),
-        n.d(e, 'l', function() {
+        n.d(e, 'l', function () {
           return d
         }),
-        n.d(e, 'c', function() {
+        n.d(e, 'c', function () {
           return v
         }),
-        n.d(e, 'j', function() {
+        n.d(e, 'j', function () {
           return m
         })
       n(42), n(66), n(299), n(300), n(163), n(65), n(91), n(27)
@@ -45,9 +45,7 @@
         a = /\/$/,
         s = /^[a-z]+:/i
       function o(t) {
-        return decodeURI(t)
-          .replace(i, '')
-          .replace(r, '')
+        return decodeURI(t).replace(i, '').replace(r, '')
       }
       function u(t) {
         return s.test(t)
@@ -67,7 +65,7 @@
       }
       function p(t, e) {
         var n = decodeURIComponent(t.hash),
-          r = (function(t) {
+          r = (function (t) {
             var e = t.match(i)
             if (e) return e[0]
           })(e)
@@ -76,7 +74,7 @@
       function f(t, e, n) {
         if (u(e)) return { type: 'external', path: e }
         n &&
-          (e = (function(t, e, n) {
+          (e = (function (t, e, n) {
             var i = t.charAt(0)
             if ('/' === i) return t
             if ('?' === i || '#' === i) return e + t
@@ -114,7 +112,7 @@
           return g(t)
         var o = s.sidebar || a.sidebar
         if (o) {
-          var u = (function(t, e) {
+          var u = (function (t, e) {
               if (Array.isArray(e)) return { base: '/', config: e }
               for (var n in e)
                 if (
@@ -132,7 +130,7 @@
           return 'auto' === c
             ? g(t)
             : c
-            ? c.map(function(t) {
+            ? c.map(function (t) {
                 return (function t(e, n, i) {
                   var r =
                     arguments.length > 3 && void 0 !== arguments[3]
@@ -150,10 +148,10 @@
                         title: e.title,
                         sidebarDepth: e.sidebarDepth,
                         initialOpenGroupIndex: e.initialOpenGroupIndex,
-                        children: a.map(function(e) {
+                        children: a.map(function (e) {
                           return t(e, n, i, r + 1)
                         }),
-                        collapsable: !1 !== e.collapsable
+                        collapsable: !1 !== e.collapsable,
                       }
                 })(t, r, l)
               })
@@ -169,40 +167,40 @@
             collapsable: !1,
             title: t.title,
             path: null,
-            children: e.map(function(e) {
+            children: e.map(function (e) {
               return {
                 type: 'auto',
                 title: e.title,
                 basePath: t.path,
                 path: t.path + '#' + e.slug,
-                children: e.children || []
+                children: e.children || [],
               }
-            })
-          }
+            }),
+          },
         ]
       }
       function v(t) {
         var e
         return (
-          (t = t.map(function(t) {
+          (t = t.map(function (t) {
             return Object.assign({}, t)
-          })).forEach(function(t) {
+          })).forEach(function (t) {
             2 === t.level
               ? (e = t)
               : e && (e.children || (e.children = [])).push(t)
           }),
-          t.filter(function(t) {
+          t.filter(function (t) {
             return 2 === t.level
           })
         )
       }
       function m(t) {
         return Object.assign(t, {
-          type: t.items && t.items.length ? 'links' : 'link'
+          type: t.items && t.items.length ? 'links' : 'link',
         })
       }
     },
-    299: function(t, e, n) {
+    299: function (t, e, n) {
       'use strict'
       var i = n(160),
         r = n(5),
@@ -210,14 +208,14 @@
         s = n(23),
         o = n(161),
         u = n(162)
-      i('match', 1, function(t, e, n) {
+      i('match', 1, function (t, e, n) {
         return [
-          function(e) {
+          function (e) {
             var n = s(this),
               i = null == e ? void 0 : e[t]
             return void 0 !== i ? i.call(e, n) : new RegExp(e)[t](String(n))
           },
-          function(t) {
+          function (t) {
             var i = n(e, t, this)
             if (i.done) return i.value
             var s = r(t),
@@ -232,11 +230,11 @@
                 f++
             }
             return 0 === f ? null : p
-          }
+          },
         ]
       })
     },
-    300: function(t, e, n) {
+    300: function (t, e, n) {
       'use strict'
       var i = n(160),
         r = n(157),
@@ -253,7 +251,7 @@
       i(
         'split',
         2,
-        function(t, e, n) {
+        function (t, e, n) {
           var i
           return (
             (i =
@@ -263,7 +261,7 @@
               4 != '.'.split(/(.?)(.?)/).length ||
               '.'.split(/()()/).length > 1 ||
               ''.split(/.?/).length
-                ? function(t, n) {
+                ? function (t, n) {
                     var i = String(s(this)),
                       a = void 0 === n ? 4294967295 : n >>> 0
                     if (0 === a) return []
@@ -303,17 +301,17 @@
                     )
                   }
                 : '0'.split(void 0, 0).length
-                ? function(t, n) {
+                ? function (t, n) {
                     return void 0 === t && 0 === n ? [] : e.call(this, t, n)
                   }
                 : e),
             [
-              function(e, n) {
+              function (e, n) {
                 var r = s(this),
                   a = null == e ? void 0 : e[t]
                 return void 0 !== a ? a.call(e, r, n) : i.call(String(r), e, n)
               },
-              function(t, r) {
+              function (t, r) {
                 var s = n(i, t, this, r, i !== e)
                 if (s.done) return s.value
                 var h = a(t),
@@ -346,31 +344,31 @@
                   }
                 }
                 return C.push(f.slice(_)), C
-              }
+              },
             ]
           )
         },
         p
       )
     },
-    301: function(t, e, n) {},
-    302: function(t, e, n) {
+    301: function (t, e, n) {},
+    302: function (t, e, n) {
       'use strict'
       var i = n(0),
         r = n(329).trim
       i(
         { target: 'String', proto: !0, forced: n(330)('trim') },
         {
-          trim: function() {
+          trim: function () {
             return r(this)
-          }
+          },
         }
       )
     },
-    303: function(t, e) {
+    303: function (t, e) {
       t.exports = '\t\n\v\f\r                　\u2028\u2029\ufeff'
     },
-    304: function(t, e, n) {
+    304: function (t, e, n) {
       var i = n(8),
         r = n(3),
         a = n(93),
@@ -397,13 +395,13 @@
           'RegExp',
           !x ||
             C ||
-            f(function() {
+            f(function () {
               return (_[v] = !1), m(k) != k || m(_) == _ || '/a/i' != m(k, 'i')
             })
         )
       ) {
         for (
-          var $ = function(t, e) {
+          var $ = function (t, e) {
               var n,
                 i = this instanceof $,
                 r = l(t),
@@ -418,16 +416,16 @@
               var o = s(x ? new m(t, e) : m(t, e), i ? this : b, $)
               return C && n && d(o, { sticky: n }), o
             },
-            y = function(t) {
+            y = function (t) {
               ;(t in $) ||
                 o($, t, {
                   configurable: !0,
-                  get: function() {
+                  get: function () {
                     return m[t]
                   },
-                  set: function(e) {
+                  set: function (e) {
                     m[t] = e
-                  }
+                  },
                 })
             },
             L = u(m),
@@ -440,7 +438,7 @@
       }
       g('RegExp')
     },
-    305: function(t, e, n) {
+    305: function (t, e, n) {
       'use strict'
       var i = n(18),
         r = n(5),
@@ -448,7 +446,7 @@
         s = n(158),
         o = RegExp.prototype,
         u = o.toString,
-        l = a(function() {
+        l = a(function () {
           return '/a/b' != u.call({ source: 'a', flags: 'b' })
         }),
         c = 'toString' != u.name
@@ -456,7 +454,7 @@
         i(
           RegExp.prototype,
           'toString',
-          function() {
+          function () {
             var t = r(this),
               e = String(t.source),
               n = t.flags
@@ -474,24 +472,24 @@
           { unsafe: !0 }
         )
     },
-    306: function(t, e, n) {},
-    307: function(t, e, n) {},
-    308: function(t, e, n) {},
-    309: function(t, e, n) {},
-    310: function(t, e, n) {},
-    311: function(t, e, n) {},
-    312: function(t, e) {
-      t.exports = function(t) {
+    306: function (t, e, n) {},
+    307: function (t, e, n) {},
+    308: function (t, e, n) {},
+    309: function (t, e, n) {},
+    310: function (t, e, n) {},
+    311: function (t, e, n) {},
+    312: function (t, e) {
+      t.exports = function (t) {
         return null == t
       }
     },
-    313: function(t, e, n) {},
-    314: function(t, e, n) {},
-    315: function(t, e, n) {},
-    316: function(t, e, n) {},
-    317: function(t, e, n) {},
-    318: function(t, e, n) {},
-    323: function(t, e, n) {
+    313: function (t, e, n) {},
+    314: function (t, e, n) {},
+    315: function (t, e, n) {},
+    316: function (t, e, n) {},
+    317: function (t, e, n) {},
+    318: function (t, e, n) {},
+    323: function (t, e, n) {
       'use strict'
       n.r(e)
       var i = n(298),
@@ -499,15 +497,15 @@
           name: 'SidebarGroup',
           components: { DropdownTransition: n(324).a },
           props: ['item', 'open', 'collapsable', 'depth'],
-          beforeCreate: function() {
+          beforeCreate: function () {
             this.$options.components.SidebarLinks = n(323).default
           },
-          methods: { isActive: i.e }
+          methods: { isActive: i.e },
         },
         a = (n(343), n(41)),
         s = Object(a.a)(
           r,
-          function() {
+          function () {
             var t = this,
               e = t.$createElement,
               n = t._self._c || e
@@ -517,8 +515,8 @@
                 staticClass: 'sidebar-group',
                 class: [
                   { collapsable: t.collapsable, 'is-sub-group': 0 !== t.depth },
-                  'depth-' + t.depth
-                ]
+                  'depth-' + t.depth,
+                ],
               },
               [
                 t.item.path
@@ -528,14 +526,14 @@
                         staticClass: 'sidebar-heading clickable',
                         class: {
                           open: t.open,
-                          active: t.isActive(t.$route, t.item.path)
+                          active: t.isActive(t.$route, t.item.path),
                         },
                         attrs: { to: t.item.path },
                         nativeOn: {
-                          click: function(e) {
+                          click: function (e) {
                             return t.$emit('toggle')
-                          }
-                        }
+                          },
+                        },
                       },
                       [
                         n('span', [t._v(t._s(t.item.title))]),
@@ -543,9 +541,9 @@
                         t.collapsable
                           ? n('span', {
                               staticClass: 'arrow',
-                              class: t.open ? 'down' : 'right'
+                              class: t.open ? 'down' : 'right',
                             })
-                          : t._e()
+                          : t._e(),
                       ]
                     )
                   : n(
@@ -554,10 +552,10 @@
                         staticClass: 'sidebar-heading',
                         class: { open: t.open },
                         on: {
-                          click: function(e) {
+                          click: function (e) {
                             return t.$emit('toggle')
-                          }
-                        }
+                          },
+                        },
                       },
                       [
                         n('span', [t._v(t._s(t.item.title))]),
@@ -565,9 +563,9 @@
                         t.collapsable
                           ? n('span', {
                               staticClass: 'arrow',
-                              class: t.open ? 'down' : 'right'
+                              class: t.open ? 'down' : 'right',
                             })
-                          : t._e()
+                          : t._e(),
                       ]
                     ),
                 t._v(' '),
@@ -582,13 +580,13 @@
                             'sidebar-depth': t.item.sidebarDepth,
                             'initial-open-group-index':
                               t.item.initialOpenGroupIndex,
-                            depth: t.depth + 1
-                          }
+                            depth: t.depth + 1,
+                          },
                         })
-                      : t._e()
+                      : t._e(),
                   ],
                   1
-                )
+                ),
               ],
               1
             )
@@ -603,7 +601,7 @@
       function o(t, e, n, i, r) {
         var a = {
           props: { to: e, activeClass: '', exactActiveClass: '' },
-          class: { active: i, 'sidebar-link': !0 }
+          class: { active: i, 'sidebar-link': !0 },
         }
         return (
           r > 2 && (a.style = { 'padding-left': r + 'rem' }),
@@ -618,11 +616,11 @@
           : t(
               'ul',
               { class: 'sidebar-sub-headers' },
-              e.map(function(e) {
+              e.map(function (e) {
                 var l = Object(i.e)(r, n + '#' + e.slug)
                 return t('li', { class: 'sidebar-sub-header' }, [
                   o(t, n + '#' + e.slug, e.title, l, e.level - 1),
-                  u(t, e.children, n, r, a, s + 1)
+                  u(t, e.children, n, r, a, s + 1),
                 ])
               })
             )
@@ -630,7 +628,7 @@
       var l = {
         functional: !0,
         props: ['item', 'sidebarDepth'],
-        render: function(t, e) {
+        render: function (t, e) {
           var n = e.parent,
             r = n.$page,
             a = (n.$site, n.$route),
@@ -643,22 +641,22 @@
             d =
               'auto' === h.type
                 ? f ||
-                  h.children.some(function(t) {
+                  h.children.some(function (t) {
                     return Object(i.e)(a, h.basePath + '#' + t.slug)
                   })
                 : f,
             g =
               'external' === h.type
-                ? (function(t, e, n) {
+                ? (function (t, e, n) {
                     return t(
                       'a',
                       {
                         attrs: {
                           href: e,
                           target: '_blank',
-                          rel: 'noopener noreferrer'
+                          rel: 'noopener noreferrer',
                         },
-                        class: { 'sidebar-link': !0 }
+                        class: { 'sidebar-link': !0 },
                       },
                       [n, t('OutboundLink')]
                     )
@@ -669,8 +667,8 @@
               p,
               l.sidebarDepth,
               s.sidebarDepth,
-              1
-            ].find(function(t) {
+              1,
+            ].find(function (t) {
               return void 0 !== t
             }),
             m = l.displayAllHeaders || s.displayAllHeaders
@@ -679,13 +677,13 @@
             : (d || m) && h.headers && !i.d.test(h.path)
             ? [g, u(t, Object(i.c)(h.headers), h.path, a, v)]
             : g
-        }
+        },
       }
       n(345)
       function c(t, e) {
         if ('group' === e.type) {
           var n = e.path && Object(i.e)(t, e.path),
-            r = e.children.some(function(e) {
+            r = e.children.some(function (e) {
               return 'group' === e.type
                 ? c(t, e)
                 : 'page' === e.type && Object(i.e)(t, e.path)
@@ -699,23 +697,23 @@
           components: {
             SidebarGroup: s,
             SidebarLink: Object(a.a)(l, void 0, void 0, !1, null, null, null)
-              .exports
+              .exports,
           },
           props: ['items', 'depth', 'sidebarDepth', 'initialOpenGroupIndex'],
-          data: function() {
+          data: function () {
             return { openGroupIndex: this.initialOpenGroupIndex || 0 }
           },
           watch: {
-            $route: function() {
+            $route: function () {
               this.refreshIndex()
-            }
+            },
           },
-          created: function() {
+          created: function () {
             this.refreshIndex()
           },
           methods: {
-            refreshIndex: function() {
-              var t = (function(t, e) {
+            refreshIndex: function () {
+              var t = (function (t, e) {
                 for (var n = 0; n < e.length; n++) {
                   var i = e[n]
                   if (c(t, i)) return n
@@ -724,17 +722,17 @@
               })(this.$route, this.items)
               t > -1 && (this.openGroupIndex = t)
             },
-            toggleGroup: function(t) {
+            toggleGroup: function (t) {
               this.openGroupIndex = t === this.openGroupIndex ? -1 : t
             },
-            isActive: function(t) {
+            isActive: function (t) {
               return Object(i.e)(this.$route, t.regularPath)
-            }
-          }
+            },
+          },
         },
         p = Object(a.a)(
           h,
-          function() {
+          function () {
             var t = this,
               e = t.$createElement,
               n = t._self._c || e
@@ -742,7 +740,7 @@
               ? n(
                   'ul',
                   { staticClass: 'sidebar-links' },
-                  t._l(t.items, function(e, i) {
+                  t._l(t.items, function (e, i) {
                     return n(
                       'li',
                       { key: i },
@@ -753,20 +751,20 @@
                                 item: e,
                                 open: i === t.openGroupIndex,
                                 collapsable: e.collapsable || e.collapsible,
-                                depth: t.depth
+                                depth: t.depth,
                               },
                               on: {
-                                toggle: function(e) {
+                                toggle: function (e) {
                                   return t.toggleGroup(i)
-                                }
-                              }
+                                },
+                              },
                             })
                           : n('SidebarLink', {
                               attrs: {
                                 'sidebar-depth': t.sidebarDepth,
-                                item: e
-                              }
-                            })
+                                item: e,
+                              },
+                            }),
                       ],
                       1
                     )
@@ -783,23 +781,23 @@
         )
       e.default = p.exports
     },
-    324: function(t, e, n) {
+    324: function (t, e, n) {
       'use strict'
       var i = {
           name: 'DropdownTransition',
           methods: {
-            setHeight: function(t) {
+            setHeight: function (t) {
               t.style.height = t.scrollHeight + 'px'
             },
-            unsetHeight: function(t) {
+            unsetHeight: function (t) {
               t.style.height = ''
-            }
-          }
+            },
+          },
         },
         r = (n(335), n(41)),
         a = Object(r.a)(
           i,
-          function() {
+          function () {
             var t = this.$createElement
             return (this._self._c || t)(
               'transition',
@@ -808,8 +806,8 @@
                 on: {
                   enter: this.setHeight,
                   'after-enter': this.unsetHeight,
-                  'before-leave': this.setHeight
-                }
+                  'before-leave': this.setHeight,
+                },
               },
               [this._t('default')],
               2
@@ -823,23 +821,23 @@
         )
       e.a = a.exports
     },
-    325: function(t, e, n) {
+    325: function (t, e, n) {
       'use strict'
       var i = n(0),
         r = n(326)
       i(
         { target: 'String', proto: !0, forced: n(327)('link') },
         {
-          link: function(t) {
+          link: function (t) {
             return r(this, 'a', 'href', t)
-          }
+          },
         }
       )
     },
-    326: function(t, e, n) {
+    326: function (t, e, n) {
       var i = n(23),
         r = /"/g
-      t.exports = function(t, e, n, a) {
+      t.exports = function (t, e, n, a) {
         var s = String(i(t)),
           o = '<' + e
         return (
@@ -849,26 +847,26 @@
         )
       }
     },
-    327: function(t, e, n) {
+    327: function (t, e, n) {
       var i = n(2)
-      t.exports = function(t) {
-        return i(function() {
+      t.exports = function (t) {
+        return i(function () {
           var e = ''[t]('"')
           return e !== e.toLowerCase() || e.split('"').length > 3
         })
       }
     },
-    328: function(t, e, n) {
+    328: function (t, e, n) {
       'use strict'
       n(301)
     },
-    329: function(t, e, n) {
+    329: function (t, e, n) {
       var i = n(23),
         r = '[' + n(303) + ']',
         a = RegExp('^' + r + r + '*'),
         s = RegExp(r + r + '*$'),
-        o = function(t) {
-          return function(e) {
+        o = function (t) {
+          return function (e) {
             var n = String(i(e))
             return (
               1 & t && (n = n.replace(a, '')),
@@ -879,19 +877,19 @@
         }
       t.exports = { start: o(1), end: o(2), trim: o(3) }
     },
-    330: function(t, e, n) {
+    330: function (t, e, n) {
       var i = n(2),
         r = n(303)
-      t.exports = function(t) {
-        return i(function() {
+      t.exports = function (t) {
+        return i(function () {
           return !!r[t]() || '​᠎' != '​᠎'[t]() || r[t].name !== t
         })
       }
     },
-    331: function(t, e, n) {
+    331: function (t, e, n) {
       var i = n(4),
         r = n(164)
-      t.exports = function(t, e, n) {
+      t.exports = function (t, e, n) {
         var a, s
         return (
           r &&
@@ -904,7 +902,7 @@
         )
       }
     },
-    332: function(t, e, n) {
+    332: function (t, e, n) {
       'use strict'
       var i,
         r = n(0),
@@ -926,10 +924,10 @@
               c ||
               f ||
               ((i = a(String.prototype, 'endsWith')), !i || i.writable)
-            ) && !f
+            ) && !f,
         },
         {
-          endsWith: function(t) {
+          endsWith: function (t) {
             var e = String(u(this))
             o(t)
             var n = arguments.length > 1 ? arguments[1] : void 0,
@@ -937,89 +935,89 @@
               r = void 0 === n ? i : p(s(n), i),
               a = String(t)
             return h ? h.call(e, a, r) : e.slice(r - a.length, r) === a
-          }
+          },
         }
       )
     },
-    333: function(t, e, n) {
+    333: function (t, e, n) {
       'use strict'
       n(306)
     },
-    334: function(t, e, n) {
+    334: function (t, e, n) {
       'use strict'
       n(307)
     },
-    335: function(t, e, n) {
+    335: function (t, e, n) {
       'use strict'
       n(308)
     },
-    336: function(t, e, n) {
+    336: function (t, e, n) {
       'use strict'
       n(309)
     },
-    337: function(t, e, n) {
+    337: function (t, e, n) {
       'use strict'
       n(310)
     },
-    338: function(t, e, n) {
+    338: function (t, e, n) {
       'use strict'
       n(311)
     },
-    339: function(t, e, n) {
+    339: function (t, e, n) {
       'use strict'
       n(313)
     },
-    340: function(t, e, n) {
+    340: function (t, e, n) {
       var i = n(29),
         r = n(14),
         a = n(25)
-      t.exports = function(t) {
+      t.exports = function (t) {
         return (
           'string' == typeof t || (!r(t) && a(t) && '[object String]' == i(t))
         )
       }
     },
-    341: function(t, e, n) {
+    341: function (t, e, n) {
       'use strict'
       n(314)
     },
-    342: function(t, e, n) {
+    342: function (t, e, n) {
       'use strict'
       n(315)
     },
-    343: function(t, e, n) {
+    343: function (t, e, n) {
       'use strict'
       n(316)
     },
-    344: function(t, e, n) {
+    344: function (t, e, n) {
       'use strict'
       var i = n(0),
         r = n(43).find,
         a = n(92),
         s = !0
       'find' in [] &&
-        Array(1).find(function() {
+        Array(1).find(function () {
           s = !1
         }),
         i(
           { target: 'Array', proto: !0, forced: s },
           {
-            find: function(t) {
+            find: function (t) {
               return r(this, t, arguments.length > 1 ? arguments[1] : void 0)
-            }
+            },
           }
         ),
         a('find')
     },
-    345: function(t, e, n) {
+    345: function (t, e, n) {
       'use strict'
       n(317)
     },
-    346: function(t, e, n) {
+    346: function (t, e, n) {
       'use strict'
       n(318)
     },
-    351: function(t, e, n) {
+    351: function (t, e, n) {
       'use strict'
       n.r(e)
       n(325), n(90)
@@ -1028,27 +1026,27 @@
           name: 'NavLink',
           props: { item: { required: !0 } },
           computed: {
-            link: function() {
+            link: function () {
               return Object(i.b)(this.item.link)
             },
-            exact: function() {
+            exact: function () {
               var t = this
               return this.$site.locales
-                ? Object.keys(this.$site.locales).some(function(e) {
+                ? Object.keys(this.$site.locales).some(function (e) {
                     return e === t.link
                   })
                 : '/' === this.link
             },
-            isNonHttpURI: function() {
+            isNonHttpURI: function () {
               return Object(i.g)(this.link) || Object(i.h)(this.link)
             },
-            isBlankTarget: function() {
+            isBlankTarget: function () {
               return '_blank' === this.target
             },
-            isInternal: function() {
+            isInternal: function () {
               return !Object(i.f)(this.link) && !this.isBlankTarget
             },
-            target: function() {
+            target: function () {
               return this.isNonHttpURI
                 ? null
                 : this.item.target
@@ -1057,7 +1055,7 @@
                 ? '_blank'
                 : ''
             },
-            rel: function() {
+            rel: function () {
               return this.isNonHttpURI || !1 === this.item.rel
                 ? null
                 : this.item.rel
@@ -1065,18 +1063,18 @@
                 : this.isBlankTarget
                 ? 'noopener noreferrer'
                 : null
-            }
+            },
           },
           methods: {
-            focusoutAction: function() {
+            focusoutAction: function () {
               this.$emit('focusout')
-            }
-          }
+            },
+          },
         },
         a = n(41),
         s = Object(a.a)(
           r,
-          function() {
+          function () {
             var t = this,
               e = t.$createElement,
               n = t._self._c || e
@@ -1087,10 +1085,10 @@
                     staticClass: 'nav-link',
                     attrs: { to: t.link, exact: t.exact },
                     nativeOn: {
-                      focusout: function(e) {
+                      focusout: function (e) {
                         return t.focusoutAction(e)
-                      }
-                    }
+                      },
+                    },
                   },
                   [t._v('\n  ' + t._s(t.item.text) + '\n')]
                 )
@@ -1099,11 +1097,11 @@
                   {
                     staticClass: 'nav-link external',
                     attrs: { href: t.link, target: t.target, rel: t.rel },
-                    on: { focusout: t.focusoutAction }
+                    on: { focusout: t.focusoutAction },
                   },
                   [
                     t._v('\n  ' + t._s(t.item.text) + '\n  '),
-                    t.isBlankTarget ? n('OutboundLink') : t._e()
+                    t.isBlankTarget ? n('OutboundLink') : t._e(),
                   ],
                   1
                 )
@@ -1118,19 +1116,19 @@
           name: 'Home',
           components: { NavLink: s },
           computed: {
-            data: function() {
+            data: function () {
               return this.$page.frontmatter
             },
-            actionLink: function() {
+            actionLink: function () {
               return { link: this.data.actionLink, text: this.data.actionText }
-            }
-          }
+            },
+          },
         },
         u =
           (n(328),
           Object(a.a)(
             o,
-            function() {
+            function () {
               var t = this,
                 e = t.$createElement,
                 n = t._self._c || e
@@ -1140,8 +1138,8 @@
                   staticClass: 'home',
                   attrs: {
                     'aria-labelledby':
-                      null !== t.data.heroText ? 'main-title' : null
-                  }
+                      null !== t.data.heroText ? 'main-title' : null,
+                  },
                 },
                 [
                   n('header', { staticClass: 'hero' }, [
@@ -1149,8 +1147,8 @@
                       ? n('img', {
                           attrs: {
                             src: t.$withBase(t.data.heroImage),
-                            alt: t.data.heroAlt || 'hero'
-                          }
+                            alt: t.data.heroAlt || 'hero',
+                          },
                         })
                       : t._e(),
                     t._v(' '),
@@ -1160,7 +1158,7 @@
                             '\n      ' +
                               t._s(t.data.heroText || t.$title || 'Hello') +
                               '\n    '
-                          )
+                          ),
                         ])
                       : t._e(),
                     t._v(' '),
@@ -1174,7 +1172,7 @@
                                   'Welcome to your VuePress site'
                               ) +
                               '\n    '
-                          )
+                          ),
                         ])
                       : t._e(),
                     t._v(' '),
@@ -1185,23 +1183,23 @@
                           [
                             n('NavLink', {
                               staticClass: 'action-button',
-                              attrs: { item: t.actionLink }
-                            })
+                              attrs: { item: t.actionLink },
+                            }),
                           ],
                           1
                         )
-                      : t._e()
+                      : t._e(),
                   ]),
                   t._v(' '),
                   t.data.features && t.data.features.length
                     ? n(
                         'div',
                         { staticClass: 'features' },
-                        t._l(t.data.features, function(e, i) {
+                        t._l(t.data.features, function (e, i) {
                           return n('div', { key: i, staticClass: 'feature' }, [
                             n('h2', [t._v(t._s(e.title))]),
                             t._v(' '),
-                            n('p', [t._v(t._s(e.details))])
+                            n('p', [t._v(t._s(e.details))]),
                           ])
                         }),
                         0
@@ -1212,9 +1210,9 @@
                   t._v(' '),
                   t.data.footer
                     ? n('div', { staticClass: 'footer' }, [
-                        t._v('\n    ' + t._s(t.data.footer) + '\n  ')
+                        t._v('\n    ' + t._s(t.data.footer) + '\n  '),
                       ])
-                    : t._e()
+                    : t._e(),
                 ],
                 1
               )
@@ -1241,7 +1239,7 @@
           n(332),
           n(169)),
         c = n.n(l),
-        h = function(t, e) {
+        h = function (t, e) {
           var n =
               arguments.length > 2 && void 0 !== arguments[2]
                 ? arguments[2]
@@ -1254,27 +1252,27 @@
             p(t, i)
           )
         },
-        p = function(t, e) {
-          var n = function(t) {
+        p = function (t, e) {
+          var n = function (t) {
               return t.replace(/[-/\\^$*+?.()|[\]{}]/g, '\\$&')
             },
             i = new RegExp('[^\0-]'),
             r = t
               .split(/\s+/g)
-              .map(function(t) {
+              .map(function (t) {
                 return t.trim()
               })
-              .filter(function(t) {
+              .filter(function (t) {
                 return !!t
               })
           if (i.test(t))
-            return r.some(function(t) {
+            return r.some(function (t) {
               return e.toLowerCase().indexOf(t) > -1
             })
           var a = t.endsWith(' ')
           return new RegExp(
             r
-              .map(function(t, e) {
+              .map(function (t, e) {
                 return r.length !== e + 1 || a
                   ? '(?=.*\\b'.concat(n(t), '\\b)')
                   : '(?=.*\\b'.concat(n(t), ')')
@@ -1285,19 +1283,19 @@
         },
         f = {
           name: 'SearchBox',
-          data: function() {
+          data: function () {
             return {
               query: '',
               focused: !1,
               focusIndex: 0,
-              placeholder: void 0
+              placeholder: void 0,
             }
           },
           computed: {
-            showSuggestions: function() {
+            showSuggestions: function () {
               return this.focused && this.suggestions && this.suggestions.length
             },
-            suggestions: function() {
+            suggestions: function () {
               var t = this.query.trim().toLowerCase()
               if (t) {
                 for (
@@ -1324,7 +1322,7 @@
                           r.push(
                             Object.assign({}, s, {
                               path: s.path + '#' + u.slug,
-                              header: u
+                              header: u,
                             })
                           )
                       }
@@ -1332,73 +1330,73 @@
                 return r
               }
             },
-            alignRight: function() {
+            alignRight: function () {
               return (
                 (this.$site.themeConfig.nav || []).length +
                   (this.$site.repo ? 1 : 0) <=
                 2
               )
-            }
+            },
           },
-          mounted: function() {
+          mounted: function () {
             ;(this.placeholder =
               this.$site.themeConfig.searchPlaceholder || ''),
               document.addEventListener('keydown', this.onHotkey)
           },
-          beforeDestroy: function() {
+          beforeDestroy: function () {
             document.removeEventListener('keydown', this.onHotkey)
           },
           methods: {
-            getPageLocalePath: function(t) {
+            getPageLocalePath: function (t) {
               for (var e in this.$site.locales || {})
                 if ('/' !== e && 0 === t.path.indexOf(e)) return e
               return '/'
             },
-            isSearchable: function(t) {
+            isSearchable: function (t) {
               var e = null
               return (
                 null === e ||
-                (e = Array.isArray(e) ? e : new Array(e)).filter(function(e) {
+                (e = Array.isArray(e) ? e : new Array(e)).filter(function (e) {
                   return t.path.match(e)
                 }).length > 0
               )
             },
-            onHotkey: function(t) {
+            onHotkey: function (t) {
               t.srcElement === document.body &&
                 ['s', '/'].includes(t.key) &&
                 (this.$refs.input.focus(), t.preventDefault())
             },
-            onUp: function() {
+            onUp: function () {
               this.showSuggestions &&
                 (this.focusIndex > 0
                   ? this.focusIndex--
                   : (this.focusIndex = this.suggestions.length - 1))
             },
-            onDown: function() {
+            onDown: function () {
               this.showSuggestions &&
                 (this.focusIndex < this.suggestions.length - 1
                   ? this.focusIndex++
                   : (this.focusIndex = 0))
             },
-            go: function(t) {
+            go: function (t) {
               this.showSuggestions &&
                 (this.$router.push(this.suggestions[t].path),
                 (this.query = ''),
                 (this.focusIndex = 0))
             },
-            focus: function(t) {
+            focus: function (t) {
               this.focusIndex = t
             },
-            unfocus: function() {
+            unfocus: function () {
               this.focusIndex = -1
-            }
-          }
+            },
+          },
         },
         d =
           (n(333),
           Object(a.a)(
             f,
-            function() {
+            function () {
               var t = this,
                 e = t.$createElement,
                 n = t._self._c || e
@@ -1410,43 +1408,43 @@
                     'aria-label': 'Search',
                     placeholder: t.placeholder,
                     autocomplete: 'off',
-                    spellcheck: 'false'
+                    spellcheck: 'false',
                   },
                   domProps: { value: t.query },
                   on: {
-                    input: function(e) {
+                    input: function (e) {
                       t.query = e.target.value
                     },
-                    focus: function(e) {
+                    focus: function (e) {
                       t.focused = !0
                     },
-                    blur: function(e) {
+                    blur: function (e) {
                       t.focused = !1
                     },
                     keyup: [
-                      function(e) {
+                      function (e) {
                         return !e.type.indexOf('key') &&
                           t._k(e.keyCode, 'enter', 13, e.key, 'Enter')
                           ? null
                           : t.go(t.focusIndex)
                       },
-                      function(e) {
+                      function (e) {
                         return !e.type.indexOf('key') &&
                           t._k(e.keyCode, 'up', 38, e.key, ['Up', 'ArrowUp'])
                           ? null
                           : t.onUp(e)
                       },
-                      function(e) {
+                      function (e) {
                         return !e.type.indexOf('key') &&
                           t._k(e.keyCode, 'down', 40, e.key, [
                             'Down',
-                            'ArrowDown'
+                            'ArrowDown',
                           ])
                           ? null
                           : t.onDown(e)
-                      }
-                    ]
-                  }
+                      },
+                    ],
+                  },
                 }),
                 t._v(' '),
                 t.showSuggestions
@@ -1455,9 +1453,9 @@
                       {
                         staticClass: 'suggestions',
                         class: { 'align-right': t.alignRight },
-                        on: { mouseleave: t.unfocus }
+                        on: { mouseleave: t.unfocus },
                       },
-                      t._l(t.suggestions, function(e, i) {
+                      t._l(t.suggestions, function (e, i) {
                         return n(
                           'li',
                           {
@@ -1465,13 +1463,13 @@
                             staticClass: 'suggestion',
                             class: { focused: i === t.focusIndex },
                             on: {
-                              mousedown: function(e) {
+                              mousedown: function (e) {
                                 return t.go(i)
                               },
-                              mouseenter: function(e) {
+                              mouseenter: function (e) {
                                 return t.focus(i)
-                              }
-                            }
+                              },
+                            },
                           },
                           [
                             n(
@@ -1479,29 +1477,29 @@
                               {
                                 attrs: { href: e.path },
                                 on: {
-                                  click: function(t) {
+                                  click: function (t) {
                                     t.preventDefault()
-                                  }
-                                }
+                                  },
+                                },
                               },
                               [
                                 n('span', { staticClass: 'page-title' }, [
-                                  t._v(t._s(e.title || e.path))
+                                  t._v(t._s(e.title || e.path)),
                                 ]),
                                 t._v(' '),
                                 e.header
                                   ? n('span', { staticClass: 'header' }, [
-                                      t._v('> ' + t._s(e.header.title))
+                                      t._v('> ' + t._s(e.header.title)),
                                     ])
-                                  : t._e()
+                                  : t._e(),
                               ]
-                            )
+                            ),
                           ]
                         )
                       }),
                       0
                     )
-                  : t._e()
+                  : t._e(),
               ])
             },
             [],
@@ -1514,7 +1512,7 @@
           (n(334),
           Object(a.a)(
             {},
-            function() {
+            function () {
               var t = this,
                 e = t.$createElement,
                 n = t._self._c || e
@@ -1523,10 +1521,10 @@
                 {
                   staticClass: 'sidebar-button',
                   on: {
-                    click: function(e) {
+                    click: function (e) {
                       return t.$emit('toggle-sidebar')
-                    }
-                  }
+                    },
+                  },
                 },
                 [
                   n(
@@ -1537,19 +1535,18 @@
                         xmlns: 'http://www.w3.org/2000/svg',
                         'aria-hidden': 'true',
                         role: 'img',
-                        viewBox: '0 0 448 512'
-                      }
+                        viewBox: '0 0 448 512',
+                      },
                     },
                     [
                       n('path', {
                         attrs: {
                           fill: 'currentColor',
-                          d:
-                            'M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z'
-                        }
-                      })
+                          d: 'M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z',
+                        },
+                      }),
                     ]
-                  )
+                  ),
                 ]
               )
             },
@@ -1567,30 +1564,30 @@
           name: 'DropdownLink',
           components: { NavLink: s, DropdownTransition: m.a },
           props: { item: { required: !0 } },
-          data: function() {
+          data: function () {
             return { open: !1 }
           },
           computed: {
-            dropdownAriaLabel: function() {
+            dropdownAriaLabel: function () {
               return this.item.ariaLabel || this.item.text
-            }
+            },
           },
           watch: {
-            $route: function() {
+            $route: function () {
               this.open = !1
-            }
+            },
           },
           methods: {
-            setOpen: function(t) {
+            setOpen: function (t) {
               this.open = t
             },
-            isLastItemOfArray: function(t, e) {
+            isLastItemOfArray: function (t, e) {
               return k()(e) === t
             },
-            handleDropdown: function() {
+            handleDropdown: function () {
               0 === event.detail && this.setOpen(!this.open)
-            }
-          }
+            },
+          },
         },
         x =
           (n(336),
@@ -1600,7 +1597,7 @@
               NavLink: s,
               DropdownLink: Object(a.a)(
                 _,
-                function() {
+                function () {
                   var t = this,
                     e = t.$createElement,
                     n = t._self._c || e
@@ -1608,7 +1605,7 @@
                     'div',
                     {
                       staticClass: 'dropdown-wrapper',
-                      class: { open: t.open }
+                      class: { open: t.open },
                     },
                     [
                       n(
@@ -1617,16 +1614,16 @@
                           staticClass: 'dropdown-title',
                           attrs: {
                             type: 'button',
-                            'aria-label': t.dropdownAriaLabel
+                            'aria-label': t.dropdownAriaLabel,
                           },
-                          on: { click: t.handleDropdown }
+                          on: { click: t.handleDropdown },
                         },
                         [
                           n('span', { staticClass: 'title' }, [
-                            t._v(t._s(t.item.text))
+                            t._v(t._s(t.item.text)),
                           ]),
                           t._v(' '),
-                          n('span', { staticClass: 'arrow down' })
+                          n('span', { staticClass: 'arrow down' }),
                         ]
                       ),
                       t._v(' '),
@@ -1636,23 +1633,23 @@
                           staticClass: 'mobile-dropdown-title',
                           attrs: {
                             type: 'button',
-                            'aria-label': t.dropdownAriaLabel
+                            'aria-label': t.dropdownAriaLabel,
                           },
                           on: {
-                            click: function(e) {
+                            click: function (e) {
                               return t.setOpen(!t.open)
-                            }
-                          }
+                            },
+                          },
                         },
                         [
                           n('span', { staticClass: 'title' }, [
-                            t._v(t._s(t.item.text))
+                            t._v(t._s(t.item.text)),
                           ]),
                           t._v(' '),
                           n('span', {
                             staticClass: 'arrow',
-                            class: t.open ? 'down' : 'right'
-                          })
+                            class: t.open ? 'down' : 'right',
+                          }),
                         ]
                       ),
                       t._v(' '),
@@ -1665,17 +1662,17 @@
                                 name: 'show',
                                 rawName: 'v-show',
                                 value: t.open,
-                                expression: 'open'
-                              }
+                                expression: 'open',
+                              },
                             ],
-                            staticClass: 'nav-dropdown'
+                            staticClass: 'nav-dropdown',
                           },
-                          t._l(t.item.items, function(e, i) {
+                          t._l(t.item.items, function (e, i) {
                             return n(
                               'li',
                               {
                                 key: e.link || i,
-                                staticClass: 'dropdown-item'
+                                staticClass: 'dropdown-item',
                               },
                               [
                                 'links' === e.type
@@ -1684,7 +1681,7 @@
                                         '\n          ' +
                                           t._s(e.text) +
                                           '\n        '
-                                      )
+                                      ),
                                     ])
                                   : t._e(),
                                 t._v(' '),
@@ -1692,20 +1689,20 @@
                                   ? n(
                                       'ul',
                                       {
-                                        staticClass: 'dropdown-subitem-wrapper'
+                                        staticClass: 'dropdown-subitem-wrapper',
                                       },
-                                      t._l(e.items, function(i) {
+                                      t._l(e.items, function (i) {
                                         return n(
                                           'li',
                                           {
                                             key: i.link,
-                                            staticClass: 'dropdown-subitem'
+                                            staticClass: 'dropdown-subitem',
                                           },
                                           [
                                             n('NavLink', {
                                               attrs: { item: i },
                                               on: {
-                                                focusout: function(n) {
+                                                focusout: function (n) {
                                                   t.isLastItemOfArray(
                                                     i,
                                                     e.items
@@ -1715,9 +1712,9 @@
                                                       t.item.items
                                                     ) &&
                                                     t.setOpen(!1)
-                                                }
-                                              }
-                                            })
+                                                },
+                                              },
+                                            }),
                                           ],
                                           1
                                         )
@@ -1727,21 +1724,21 @@
                                   : n('NavLink', {
                                       attrs: { item: e },
                                       on: {
-                                        focusout: function(n) {
+                                        focusout: function (n) {
                                           t.isLastItemOfArray(
                                             e,
                                             t.item.items
                                           ) && t.setOpen(!1)
-                                        }
-                                      }
-                                    })
+                                        },
+                                      },
+                                    }),
                               ],
                               1
                             )
                           }),
                           0
-                        )
-                      ])
+                        ),
+                      ]),
                     ],
                     1
                   )
@@ -1751,17 +1748,17 @@
                 null,
                 null,
                 null
-              ).exports
+              ).exports,
             },
             computed: {
-              userNav: function() {
+              userNav: function () {
                 return (
                   this.$themeLocaleConfig.nav ||
                   this.$site.themeConfig.nav ||
                   []
                 )
               },
-              nav: function() {
+              nav: function () {
                 var t = this,
                   e = this.$site.locales
                 if (e && Object.keys(e).length > 1) {
@@ -1772,7 +1769,7 @@
                       text: this.$themeLocaleConfig.selectText || 'Languages',
                       ariaLabel:
                         this.$themeLocaleConfig.ariaLabel || 'Select language',
-                      items: Object.keys(e).map(function(a) {
+                      items: Object.keys(e).map(function (a) {
                         var s,
                           o = e[a],
                           u = (r[a] && r[a].label) || o.lang
@@ -1780,25 +1777,25 @@
                           o.lang === t.$lang
                             ? (s = n)
                             : ((s = n.replace(t.$localeConfig.path, a)),
-                              i.some(function(t) {
+                              i.some(function (t) {
                                 return t.path === s
                               }) || (s = a)),
                           { text: u, link: s }
                         )
-                      })
+                      }),
                     }
                   return [].concat(Object(v.a)(this.userNav), [a])
                 }
                 return this.userNav
               },
-              userLinks: function() {
-                return (this.nav || []).map(function(t) {
+              userLinks: function () {
+                return (this.nav || []).map(function (t) {
                   return Object.assign(Object(i.j)(t), {
-                    items: (t.items || []).map(i.j)
+                    items: (t.items || []).map(i.j),
                   })
                 })
               },
-              repoLink: function() {
+              repoLink: function () {
                 var t = this.$site.themeConfig.repo
                 return t
                   ? /^https?:/.test(t)
@@ -1806,7 +1803,7 @@
                     : 'https://github.com/'.concat(t)
                   : null
               },
-              repoLabel: function() {
+              repoLabel: function () {
                 if (this.repoLink) {
                   if (this.$site.themeConfig.repoLabel)
                     return this.$site.themeConfig.repoLabel
@@ -1822,14 +1819,14 @@
                   }
                   return 'Source'
                 }
-              }
-            }
+              },
+            },
           }),
         C =
           (n(337),
           Object(a.a)(
             x,
-            function() {
+            function () {
               var t = this,
                 e = t.$createElement,
                 n = t._self._c || e
@@ -1838,14 +1835,14 @@
                     'nav',
                     { staticClass: 'nav-links' },
                     [
-                      t._l(t.userLinks, function(t) {
+                      t._l(t.userLinks, function (t) {
                         return n(
                           'div',
                           { key: t.link, staticClass: 'nav-item' },
                           [
                             'links' === t.type
                               ? n('DropdownLink', { attrs: { item: t } })
-                              : n('NavLink', { attrs: { item: t } })
+                              : n('NavLink', { attrs: { item: t } }),
                           ],
                           1
                         )
@@ -1859,16 +1856,16 @@
                               attrs: {
                                 href: t.repoLink,
                                 target: '_blank',
-                                rel: 'noopener noreferrer'
-                              }
+                                rel: 'noopener noreferrer',
+                              },
                             },
                             [
                               t._v('\n    ' + t._s(t.repoLabel) + '\n    '),
-                              n('OutboundLink')
+                              n('OutboundLink'),
                             ],
                             1
                           )
-                        : t._e()
+                        : t._e(),
                     ],
                     2
                   )
@@ -1889,31 +1886,31 @@
             SidebarButton: g,
             NavLinks: C,
             SearchBox: d,
-            AlgoliaSearchBox: {}
+            AlgoliaSearchBox: {},
           },
-          data: function() {
+          data: function () {
             return { linksWrapMaxWidth: null }
           },
           computed: {
-            algolia: function() {
+            algolia: function () {
               return (
                 this.$themeLocaleConfig.algolia ||
                 this.$site.themeConfig.algolia ||
                 {}
               )
             },
-            isAlgoliaSearch: function() {
+            isAlgoliaSearch: function () {
               return (
                 this.algolia && this.algolia.apiKey && this.algolia.indexName
               )
-            }
+            },
           },
-          mounted: function() {
+          mounted: function () {
             var t = this,
               e =
                 parseInt($(this.$el, 'paddingLeft')) +
                 parseInt($(this.$el, 'paddingRight')),
-              n = function() {
+              n = function () {
                 document.documentElement.clientWidth < 719
                   ? (t.linksWrapMaxWidth = null)
                   : (t.linksWrapMaxWidth =
@@ -1922,13 +1919,13 @@
                       ((t.$refs.siteName && t.$refs.siteName.offsetWidth) || 0))
               }
             n(), window.addEventListener('resize', n, !1)
-          }
+          },
         },
         L =
           (n(338),
           Object(a.a)(
             y,
-            function() {
+            function () {
               var t = this,
                 e = t.$createElement,
                 n = t._self._c || e
@@ -1938,10 +1935,10 @@
                 [
                   n('SidebarButton', {
                     on: {
-                      'toggle-sidebar': function(e) {
+                      'toggle-sidebar': function (e) {
                         return t.$emit('toggle-sidebar')
-                      }
-                    }
+                      },
+                    },
                   }),
                   t._v(' '),
                   n(
@@ -1953,8 +1950,8 @@
                             staticClass: 'logo',
                             attrs: {
                               src: t.$withBase(t.$site.themeConfig.logo),
-                              alt: t.$siteTitle
-                            }
+                              alt: t.$siteTitle,
+                            },
                           })
                         : t._e(),
                       t._v(' '),
@@ -1964,11 +1961,11 @@
                             {
                               ref: 'siteName',
                               staticClass: 'site-name',
-                              class: { 'can-hide': t.$site.themeConfig.logo }
+                              class: { 'can-hide': t.$site.themeConfig.logo },
                             },
                             [t._v(t._s(t.$siteTitle))]
                           )
-                        : t._e()
+                        : t._e(),
                     ]
                   ),
                   t._v(' '),
@@ -1978,22 +1975,22 @@
                       staticClass: 'links',
                       style: t.linksWrapMaxWidth
                         ? { 'max-width': t.linksWrapMaxWidth + 'px' }
-                        : {}
+                        : {},
                     },
                     [
                       t.isAlgoliaSearch
                         ? n('AlgoliaSearchBox', {
-                            attrs: { options: t.algolia }
+                            attrs: { options: t.algolia },
                           })
                         : !1 !== t.$site.themeConfig.search &&
                           !1 !== t.$page.frontmatter.search
                         ? n('SearchBox')
                         : t._e(),
                       t._v(' '),
-                      n('NavLinks', { staticClass: 'can-hide' })
+                      n('NavLinks', { staticClass: 'can-hide' }),
                     ],
                     1
-                  )
+                  ),
                 ],
                 1
               )
@@ -2009,17 +2006,17 @@
         O = {
           name: 'PageEdit',
           computed: {
-            lastUpdated: function() {
+            lastUpdated: function () {
               return this.$page.lastUpdated
             },
-            lastUpdatedText: function() {
+            lastUpdatedText: function () {
               return 'string' == typeof this.$themeLocaleConfig.lastUpdated
                 ? this.$themeLocaleConfig.lastUpdated
                 : 'string' == typeof this.$site.themeConfig.lastUpdated
                 ? this.$site.themeConfig.lastUpdated
                 : 'Last Updated'
             },
-            editLink: function() {
+            editLink: function () {
               var t = S()(this.$page.frontmatter.editLink)
                   ? this.$site.themeConfig.editLinks
                   : this.$page.frontmatter.editLink,
@@ -2035,16 +2032,16 @@
                 ? this.createEditLink(n, u, r, s, this.$page.relativePath)
                 : null
             },
-            editLinkText: function() {
+            editLinkText: function () {
               return (
                 this.$themeLocaleConfig.editLinkText ||
                 this.$site.themeConfig.editLinkText ||
                 'Edit this page'
               )
-            }
+            },
           },
           methods: {
-            createEditLink: function(t, e, n, r, a) {
+            createEditLink: function (t, e, n, r, a) {
               if (/bitbucket.org/.test(e))
                 return (
                   e.replace(i.a, '') +
@@ -2071,14 +2068,14 @@
                     '/'.concat(r, '/') +
                     (n ? n.replace(i.a, '') + '/' : '') +
                     a
-            }
-          }
+            },
+          },
         },
         I =
           (n(339),
           Object(a.a)(
             O,
-            function() {
+            function () {
               var t = this,
                 e = t.$createElement,
                 n = t._self._c || e
@@ -2094,13 +2091,13 @@
                             attrs: {
                               href: t.editLink,
                               target: '_blank',
-                              rel: 'noopener noreferrer'
-                            }
+                              rel: 'noopener noreferrer',
+                            },
                           },
                           [t._v(t._s(t.editLinkText))]
                         ),
                         t._v(' '),
-                        n('OutboundLink')
+                        n('OutboundLink'),
                       ],
                       1
                     )
@@ -2109,14 +2106,14 @@
                 t.lastUpdated
                   ? n('div', { staticClass: 'last-updated' }, [
                       n('span', { staticClass: 'prefix' }, [
-                        t._v(t._s(t.lastUpdatedText) + ':')
+                        t._v(t._s(t.lastUpdatedText) + ':'),
                       ]),
                       t._v(' '),
                       n('span', { staticClass: 'time' }, [
-                        t._v(t._s(t.lastUpdated))
-                      ])
+                        t._v(t._s(t.lastUpdated)),
+                      ]),
                     ])
-                  : t._e()
+                  : t._e(),
               ])
             },
             [],
@@ -2131,37 +2128,37 @@
           name: 'PageNav',
           props: ['sidebarItems'],
           computed: {
-            prev: function() {
+            prev: function () {
               return P(T.PREV, this)
             },
-            next: function() {
+            next: function () {
               return P(T.NEXT, this)
-            }
-          }
+            },
+          },
         }
       var T = {
         NEXT: {
-          resolveLink: function(t, e) {
+          resolveLink: function (t, e) {
             return R(t, e, 1)
           },
-          getThemeLinkConfig: function(t) {
+          getThemeLinkConfig: function (t) {
             return t.nextLinks
           },
-          getPageLinkConfig: function(t) {
+          getPageLinkConfig: function (t) {
             return t.frontmatter.next
-          }
+          },
         },
         PREV: {
-          resolveLink: function(t, e) {
+          resolveLink: function (t, e) {
             return R(t, e, -1)
           },
-          getThemeLinkConfig: function(t) {
+          getThemeLinkConfig: function (t) {
             return t.prevLinks
           },
-          getPageLinkConfig: function(t) {
+          getPageLinkConfig: function (t) {
             return t.frontmatter.prev
-          }
-        }
+          },
+        },
       }
       function P(t, e) {
         var n = e.$themeConfig,
@@ -2201,7 +2198,7 @@
               PageEdit: I,
               PageNav: Object(a.a)(
                 A,
-                function() {
+                function () {
                   var t = this,
                     e = t.$createElement,
                     n = t._self._c || e
@@ -2222,8 +2219,8 @@
                                           attrs: {
                                             href: t.prev.path,
                                             target: '_blank',
-                                            rel: 'noopener noreferrer'
-                                          }
+                                            rel: 'noopener noreferrer',
+                                          },
                                         },
                                         [
                                           t._v(
@@ -2233,7 +2230,7 @@
                                               ) +
                                               '\n\n        '
                                           ),
-                                          n('OutboundLink')
+                                          n('OutboundLink'),
                                         ],
                                         1
                                       )
@@ -2241,7 +2238,7 @@
                                         'RouterLink',
                                         {
                                           staticClass: 'prev',
-                                          attrs: { to: t.prev.path }
+                                          attrs: { to: t.prev.path },
                                         },
                                         [
                                           t._v(
@@ -2250,9 +2247,9 @@
                                                 t.prev.title || t.prev.path
                                               ) +
                                               '\n      '
-                                          )
+                                          ),
                                         ]
-                                      )
+                                      ),
                                 ],
                                 1
                               )
@@ -2270,8 +2267,8 @@
                                           attrs: {
                                             href: t.next.path,
                                             target: '_blank',
-                                            rel: 'noopener noreferrer'
-                                          }
+                                            rel: 'noopener noreferrer',
+                                          },
                                         },
                                         [
                                           t._v(
@@ -2281,7 +2278,7 @@
                                               ) +
                                               '\n\n        '
                                           ),
-                                          n('OutboundLink')
+                                          n('OutboundLink'),
                                         ],
                                         1
                                       )
@@ -2295,15 +2292,15 @@
                                                 t.next.title || t.next.path
                                               ) +
                                               '\n      '
-                                          )
+                                          ),
                                         ]
                                       ),
-                                  t._v('\n      →\n    ')
+                                  t._v('\n      →\n    '),
                                 ],
                                 1
                               )
-                            : t._e()
-                        ])
+                            : t._e(),
+                        ]),
                       ])
                     : t._e()
                 },
@@ -2312,15 +2309,15 @@
                 null,
                 null,
                 null
-              ).exports
+              ).exports,
             },
-            props: ['sidebarItems']
+            props: ['sidebarItems'],
           }),
         U =
           (n(342),
           Object(a.a)(
             D,
-            function() {
+            function () {
               var t = this,
                 e = t.$createElement,
                 n = t._self._c || e
@@ -2339,7 +2336,7 @@
                     t._b({}, 'PageNav', { sidebarItems: t.sidebarItems }, !1)
                   ),
                   t._v(' '),
-                  t._t('bottom')
+                  t._t('bottom'),
                 ],
                 2
               )
@@ -2353,7 +2350,7 @@
         H = {
           name: 'Sidebar',
           components: { SidebarLinks: n(323).default, NavLinks: C },
-          props: ['items']
+          props: ['items'],
         },
         W =
           (n(346),
@@ -2364,7 +2361,7 @@
               Page: U,
               Sidebar: Object(a.a)(
                 H,
-                function() {
+                function () {
                   var t = this.$createElement,
                     e = this._self._c || t
                   return e(
@@ -2376,10 +2373,10 @@
                       this._t('top'),
                       this._v(' '),
                       e('SidebarLinks', {
-                        attrs: { depth: 0, items: this.items }
+                        attrs: { depth: 0, items: this.items },
                       }),
                       this._v(' '),
-                      this._t('bottom')
+                      this._t('bottom'),
                     ],
                     2
                   )
@@ -2390,13 +2387,13 @@
                 null,
                 null
               ).exports,
-              Navbar: L
+              Navbar: L,
             },
-            data: function() {
+            data: function () {
               return { isSidebarOpen: !1 }
             },
             computed: {
-              shouldShowNavbar: function() {
+              shouldShowNavbar: function () {
                 var t = this.$site.themeConfig
                 return (
                   !1 !== this.$page.frontmatter.navbar &&
@@ -2408,11 +2405,11 @@
                     this.$themeLocaleConfig.nav)
                 )
               },
-              shouldShowSidebar: function() {
+              shouldShowSidebar: function () {
                 var t = this.$page.frontmatter
                 return !t.home && !1 !== t.sidebar && this.sidebarItems.length
               },
-              sidebarItems: function() {
+              sidebarItems: function () {
                 return Object(i.l)(
                   this.$page,
                   this.$page.regularPath,
@@ -2420,37 +2417,37 @@
                   this.$localePath
                 )
               },
-              pageClasses: function() {
+              pageClasses: function () {
                 var t = this.$page.frontmatter.pageClass
                 return [
                   {
                     'no-navbar': !this.shouldShowNavbar,
                     'sidebar-open': this.isSidebarOpen,
-                    'no-sidebar': !this.shouldShowSidebar
+                    'no-sidebar': !this.shouldShowSidebar,
                   },
-                  t
+                  t,
                 ]
-              }
+              },
             },
-            mounted: function() {
+            mounted: function () {
               var t = this
-              this.$router.afterEach(function() {
+              this.$router.afterEach(function () {
                 t.isSidebarOpen = !1
               })
             },
             methods: {
-              toggleSidebar: function(t) {
+              toggleSidebar: function (t) {
                 ;(this.isSidebarOpen =
                   'boolean' == typeof t ? t : !this.isSidebarOpen),
                   this.$emit('toggle-sidebar', this.isSidebarOpen)
               },
-              onTouchStart: function(t) {
+              onTouchStart: function (t) {
                 this.touchStart = {
                   x: t.changedTouches[0].clientX,
-                  y: t.changedTouches[0].clientY
+                  y: t.changedTouches[0].clientY,
                 }
               },
-              onTouchEnd: function(t) {
+              onTouchEnd: function (t) {
                 var e = t.changedTouches[0].clientX - this.touchStart.x,
                   n = t.changedTouches[0].clientY - this.touchStart.y
                 Math.abs(e) > Math.abs(n) &&
@@ -2458,12 +2455,12 @@
                   (e > 0 && this.touchStart.x <= 80
                     ? this.toggleSidebar(!0)
                     : this.toggleSidebar(!1))
-              }
-            }
+              },
+            },
           }),
         G = Object(a.a)(
           W,
-          function() {
+          function () {
             var t = this,
               e = t.$createElement,
               n = t._self._c || e
@@ -2472,7 +2469,7 @@
               {
                 staticClass: 'theme-container',
                 class: t.pageClasses,
-                on: { touchstart: t.onTouchStart, touchend: t.onTouchEnd }
+                on: { touchstart: t.onTouchStart, touchend: t.onTouchEnd },
               },
               [
                 t.shouldShowNavbar
@@ -2482,10 +2479,10 @@
                 n('div', {
                   staticClass: 'sidebar-mask',
                   on: {
-                    click: function(e) {
+                    click: function (e) {
                       return t.toggleSidebar(!1)
-                    }
-                  }
+                    },
+                  },
                 }),
                 t._v(' '),
                 n('Sidebar', {
@@ -2495,22 +2492,22 @@
                     [
                       {
                         key: 'top',
-                        fn: function() {
+                        fn: function () {
                           return [t._t('sidebar-top')]
                         },
-                        proxy: !0
+                        proxy: !0,
                       },
                       {
                         key: 'bottom',
-                        fn: function() {
+                        fn: function () {
                           return [t._t('sidebar-bottom')]
                         },
-                        proxy: !0
-                      }
+                        proxy: !0,
+                      },
                     ],
                     null,
                     !0
-                  )
+                  ),
                 }),
                 t._v(' '),
                 t.$page.frontmatter.home
@@ -2521,23 +2518,23 @@
                         [
                           {
                             key: 'top',
-                            fn: function() {
+                            fn: function () {
                               return [t._t('page-top')]
                             },
-                            proxy: !0
+                            proxy: !0,
                           },
                           {
                             key: 'bottom',
-                            fn: function() {
+                            fn: function () {
                               return [t._t('page-bottom')]
                             },
-                            proxy: !0
-                          }
+                            proxy: !0,
+                          },
                         ],
                         null,
                         !0
-                      )
-                    })
+                      ),
+                    }),
               ],
               1
             )
@@ -2549,6 +2546,6 @@
           null
         )
       e.default = G.exports
-    }
-  }
+    },
+  },
 ])

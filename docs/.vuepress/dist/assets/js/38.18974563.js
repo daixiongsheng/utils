@@ -1,13 +1,13 @@
 ;(window.webpackJsonp = window.webpackJsonp || []).push([
   [38],
   {
-    387: function(s, t, a) {
+    387: function (s, t, a) {
       'use strict'
       a.r(t)
       var n = a(41),
         e = Object(n.a)(
           {},
-          function() {
+          function () {
             var s = this,
               t = s.$createElement,
               a = s._self._c || t
@@ -20,11 +20,11 @@
                     'a',
                     {
                       staticClass: 'header-anchor',
-                      attrs: { href: '#url-传参时进行参数拼接' }
+                      attrs: { href: '#url-传参时进行参数拼接' },
                     },
                     [s._v('#')]
                   ),
-                  s._v(' url 传参时进行参数拼接')
+                  s._v(' url 传参时进行参数拼接'),
                 ]),
                 s._v(' '),
                 a('p', [a('code', [s._v('dealPath(path, queryObject)')])]),
@@ -35,7 +35,7 @@
                     { staticClass: 'header-anchor', attrs: { href: '#说明' } },
                     [s._v('#')]
                   ),
-                  s._v(' 说明')
+                  s._v(' 说明'),
                 ]),
                 s._v(' '),
                 a('p', [s._v('目前还没有做 hash 的处理, 支持多次调用')]),
@@ -45,23 +45,23 @@
                     'a',
                     {
                       staticClass: 'header-anchor',
-                      attrs: { href: '#params' }
+                      attrs: { href: '#params' },
                     },
                     [s._v('#')]
                   ),
-                  s._v(' params')
+                  s._v(' params'),
                 ]),
                 s._v(' '),
                 a('ol', [
                   a('li', [
                     a('code', [s._v('{path}')]),
-                    s._v(': 需要转换的 path')
+                    s._v(': 需要转换的 path'),
                   ]),
                   s._v(' '),
                   a('li', [
                     a('code', [s._v('{object}')]),
-                    s._v(': 需要添加的相应参数')
-                  ])
+                    s._v(': 需要添加的相应参数'),
+                  ]),
                 ]),
                 s._v(' '),
                 a('h4', { attrs: { id: 'return' } }, [
@@ -69,16 +69,16 @@
                     'a',
                     {
                       staticClass: 'header-anchor',
-                      attrs: { href: '#return' }
+                      attrs: { href: '#return' },
                     },
                     [s._v('#')]
                   ),
-                  s._v(' return')
+                  s._v(' return'),
                 ]),
                 s._v(' '),
                 a('p', [
                   a('code', [s._v('{string}')]),
-                  s._v(': 返回拼接后的 url')
+                  s._v(': 返回拼接后的 url'),
                 ]),
                 s._v(' '),
                 a('h4', { attrs: { id: 'eg' } }, [
@@ -87,7 +87,7 @@
                     { staticClass: 'header-anchor', attrs: { href: '#eg' } },
                     [s._v('#')]
                   ),
-                  s._v(' eg')
+                  s._v(' eg'),
                 ]),
                 s._v(' '),
                 a('div', { staticClass: 'language-JS line-numbers-mode' }, [
@@ -110,7 +110,7 @@
                         [s._v('(')]
                       ),
                       a('span', { pre: !0, attrs: { class: 'token string' } }, [
-                        s._v("'a.b.c'")
+                        s._v("'a.b.c'"),
                       ]),
                       a(
                         'span',
@@ -131,7 +131,7 @@
                       ),
                       s._v(' '),
                       a('span', { pre: !0, attrs: { class: 'token number' } }, [
-                        s._v('1')
+                        s._v('1'),
                       ]),
                       s._v('\n'),
                       a(
@@ -151,7 +151,7 @@
                         [
                           s._v(
                             '// https://daixiongsheng.github.io/?page=1&size=2&limit=10'
-                          )
+                          ),
                         ]
                       ),
                       s._v('\n'),
@@ -166,7 +166,7 @@
                         [s._v('(')]
                       ),
                       a('span', { pre: !0, attrs: { class: 'token string' } }, [
-                        s._v("'https://daixiongsheng.github.io'")
+                        s._v("'https://daixiongsheng.github.io'"),
                       ]),
                       a(
                         'span',
@@ -187,7 +187,7 @@
                       ),
                       s._v(' '),
                       a('span', { pre: !0, attrs: { class: 'token number' } }, [
-                        s._v('1')
+                        s._v('1'),
                       ]),
                       a(
                         'span',
@@ -202,7 +202,7 @@
                       ),
                       s._v(' '),
                       a('span', { pre: !0, attrs: { class: 'token number' } }, [
-                        s._v('2')
+                        s._v('2'),
                       ]),
                       a(
                         'span',
@@ -217,7 +217,7 @@
                       ),
                       s._v(' '),
                       a('span', { pre: !0, attrs: { class: 'token number' } }, [
-                        s._v('10')
+                        s._v('10'),
                       ]),
                       s._v('\n'),
                       a(
@@ -230,8 +230,8 @@
                         { pre: !0, attrs: { class: 'token punctuation' } },
                         [s._v(')')]
                       ),
-                      s._v('\n\n')
-                    ])
+                      s._v('\n\n'),
+                    ]),
                   ]),
                   s._v(' '),
                   a('div', { staticClass: 'line-numbers-wrapper' }, [
@@ -258,9 +258,9 @@
                     a('span', { staticClass: 'line-number' }, [s._v('11')]),
                     a('br'),
                     a('span', { staticClass: 'line-number' }, [s._v('12')]),
-                    a('br')
-                  ])
-                ])
+                    a('br'),
+                  ]),
+                ]),
               ]
             )
           },
@@ -271,6 +271,6 @@
           null
         )
       t.default = e.exports
-    }
-  }
+    },
+  },
 ])

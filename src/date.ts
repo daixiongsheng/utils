@@ -28,7 +28,7 @@ export function dayOfTheWeek(
     'Thursday',
     'Friday',
     'Saturday',
-    'Sunday'
+    'Sunday',
   ]
   if (month < 3) {
     month += 12

@@ -1,13 +1,13 @@
 ;(window.webpackJsonp = window.webpackJsonp || []).push([
   [30],
   {
-    376: function(s, t, a) {
+    376: function (s, t, a) {
       'use strict'
       a.r(t)
       var n = a(41),
         e = Object(n.a)(
           {},
-          function() {
+          function () {
             var s = this,
               t = s.$createElement,
               a = s._self._c || t
@@ -20,11 +20,11 @@
                     'a',
                     {
                       staticClass: 'header-anchor',
-                      attrs: { href: '#将字节转换成简单模式' }
+                      attrs: { href: '#将字节转换成简单模式' },
                     },
                     [s._v('#')]
                   ),
-                  s._v(' 将字节转换成简单模式')
+                  s._v(' 将字节转换成简单模式'),
                 ]),
                 s._v(' '),
                 a('p', [a('code', [s._v('bytes2simple(number)')])]),
@@ -35,7 +35,7 @@
                     { staticClass: 'header-anchor', attrs: { href: '#说明' } },
                     [s._v('#')]
                   ),
-                  s._v(' 说明')
+                  s._v(' 说明'),
                 ]),
                 s._v(' '),
                 a('p', [s._v('进制转换')]),
@@ -45,18 +45,18 @@
                     'a',
                     {
                       staticClass: 'header-anchor',
-                      attrs: { href: '#params' }
+                      attrs: { href: '#params' },
                     },
                     [s._v('#')]
                   ),
-                  s._v(' params')
+                  s._v(' params'),
                 ]),
                 s._v(' '),
                 a('ol', [
                   a('li', [
                     a('code', [s._v('{number}')]),
-                    s._v(': 需要转换的数')
-                  ])
+                    s._v(': 需要转换的数'),
+                  ]),
                 ]),
                 s._v(' '),
                 a('h4', { attrs: { id: 'return' } }, [
@@ -64,16 +64,16 @@
                     'a',
                     {
                       staticClass: 'header-anchor',
-                      attrs: { href: '#return' }
+                      attrs: { href: '#return' },
                     },
                     [s._v('#')]
                   ),
-                  s._v(' return')
+                  s._v(' return'),
                 ]),
                 s._v(' '),
                 a('p', [
                   a('code', [s._v('{string}')]),
-                  s._v(': 返回转换后简写字符串')
+                  s._v(': 返回转换后简写字符串'),
                 ]),
                 s._v(' '),
                 a('h4', { attrs: { id: 'eg' } }, [
@@ -82,7 +82,7 @@
                     { staticClass: 'header-anchor', attrs: { href: '#eg' } },
                     [s._v('#')]
                   ),
-                  s._v(' eg')
+                  s._v(' eg'),
                 ]),
                 s._v(' '),
                 a('div', { staticClass: 'language-JS line-numbers-mode' }, [
@@ -115,7 +115,7 @@
                         [s._v('(')]
                       ),
                       a('span', { pre: !0, attrs: { class: 'token number' } }, [
-                        s._v('1024')
+                        s._v('1024'),
                       ]),
                       a(
                         'span',
@@ -130,7 +130,7 @@
                       ),
                       s._v(' '),
                       a('span', { pre: !0, attrs: { class: 'token string' } }, [
-                        s._v("'1KB'")
+                        s._v("'1KB'"),
                       ]),
                       a(
                         'span',
@@ -164,7 +164,7 @@
                         [s._v('(')]
                       ),
                       a('span', { pre: !0, attrs: { class: 'token number' } }, [
-                        s._v('1024')
+                        s._v('1024'),
                       ]),
                       s._v(' '),
                       a(
@@ -174,7 +174,7 @@
                       ),
                       s._v(' '),
                       a('span', { pre: !0, attrs: { class: 'token number' } }, [
-                        s._v('1024')
+                        s._v('1024'),
                       ]),
                       a(
                         'span',
@@ -189,7 +189,7 @@
                       ),
                       s._v(' '),
                       a('span', { pre: !0, attrs: { class: 'token string' } }, [
-                        s._v("'1MB'")
+                        s._v("'1MB'"),
                       ]),
                       a(
                         'span',
@@ -223,7 +223,7 @@
                         [s._v('(')]
                       ),
                       a('span', { pre: !0, attrs: { class: 'token number' } }, [
-                        s._v('1500')
+                        s._v('1500'),
                       ]),
                       a(
                         'span',
@@ -238,15 +238,15 @@
                       ),
                       s._v(' '),
                       a('span', { pre: !0, attrs: { class: 'token string' } }, [
-                        s._v("'1.46484375KB'")
+                        s._v("'1.46484375KB'"),
                       ]),
                       a(
                         'span',
                         { pre: !0, attrs: { class: 'token punctuation' } },
                         [s._v(')')]
                       ),
-                      s._v('\n')
-                    ])
+                      s._v('\n'),
+                    ]),
                   ]),
                   s._v(' '),
                   a('div', { staticClass: 'line-numbers-wrapper' }, [
@@ -255,9 +255,9 @@
                     a('span', { staticClass: 'line-number' }, [s._v('2')]),
                     a('br'),
                     a('span', { staticClass: 'line-number' }, [s._v('3')]),
-                    a('br')
-                  ])
-                ])
+                    a('br'),
+                  ]),
+                ]),
               ]
             )
           },
@@ -268,6 +268,6 @@
           null
         )
       t.default = e.exports
-    }
-  }
+    },
+  },
 ])

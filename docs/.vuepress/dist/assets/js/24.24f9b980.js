@@ -1,13 +1,13 @@
 ;(window.webpackJsonp = window.webpackJsonp || []).push([
   [24],
   {
-    368: function(t, s, a) {
+    368: function (t, s, a) {
       'use strict'
       a.r(s)
       var n = a(41),
         e = Object(n.a)(
           {},
-          function() {
+          function () {
             var t = this,
               s = t.$createElement,
               a = t._self._c || s
@@ -20,11 +20,11 @@
                     'a',
                     {
                       staticClass: 'header-anchor',
-                      attrs: { href: '#节流函数' }
+                      attrs: { href: '#节流函数' },
                     },
                     [t._v('#')]
                   ),
-                  t._v(' 节流函数')
+                  t._v(' 节流函数'),
                 ]),
                 t._v(' '),
                 a('p', [a('code', [t._v('throttle(func, delay)')])]),
@@ -35,7 +35,7 @@
                     { staticClass: 'header-anchor', attrs: { href: '#说明' } },
                     [t._v('#')]
                   ),
-                  t._v(' 说明')
+                  t._v(' 说明'),
                 ]),
                 t._v(' '),
                 a('p', [
@@ -43,7 +43,7 @@
                   a('code', [t._v('delay')]),
                   t._v(' 秒内最多执行 '),
                   a('code', [t._v('func')]),
-                  t._v(' 一次的函数。')
+                  t._v(' 一次的函数。'),
                 ]),
                 t._v(' '),
                 a('h4', { attrs: { id: 'params' } }, [
@@ -51,20 +51,20 @@
                     'a',
                     {
                       staticClass: 'header-anchor',
-                      attrs: { href: '#params' }
+                      attrs: { href: '#params' },
                     },
                     [t._v('#')]
                   ),
-                  t._v(' params')
+                  t._v(' params'),
                 ]),
                 t._v(' '),
                 a('ol', [
                   a('li', [
                     a('code', [t._v('{Function}')]),
-                    t._v(': 需要防抖的函数')
+                    t._v(': 需要防抖的函数'),
                   ]),
                   t._v(' '),
-                  a('li', [a('code', [t._v('{number}')]), t._v(': 节流时间')])
+                  a('li', [a('code', [t._v('{number}')]), t._v(': 节流时间')]),
                 ]),
                 t._v(' '),
                 a('h4', { attrs: { id: 'return' } }, [
@@ -72,16 +72,16 @@
                     'a',
                     {
                       staticClass: 'header-anchor',
-                      attrs: { href: '#return' }
+                      attrs: { href: '#return' },
                     },
                     [t._v('#')]
                   ),
-                  t._v(' return')
+                  t._v(' return'),
                 ]),
                 t._v(' '),
                 a('p', [
                   a('code', [t._v('{Function}')]),
-                  t._v(': 返回新的防抖函数。')
+                  t._v(': 返回新的防抖函数。'),
                 ]),
                 t._v(' '),
                 a('h4', { attrs: { id: 'eg' } }, [
@@ -90,7 +90,7 @@
                     { staticClass: 'header-anchor', attrs: { href: '#eg' } },
                     [t._v('#')]
                   ),
-                  t._v(' eg')
+                  t._v(' eg'),
                 ]),
                 t._v(' '),
                 a('div', { staticClass: 'language-JS line-numbers-mode' }, [
@@ -163,7 +163,7 @@
                         [t._v('(')]
                       ),
                       a('span', { pre: !0, attrs: { class: 'token string' } }, [
-                        t._v("'这个函数会在滚动停止后的200ms后执行'")
+                        t._v("'这个函数会在滚动停止后的200ms后执行'"),
                       ]),
                       a(
                         'span',
@@ -183,15 +183,15 @@
                       ),
                       t._v(' '),
                       a('span', { pre: !0, attrs: { class: 'token number' } }, [
-                        t._v('200')
+                        t._v('200'),
                       ]),
                       a(
                         'span',
                         { pre: !0, attrs: { class: 'token punctuation' } },
                         [t._v(')')]
                       ),
-                      t._v('\n')
-                    ])
+                      t._v('\n'),
+                    ]),
                   ]),
                   t._v(' '),
                   a('div', { staticClass: 'line-numbers-wrapper' }, [
@@ -202,9 +202,9 @@
                     a('span', { staticClass: 'line-number' }, [t._v('3')]),
                     a('br'),
                     a('span', { staticClass: 'line-number' }, [t._v('4')]),
-                    a('br')
-                  ])
-                ])
+                    a('br'),
+                  ]),
+                ]),
               ]
             )
           },
@@ -215,6 +215,6 @@
           null
         )
       s.default = e.exports
-    }
-  }
+    },
+  },
 ])

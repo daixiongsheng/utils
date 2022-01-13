@@ -1,13 +1,13 @@
 ;(window.webpackJsonp = window.webpackJsonp || []).push([
   [22],
   {
-    370: function(t, s, a) {
+    370: function (t, s, a) {
       'use strict'
       a.r(s)
       var e = a(41),
         n = Object(e.a)(
           {},
-          function() {
+          function () {
             var t = this,
               s = t.$createElement,
               a = t._self._c || s
@@ -20,11 +20,11 @@
                     'a',
                     {
                       staticClass: 'header-anchor',
-                      attrs: { href: '#空函数' }
+                      attrs: { href: '#空函数' },
                     },
                     [t._v('#')]
                   ),
-                  t._v(' 空函数')
+                  t._v(' 空函数'),
                 ]),
                 t._v(' '),
                 a('p', [a('code', [t._v('noop()')])]),
@@ -35,7 +35,7 @@
                     { staticClass: 'header-anchor', attrs: { href: '#eg' } },
                     [t._v('#')]
                   ),
-                  t._v(' eg')
+                  t._v(' eg'),
                 ]),
                 t._v(' '),
                 a('div', { staticClass: 'language-js line-numbers-mode' }, [
@@ -56,15 +56,15 @@
                         { pre: !0, attrs: { class: 'token punctuation' } },
                         [t._v(')')]
                       ),
-                      t._v('\n')
-                    ])
+                      t._v('\n'),
+                    ]),
                   ]),
                   t._v(' '),
                   a('div', { staticClass: 'line-numbers-wrapper' }, [
                     a('span', { staticClass: 'line-number' }, [t._v('1')]),
-                    a('br')
-                  ])
-                ])
+                    a('br'),
+                  ]),
+                ]),
               ]
             )
           },
@@ -75,6 +75,6 @@
           null
         )
       s.default = n.exports
-    }
-  }
+    },
+  },
 ])

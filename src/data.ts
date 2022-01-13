@@ -21,7 +21,7 @@ export function isObject<T = any>(o: T): boolean {
   return typeof o === 'object' && o !== null
 }
 
-export type BaseType = boolean | number | string | symbol | bigint | any;
+export type BaseType = boolean | number | string | symbol | bigint | any
 /**
  * 判断有没有定义，不是null和undefined
  *
@@ -92,7 +92,7 @@ export function clone<T = any>(obj: T, map = new Map()): T {
         } else {
           copy = {}
           map.set(obj, copy)
-          Reflect.ownKeys(obj as any).forEach(key => {
+          Reflect.ownKeys(obj as any).forEach((key) => {
             copy[key] = clone(obj[key], map)
           })
         }
@@ -168,15 +168,13 @@ export function strictEqual<T = any>(
   switch (typeA) {
     case 'symbol':
       return (
-        ((value as unknown) as symbol).description ===
-        ((other as unknown) as symbol).description
+        (value as unknown as symbol).description ===
+        (other as unknown as symbol).description
       )
     case 'NaN':
       return true
     case 'array':
-      if (
-        ((value as unknown) as []).length !== ((other as unknown) as []).length
-      ) {
+      if ((value as unknown as []).length !== (other as unknown as []).length) {
         return false
       }
 
@@ -186,7 +184,7 @@ export function strictEqual<T = any>(
         return false
       }
       ma.set(value, other)
-      for (let i = 0, len = ((value as unknown) as []).length; i < len; i++) {
+      for (let i = 0, len = (value as unknown as []).length; i < len; i++) {
         if (!strictEqual(value[i], other[i], ma)) {
           return false
         }

@@ -1,13 +1,13 @@
 ;(window.webpackJsonp = window.webpackJsonp || []).push([
   [26],
   {
-    373: function(t, e, o) {
+    373: function (t, e, o) {
       'use strict'
       o.r(e)
       var r = o(41),
         n = Object(r.a)(
           {},
-          function() {
+          function () {
             var t = this,
               e = t.$createElement,
               o = t._self._c || e
@@ -20,11 +20,11 @@
                     'a',
                     {
                       staticClass: 'header-anchor',
-                      attrs: { href: '#feature' }
+                      attrs: { href: '#feature' },
                     },
                     [t._v('#')]
                   ),
-                  t._v(' feature')
+                  t._v(' feature'),
                 ]),
                 t._v(' '),
                 o('ol', [
@@ -33,16 +33,16 @@
                     o('code', [t._v('compose')]),
                     t._v(' '),
                     o('code', [t._v('pipe')]),
-                    t._v(' 函数')
-                  ])
+                    t._v(' 函数'),
+                  ]),
                 ]),
                 t._v(' '),
                 o(
                   'p',
                   [
                     o('RouterLink', { attrs: { to: '/function/compose/' } }, [
-                      t._v('compose')
-                    ])
+                      t._v('compose'),
+                    ]),
                   ],
                   1
                 ),
@@ -51,11 +51,11 @@
                   'p',
                   [
                     o('RouterLink', { attrs: { to: '/function/pipe/' } }, [
-                      t._v('pipe')
-                    ])
+                      t._v('pipe'),
+                    ]),
                   ],
                   1
-                )
+                ),
               ]
             )
           },
@@ -66,6 +66,6 @@
           null
         )
       e.default = n.exports
-    }
-  }
+    },
+  },
 ])

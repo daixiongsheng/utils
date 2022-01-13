@@ -127,6 +127,6 @@ export function simple2bytes(size: string): number {
   const symbols = ['B', 'KB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB']
   const length = parseInt(size, 10)
   const unit = size.substring(length.toString().length).toUpperCase()
-  const index = symbols.findIndex(i => i === unit)
+  const index = symbols.findIndex((i) => i === unit)
   return length * Math.pow(2, 10 * index)
 }

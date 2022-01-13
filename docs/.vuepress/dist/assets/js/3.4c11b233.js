@@ -1,19 +1,19 @@
 ;(window.webpackJsonp = window.webpackJsonp || []).push([
   [3],
   {
-    319: function(n, t, e) {},
-    347: function(n, t, e) {
+    319: function (n, t, e) {},
+    347: function (n, t, e) {
       'use strict'
       e(319)
     },
-    353: function(n, t, e) {
+    353: function (n, t, e) {
       'use strict'
       e.r(t)
       var s = { name: 'HelloWorld', mounted() {} },
         c = (e(347), e(41)),
         i = Object(c.a)(
           s,
-          function() {
+          function () {
             var n = this.$createElement
             return (this._self._c || n)(
               'section',
@@ -28,6 +28,6 @@
           null
         )
       t.default = i.exports
-    }
-  }
+    },
+  },
 ])

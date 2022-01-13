@@ -8,7 +8,7 @@ outStream.on('open', () => {
   console = {
     log(...args) {
       outStream.write(args.join('') + '\n', 'utf8')
-    }
+    },
   }
   console.log(
     '---\n' + 'title: 目录\n' + 'search: true\n' + '---\n' + '\n' + '# 开始\n'
@@ -16,7 +16,7 @@ outStream.on('open', () => {
   const title = []
   const re = /title:\s*(.+)\n(.|\n)*/
   const rshape = /^#\B[^#]\s*(.+)\n?(.|\n)*/
-  sidebar.forEach(key => {
+  sidebar.forEach((key) => {
     key = typeof key === 'object' ? key.children[0] : key
     key = key.replace(/\//g, '')
     if (key && !key.includes('guide')) {
@@ -35,7 +35,7 @@ outStream.on('open', () => {
     }
   })
 
-  console.log('目前工具划分为' + title.map(key => key[1]).join(',') + '...')
+  console.log('目前工具划分为' + title.map((key) => key[1]).join(',') + '...')
   console.log()
 
   title.forEach(([key, title]) => {

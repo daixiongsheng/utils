@@ -1,39 +1,39 @@
 ;(window.webpackJsonp = window.webpackJsonp || []).push([
   [6],
   {
-    322: function(e, t, a) {},
-    350: function(e, t, a) {
+    322: function (e, t, a) {},
+    350: function (e, t, a) {
       'use strict'
       a(322)
     },
-    355: function(e, t, a) {
+    355: function (e, t, a) {
       'use strict'
       a.r(t)
       a(65), a(27), a(91)
       var o = {
           name: 'CodeGroup',
-          data: function() {
+          data: function () {
             return { codeTabs: [], activeCodeTabIndex: -1 }
           },
           watch: {
-            activeCodeTabIndex: function(e) {
+            activeCodeTabIndex: function (e) {
               this.activateCodeTab(e)
-            }
+            },
           },
-          mounted: function() {
+          mounted: function () {
             this.loadTabs()
           },
           methods: {
-            changeCodeTab: function(e) {
+            changeCodeTab: function (e) {
               this.activeCodeTabIndex = e
             },
-            loadTabs: function() {
+            loadTabs: function () {
               var e = this
               ;(this.codeTabs = (this.$slots.default || [])
-                .filter(function(e) {
+                .filter(function (e) {
                   return Boolean(e.componentOptions)
                 })
-                .map(function(t, a) {
+                .map(function (t, a) {
                   return (
                     '' === t.componentOptions.propsData.active &&
                       (e.activeCodeTabIndex = a),
@@ -45,19 +45,19 @@
                   (this.activeCodeTabIndex = 0),
                 this.activateCodeTab(0)
             },
-            activateCodeTab: function(e) {
-              this.codeTabs.forEach(function(e) {
+            activateCodeTab: function (e) {
+              this.codeTabs.forEach(function (e) {
                 e.elm && e.elm.classList.remove('theme-code-block__active')
               }),
                 this.codeTabs[e].elm &&
                   this.codeTabs[e].elm.classList.add('theme-code-block__active')
-            }
-          }
+            },
+          },
         },
         n = (a(350), a(41)),
         c = Object(n.a)(
           o,
-          function() {
+          function () {
             var e = this,
               t = e.$createElement,
               a = e._self._c || t
@@ -70,7 +70,7 @@
                     a(
                       'ul',
                       { staticClass: 'theme-code-group__ul' },
-                      e._l(e.codeTabs, function(t, o) {
+                      e._l(e.codeTabs, function (t, o) {
                         return a(
                           'li',
                           { key: t.title, staticClass: 'theme-code-group__li' },
@@ -81,27 +81,27 @@
                                 staticClass: 'theme-code-group__nav-tab',
                                 class: {
                                   'theme-code-group__nav-tab-active':
-                                    o === e.activeCodeTabIndex
+                                    o === e.activeCodeTabIndex,
                                 },
                                 on: {
-                                  click: function(t) {
+                                  click: function (t) {
                                     return e.changeCodeTab(o)
-                                  }
-                                }
+                                  },
+                                },
                               },
                               [
                                 e._v(
                                   '\n            ' +
                                     e._s(t.title) +
                                     '\n          '
-                                )
+                                ),
                               ]
-                            )
+                            ),
                           ]
                         )
                       }),
                       0
-                    )
+                    ),
                   ]),
                   e._v(' '),
                   e._t('default'),
@@ -110,12 +110,12 @@
                     ? a('pre', { staticClass: 'pre-blank' }, [
                         e._v(
                           '// Make sure to add code blocks to your code group'
-                        )
+                        ),
                       ])
-                    : e._e()
+                    : e._e(),
                 ],
                 2
-              )
+              ),
             ])
           },
           [],
@@ -125,6 +125,6 @@
           null
         )
       t.default = c.exports
-    }
-  }
+    },
+  },
 ])
